@@ -27,7 +27,7 @@ gulp.task('styles', () => {
     .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest(temp))
-    .pipe(reload({stream: true}))
+    .pipe(reload({ stream: true }))
 })
 
 gulp.task('scripts', () => {
@@ -37,7 +37,15 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest(temp))
-    .pipe(reload({stream: true}))
+    .pipe(reload({ stream: true }))
+})
+
+gulp.task('views', () => {
+  return gulp.src(`${src}/*.html`, { base: src })
+    .pipe($.plumber())
+    .pipe($.xhtml())
+    .pipe(gulp.dest(temp))
+    .pipe(reload({ stream: true }));
 })
 
 gulp.task('lint', () => {
@@ -49,13 +57,13 @@ gulp.task('lint', () => {
     .pipe(gulp.dest(src))
 })
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src(`${src}/*.html`, { base: src })
+gulp.task('html', ['views', 'styles', 'scripts'], () => {
+  return gulp.src(`${temp}/*.html`, { base: temp })
     .pipe($.useref({ searchPath: [temp, src, '.'] }))
     .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true }})))
     .pipe($.if(/\.css$/, $.cssnano({ safe: true, autoprefixer: false })))
     .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
+      collapseWhitespace: false,
       minifyCSS: true,
       minifyJS: { compress: { drop_console: true } },
       processConditionalComments: true,
@@ -79,14 +87,14 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('extras', () => {
-  return gulp.src([`${src}/*`, `!${src}/*.html`], { dot: true })
+  return gulp.src([`${src}/*.*`, `!${src}/*.html`], { dot: true })
     .pipe(gulp.dest(dist))
 })
 
 gulp.task('clean', del.bind(null, [temp, dist]))
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['views', 'styles', 'scripts', 'fonts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
@@ -104,6 +112,7 @@ gulp.task('serve', () => {
       `${temp}/**/fonts/**/*`
     ]).on('change', reload)
 
+    gulp.watch(`${src}/**/*.html`, ['views'])
     gulp.watch(`${src}/**/*.scss`, ['styles'])
     gulp.watch(`${src}/**/*.js`, ['scripts'])
     gulp.watch(`${src}/**/fonts/**/*`, ['fonts'])

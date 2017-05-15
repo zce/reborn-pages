@@ -1,0 +1,5 @@
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}

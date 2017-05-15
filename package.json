@@ -65,5 +65,8 @@
         "single"
       ]
     }
+  },
+  "devDependencies": {
+    "gulp-xhtml": "^0.2.0"
   }
 }
