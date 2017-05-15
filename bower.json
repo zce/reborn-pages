@@ -1,0 +1,19 @@
+{
+  "name": "reborn",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~4.0.0-alpha.6",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap.scss",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "modernizr": {
+      "main": []
+    }
+  }
+}
