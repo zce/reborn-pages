@@ -67,6 +67,6 @@
     }
   },
   "devDependencies": {
-    "gulp-xhtml": "^0.2.0"
+    "gulp-pug": "^3.3.0"
   }
 }

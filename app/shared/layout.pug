@@ -1,0 +1,72 @@
+block global
+
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+    meta(name='generator', content='')
+
+    title #{ title } « REBORN
+
+    //- Place favicon.ico in the root directory
+    link(rel='apple-touch-icon', href='assets/images/apple-touch-icon.png')
+
+    //- build:css assets/styles/vendor.css
+    //- bower:css
+    link(rel='stylesheet', href='/bower_components/simple-line-icons/css/simple-line-icons.css')
+    //- endbower
+    //- endbuild
+
+    //- build:css assets/styles/main.css
+    link(rel='stylesheet', href='assets/styles/main.css')
+    //- endbuild
+
+    block styles
+
+    //- build:js assets/scripts/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    //- endbuild
+  body
+    <!--[if lt IE 10]>
+      p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    <![endif]-->
+
+    <a class="sr-only" href="#content">跳转到内容区</a>
+
+    include header
+
+    #page.wrapper
+      block wrapper
+
+    include footer
+
+    //- build:js assets/scripts/vendor.js
+    //- bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/tether/dist/js/tether.js')
+    //- endbower
+    //- endbuild
+
+    //- build:js assets/scripts/plugins.js
+    script(src='/bower_components/bootstrap/js/dist/util.js')
+    script(src='/bower_components/bootstrap/js/dist/alert.js')
+    script(src='/bower_components/bootstrap/js/dist/button.js')
+    script(src='/bower_components/bootstrap/js/dist/carousel.js')
+    script(src='/bower_components/bootstrap/js/dist/collapse.js')
+    script(src='/bower_components/bootstrap/js/dist/dropdown.js')
+    script(src='/bower_components/bootstrap/js/dist/modal.js')
+    script(src='/bower_components/bootstrap/js/dist/scrollspy.js')
+    script(src='/bower_components/bootstrap/js/dist/tab.js')
+    script(src='/bower_components/bootstrap/js/dist/tooltip.js')
+    script(src='/bower_components/bootstrap/js/dist/popover.js')
+    //- endbuild
+
+    //- build:js assets/scripts/main.js
+    script(src='assets/scripts/main.js')
+    //- endbuild
+
+    block scripts

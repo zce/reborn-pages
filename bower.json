@@ -2,8 +2,9 @@
   "name": "reborn",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-alpha.6",
-    "modernizr": "~2.8.1"
+    "bootstrap": "^4.0.0-alpha.6",
+    "modernizr": "^2.8.1",
+    "simple-line-icons": "^2.4.1"
   },
   "overrides": {
     "bootstrap": {
@@ -14,6 +15,11 @@
     },
     "modernizr": {
       "main": []
+    },
+    "simple-line-icons": {
+      "main": [
+        "css/simple-line-icons.css"
+      ]
     }
   }
 }

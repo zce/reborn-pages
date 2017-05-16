@@ -1,0 +1,31 @@
+header.header.reborn-header
+  nav.navbar.navbar-toggleable-md.navbar-light.reborn-navbar.fixed-top
+    .container
+      button.navbar-toggler.navbar-toggler-right
+        span.navbar-toggler-icon
+
+      a.navbar-brand(href="#")
+        span.sr-only WEDN.NET
+        img(src="assets/images/logo.svg", alt="WEDN.NET", height="50")
+
+      #top-menu.navbar-collapse.collapse
+        ul.navbar-nav.ml-1.mr-auto
+          li.nav-item
+            a.nav-link.active(href="#") 首页
+          li.nav-item
+            a.nav-link(href="#") 学习
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") 博客
+            .dropdown-menu
+              a.dropdown-item 未分类
+              a.dropdown-item 爱生活
+              a.dropdown-item 爱旅行
+              a.dropdown-item 音乐
+              a.dropdown-item 诗和远方
+          li.nav-item
+            a.nav-link(href="#") 关于
+
+        form.form-inline(action="/")
+          label.input-group.input-group-sm
+            i.input-group-addon.icon-magnifier
+            input.form-control(type="search", name="q", placeholder="搜索...")

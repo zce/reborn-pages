@@ -41,9 +41,9 @@ gulp.task('scripts', () => {
 })
 
 gulp.task('views', () => {
-  return gulp.src(`${src}/*.html`, { base: src })
+  return gulp.src(`${src}/*.pug`, { base: src })
     .pipe($.plumber())
-    .pipe($.xhtml())
+    .pipe($.pug({ pretty: true }))
     .pipe(gulp.dest(temp))
     .pipe(reload({ stream: true }));
 })
@@ -58,9 +58,9 @@ gulp.task('lint', () => {
 })
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
-  return gulp.src(`${temp}/*.html`, { base: temp })
+  return gulp.src([`${src}/*.html`, `${temp}/*.html`])
     .pipe($.useref({ searchPath: [temp, src, '.'] }))
-    .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true }})))
+    .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true } })))
     .pipe($.if(/\.css$/, $.cssnano({ safe: true, autoprefixer: false })))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: false,
@@ -87,7 +87,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('extras', () => {
-  return gulp.src([`${src}/*.*`, `!${src}/*.html`], { dot: true })
+  return gulp.src([`${src}/*`, `!${src}/**/*.html`, `!${src}/**/*.pug`], { base: src, dot: true })
     .pipe(gulp.dest(dist))
 })
 
@@ -112,7 +112,7 @@ gulp.task('serve', () => {
       `${temp}/**/fonts/**/*`
     ]).on('change', reload)
 
-    gulp.watch(`${src}/**/*.html`, ['views'])
+    gulp.watch(`${src}/**/*.pug`, ['views'])
     gulp.watch(`${src}/**/*.scss`, ['styles'])
     gulp.watch(`${src}/**/*.js`, ['scripts'])
     gulp.watch(`${src}/**/fonts/**/*`, ['fonts'])
@@ -134,19 +134,53 @@ gulp.task('serve:dist', ['default'], () => {
 gulp.task('wiredep', () => {
   gulp.src(`${src}/**/*.scss`, { base: src })
     .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({ ignorePath: /^(\.\.\/)+/ }))
+    .pipe(wiredep({
+      ignorePath: /^(\.\.\/)+/,
+      fileTypes: {
+        scss: {
+          block: /(([ \t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
+          detect: {
+            css: /@import\s['"](.+css)['"]/gi,
+            sass: /@import\s['"](.+sass)['"]/gi,
+            scss: /@import\s['"](.+scss)['"]/gi
+          },
+          replace: {
+            css: '@import \'{{filePath}}\';',
+            sass: '@import \'{{filePath}}\';',
+            scss: '@import \'{{filePath}}\';'
+          }
+        }
+      }
+    }))
     .pipe(gulp.dest(src))
 
-  gulp.src(`${src}/*.html`)
+  // https://github.com/taptapship/wiredep/pull/239
+  // node_modules/wiredep/lib/default-file-types.js
+  // jade => pug
+  gulp.src(`${src}/**/*.pug`)
+    .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       exclude: ['bootstrap'],
-      ignorePath: /^(\.\.\/)*\.\./
+      ignorePath: /^(\.\.\/)*\.\./,
+      fileTypes: {
+        pug: {
+          block: /(([ \t]*)\/\/-?\s*bower:*(\S*))(\n|\r|.)*?(\/\/-?\s*endbower)/gi,
+          detect: {
+            js: /script\(.*src=['"]([^'"]+)/gi,
+            css: /link\(.*href=['"]([^'"]+)/gi
+          },
+          replace: {
+            js: 'script(src=\'{{filePath}}\')',
+            css: 'link(rel=\'stylesheet\', href=\'{{filePath}}\')'
+          }
+        }
+      }
     }))
     .pipe(gulp.dest(src))
 })
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src(`${dist}/**/*`).pipe($.size({title: 'build', gzip: true}))
+  return gulp.src(`${dist}/**/*`).pipe($.size({ title: 'build', gzip: true }))
 })
 
 gulp.task('default', () => {

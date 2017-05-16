@@ -1,0 +1,28 @@
+extends shared/layout
+
+block global
+
+  - const title = 'Landing Page'
+
+block wrapper
+
+  .container
+
+    .jumbotron
+      h1 #{title}
+      p.lead Always a pleasure scaffolding your apps.
+      p: a.btn.btn-lg.btn-success(href='#') Splendid!
+
+    .row.marketing
+      .col-lg-6
+        h4 HTML5 Boilerplate
+        p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+
+        h4 Sass
+        p Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+
+        h4 Bootstrap
+        p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+
+        h4 Modernizr
+        p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.

@@ -14,93 +14,21 @@
  */
 @charset 'UTF-8';
 
-// 1. Configuration and helpers
-@import 'variables';
-@import 'mixins';
+// 1. Variables
+@import 'variables/variables';
+
+// 2. Helpers
+@import 'helpers/helpers';
 
 // 2. Vendors
 // bower:scss
-@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
 // endbower
 
-// 3. Extends
+// 3. Layout
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/footer';
 
-// 4. Base
-body {
-  background-color: #f8fafd;
-}
-
-// 5. Header
-.header {
-  .navbar {
-    padding: .625rem;
-    // background-color: rgba(255, 255, 255, .7);
-    transition: padding .5s ease, background-color .5s ease;
-
-    @include when-inside('.scrolled') {
-      background-color: #fff;
-    }
-
-    .navbar-brand {
-      img {
-        height: 3.125rem;
-        transition: height .5s ease;
-      }
-
-      @include when-inside('.scrolled') {
-        padding-top: 0;
-        padding-bottom: 0;
-
-        img {
-          height: 2.5rem;
-        }
-      }
-    }
-
-    .nav-item {
-      .nav-link {
-        font-weight: 300;
-        color: #789;
-      }
-
-      &.active,
-      &:hover {
-        .nav-link {
-          font-weight: 400;
-          color: #567;
-        }
-      }
-
-      .dropdown-item {
-        a {
-          font-weight: 300;
-          color: #789;
-          text-decoration: none;
-        }
-
-        &.active,
-        &:hover {
-          a {
-            font-weight: 400;
-            color: #567;
-          }
-        }
-      }
-    }
-
-    .input-group-addon {
-      background-color: transparent;
-    }
-
-    .form-control {
-      background-color: transparent;
-    }
-  }
-}
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+// 5. Page-specific styles
+@import 'pages/home';
