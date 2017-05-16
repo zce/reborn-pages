@@ -7,7 +7,6 @@ const runSequence = require('run-sequence')
 const mainBowerFiles = require('main-bower-files')
 
 const $ = gulpLoadPlugins()
-const reload = browserSync.reload
 
 const src = 'app'
 const temp = '.tmp'
@@ -24,10 +23,11 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
+    // https://github.com/gulp-sourcemaps/gulp-sourcemaps/issues/60
+    .pipe($.if(!dev, $.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] })))
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest(temp))
-    .pipe(reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('scripts', () => {
@@ -37,7 +37,7 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest(temp))
-    .pipe(reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('views', () => {
@@ -45,13 +45,13 @@ gulp.task('views', () => {
     .pipe($.plumber())
     .pipe($.pug({ pretty: true }))
     .pipe(gulp.dest(temp))
-    .pipe(reload({ stream: true }));
+    .pipe(browserSync.reload({ stream: true }));
 })
 
 gulp.task('lint', () => {
   return gulp.src(`${src}/**/*.js`, { base: src })
     .pipe($.eslint({ fix: true }))
-    .pipe(reload({ stream: true, once: true }))
+    .pipe(browserSync.reload({ stream: true, once: true }))
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
     .pipe(gulp.dest(src))
@@ -110,7 +110,7 @@ gulp.task('serve', () => {
       `${src}/*.html`,
       `${src}/**/images/**/*`,
       `${temp}/**/fonts/**/*`
-    ]).on('change', reload)
+    ]).on('change', browserSync.reload)
 
     gulp.watch(`${src}/**/*.pug`, ['views'])
     gulp.watch(`${src}/**/*.scss`, ['styles'])
