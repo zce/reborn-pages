@@ -1,3 +1,152 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.section {
+  padding: 120px 0;
+
+  .article {
+    position: relative;
+    height: 420px;
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 34px;
+      font-weight: normal;
+      line-height: 48px;
+      color: $color-5;
+    }
+
+    p {
+      font-size: 18px;
+      text-indent: 2em;
+      color: $color-6;
+    }
+
+    .btn-capsule {
+      position: absolute;
+      left: 30px;
+      bottom: 0;
+      border-radius: 25px;
+    }
+  }
+
+  .feature {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px $color-a;
+
+    img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+    }
+  }
+}
+
+#first {
+  background-color: $color-e;
+
+  .follow {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 14px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      float: left;
+      margin-left: 10px;
+
+      a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $color-9;
+        border-radius: 50%;
+        color: $color-5;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+
+        @include on-event {
+          color: $color-3;
+        }
+      }
+    }
+  }
+}
+
+#second {
+  background-color: $color-f;
+
+  .heading {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-weight: normal;
+      color: $color-5;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: $color-7;
+    }
+
+    hr {
+      margin-bottom: 50px;
+      width: 100px;
+    }
+  }
+
+  // .item {
+  //   display: block;
+  //   margin-bottom: 50px;
+  //   background-color: $color-f;
+  //   box-shadow: 0 2px 10px $color-d;
+  //   color: $color-4;
+  //   text-decoration: none;
+  //   transition: box-shadow .3s ease;
+
+  //   @include on-event {
+  //     color: $color-4;
+  //     text-decoration: none;
+  //   }
+
+  //   .thumbnail {
+  //     width: 100%;
+  //     height: 270px;
+  //     object-fit: cover;
+  //   }
+
+  //   .time {
+  //     margin: -34px 15px 10px;
+  //     color: $color-e;
+  //   }
+
+  //   .title {
+  //     margin: 28px 15px;
+  //     font-size: 20px;
+  //   }
+
+  //   .category {
+
+  //   }
+
+  //   &:hover {
+  //     box-shadow: 0 2px 20px $color-c;
+  //   }
+  // }
+}
+
+#third {
+  background-color: $color-f;
+}

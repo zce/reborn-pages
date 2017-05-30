@@ -1,0 +1,41 @@
+.btn-rounded {
+  &, &:focus {
+    color: $color-e;
+    background-color: $color-6;
+    border-color: $color-6;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $color-d;
+    background-color: $color-7;
+    border-color: $color-7;
+  }
+
+  &:active {
+    color: $color-e;
+    background-color: $color-5;
+    border-color: $color-5;
+  }
+}
+
+.btn-capsule {
+  &, &:focus {
+    color: $color-e;
+    background-color: $color-6;
+    border-color: $color-6;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $color-d;
+    background-color: $color-7;
+    border-color: $color-7;
+  }
+
+  &:active {
+    color: $color-e;
+    background-color: $color-5;
+    border-color: $color-5;
+  }
+}

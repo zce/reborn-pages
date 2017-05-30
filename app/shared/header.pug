@@ -1,31 +1,40 @@
-header.header.reborn-header
-  nav.navbar.navbar-toggleable-md.navbar-light.reborn-navbar.fixed-top
+header#header
+  nav.navbar.navbar-toggleable-md.navbar-light
     .container
-      button.navbar-toggler.navbar-toggler-right
-        span.navbar-toggler-icon
+      button.navbar-toggler.navbar-toggler-right(data-toggle="collapse", data-target="#top-menu"): span.navbar-toggler-icon
 
       a.navbar-brand(href="#")
         span.sr-only WEDN.NET
         img(src="assets/images/logo.svg", alt="WEDN.NET", height="50")
 
       #top-menu.navbar-collapse.collapse
-        ul.navbar-nav.ml-1.mr-auto
-          li.nav-item
-            a.nav-link.active(href="#") 首页
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href="#") 首页
           li.nav-item
             a.nav-link(href="#") 学习
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") 博客
             .dropdown-menu
-              a.dropdown-item 未分类
-              a.dropdown-item 爱生活
-              a.dropdown-item 爱旅行
-              a.dropdown-item 音乐
-              a.dropdown-item 诗和远方
+              a.dropdown-item(href="#") 未分类
+              a.dropdown-item(href="#") 爱生活
+              a.dropdown-item(href="#") 爱旅行
+              a.dropdown-item(href="#") 音乐
+              a.dropdown-item(href="#") 诗和远方
           li.nav-item
             a.nav-link(href="#") 关于
 
         form.form-inline(action="/")
-          label.input-group.input-group-sm
-            i.input-group-addon.icon-magnifier
-            input.form-control(type="search", name="q", placeholder="搜索...")
+          label
+            input.form-control(type="search", name="q", placeholder="搜索...", autocomplete="off")
+            i.icon-magnifier
+
+  .cover
+    .intro
+      h1.title One Belt, One Road
+      h3.slogan Thoughts, stories and ideas.
+      a.btn.btn-rounded.btn-lg(href="#first") Take me start
+    .media
+      //- video(src="uploads/intro.mp4", width="2000", height="1200", autoplay, loop)
+      img(src="uploads/intro.jpg", alt="WEDN.NET")
+      .mask

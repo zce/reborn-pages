@@ -1,7 +1,224 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+// https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
+/*
+Display
+Positioning
+Box model
+Colors and Typography
+Other
+*/
 
-.reborn-header {
-  background-color: #fff;
+#header {
+  position: relative;
+  overflow: hidden;
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #fff;
+    // TODO: when in `scrolled`
+    // box-shadow: 0 .125rem .125rem rgba($color-4, .2);
+
+    .navbar-toggler {
+      top: 50%;
+      margin-top: -20px;
+    }
+
+    .navbar-brand {
+      min-width: 200px;
+      // > img {
+      //   // height: 50px;
+      //   // TODO: when in `scrolled`
+      //   // object-fit: cover;
+      // }
+    }
+
+    .nav-link {
+      color: $color-8;
+    }
+
+    .active .nav-link,
+    .nav-link:hover {
+      font-weight: $font-weight-bold;
+      color: $color-6;
+    }
+
+    .dropdown-item {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .form-inline > label {
+      position: relative;
+
+      i {
+        position: absolute;
+        left: 10px;
+        color: $color-6;
+      }
+
+      input {
+        width: 160px;
+        padding-left: 32px;
+        border-color: $color-b;
+        transition: border-color .5s ease,
+                    width .3s ease;
+
+        &:focus {
+          width: 280px;
+          border-color: $color-6;
+
+          & + i {
+            color: $color-4;
+          }
+        }
+      }
+    }
+  }
+
+  .cover {
+    display: flex;
+    height: 680px;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+
+      .title,
+      .slogan {
+        font-family: 'againts';
+      }
+
+      .title {
+        font-size: 64px;
+        color: $color-e;
+      }
+
+      .slogan {
+        font-size: 32px;
+        color: $color-d;
+      }
+
+      .btn {
+        margin-top: 30px;
+        opacity: .9;
+      }
+    }
+
+    .media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background: url(../images/mask.png);
+        opacity: .8;
+      }
+    }
+  }
 }
+
+// TODO: Dropdown Arrow
+// .dropdown {
+//   .nav-link::after,
+//   &::after {
+//     font: 12px 'simple-line-icons';
+//   }
+//   .nav-link::after {
+//     content: '\e604';
+//     margin-left: 5px;
+//   }
+//   &::after {
+//     content: '\e607';
+//     position: absolute;
+//     right: 8px;
+//     bottom: -5px;
+//     z-index: 2000;
+//     width: 12px;
+//     background-color: #fff;
+//     color: #c0c0c0;
+//   }
+
+//   &.show::after{
+//     visibility: visible;
+//   }
+// }
+
+// .dropdown-toggle {
+//   font-family: 'simple-line-icons';
+//   speak: none;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+
+//   &::before {
+//     content: '\e604';
+//     width: 12px;
+//     height: 20px;
+//     margin-left: 5px;
+//     vertical-align: middle;
+//     font-size: 12px;
+//     line-height: 20px;
+//     border: 0;
+//   }
+// }
+
+// .show .dropdown-toggle::after {
+
+// }
+
+// .dropdown-menu::before,
+// .dropdown-menu::after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   top: -20px;
+//   left: 35px;
+//   border-width: 10px;
+//   border-style: solid;
+//   border-color: transparent;
+//   border-bottom-color: $dropdown-border-color;
+//   width: 0;
+//   height: 0;
+//   // border: $dropdown-border-width solid $dropdown-border-color;
+// }
+
+// .dropdown-menu:after {
+//   top: -20px + $dropdown-border-width;
+//   border-bottom-color: $dropdown-bg;
+// }
+
+// .dropdown-item {
+//   @include hover-focus {
+//     font-weight: $font-weight-bold;
+//   }
+// }

@@ -31,18 +31,15 @@ html.no-js(lang='')
     script(src='/bower_components/modernizr/modernizr.js')
     //- endbuild
   body
-    <!--[if lt IE 10]>
-      p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
-
-    <a class="sr-only" href="#content">跳转到内容区</a>
-
-    include header
-
     #page.wrapper
+
+      //- a.sr-only(href="#content") 跳转到内容区
+
+      include header
+
       block wrapper
 
-    include footer
+      include footer
 
     //- build:js assets/scripts/vendor.js
     //- bower:js
@@ -53,16 +50,16 @@ html.no-js(lang='')
 
     //- build:js assets/scripts/plugins.js
     script(src='/bower_components/bootstrap/js/dist/util.js')
-    script(src='/bower_components/bootstrap/js/dist/alert.js')
-    script(src='/bower_components/bootstrap/js/dist/button.js')
-    script(src='/bower_components/bootstrap/js/dist/carousel.js')
-    script(src='/bower_components/bootstrap/js/dist/collapse.js')
+    //- script(src='/bower_components/bootstrap/js/dist/alert.js')
+    //- script(src='/bower_components/bootstrap/js/dist/button.js')
+    //- script(src='/bower_components/bootstrap/js/dist/carousel.js')
+    //- script(src='/bower_components/bootstrap/js/dist/collapse.js')
     script(src='/bower_components/bootstrap/js/dist/dropdown.js')
-    script(src='/bower_components/bootstrap/js/dist/modal.js')
-    script(src='/bower_components/bootstrap/js/dist/scrollspy.js')
-    script(src='/bower_components/bootstrap/js/dist/tab.js')
-    script(src='/bower_components/bootstrap/js/dist/tooltip.js')
-    script(src='/bower_components/bootstrap/js/dist/popover.js')
+    //- script(src='/bower_components/bootstrap/js/dist/modal.js')
+    //- script(src='/bower_components/bootstrap/js/dist/scrollspy.js')
+    //- script(src='/bower_components/bootstrap/js/dist/tab.js')
+    //- script(src='/bower_components/bootstrap/js/dist/tooltip.js')
+    //- script(src='/bower_components/bootstrap/js/dist/popover.js')
     //- endbuild
 
     //- build:js assets/scripts/main.js

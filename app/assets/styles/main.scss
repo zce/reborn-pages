@@ -10,6 +10,7 @@
  * Text Domain: wedn
  * Tags: blog
  *
+ * https://www.iotacss.com/
  * The main stylesheet. It is required in all themes and contains the information header for your theme.
  */
 @charset 'UTF-8';
@@ -20,15 +21,34 @@
 // 2. Helpers
 @import 'helpers/helpers';
 
-// 2. Vendors
+// 3. Vendors
 // bower:scss
 @import 'bower_components/bootstrap/scss/bootstrap.scss';
 // endbower
 
-// 3. Layout
+// 4. Fonts
+@font-face {
+	font-family: 'againts';
+	src: url('../fonts/againts.eot');
+	src: url('../fonts/againts.eot') format('embedded-opentype'),
+		url('../fonts/againts.svg#againts') format('svg'),
+		url('../fonts/againts.woff') format('woff'),
+		url('../fonts/againts.ttf') format('truetype');
+}
+
+// 5. Components
+@import 'components/button';
+
+// 6. Globals
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 6. Layout
 @import 'layout/header';
 @import 'layout/sidebar';
 @import 'layout/footer';
 
-// 5. Page-specific styles
+// 7. Page-specific styles
 @import 'pages/home';
