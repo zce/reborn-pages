@@ -11,7 +11,7 @@
 // TODO: when in `scrolled`
 // @include media-breakpoint-down('sm')
 
-#header {
+.header {
   position: relative;
   overflow: hidden;
 
@@ -136,87 +136,3 @@
     }
   }
 }
-
-
-
-
-
-
-// TODO: Dropdown Arrow
-// .dropdown {
-//   .nav-link::after,
-//   &::after {
-//     font: 12px 'simple-line-icons';
-//   }
-//   .nav-link::after {
-//     content: '\e604';
-//     margin-left: 5px;
-//   }
-//   &::after {
-//     content: '\e607';
-//     position: absolute;
-//     right: 8px;
-//     bottom: -5px;
-//     z-index: 2000;
-//     width: 12px;
-//     background-color: #fff;
-//     color: #c0c0c0;
-//   }
-
-//   &.show::after{
-//     visibility: visible;
-//   }
-// }
-
-// .dropdown-toggle {
-//   font-family: 'simple-line-icons';
-//   speak: none;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-variant: normal;
-//   text-transform: none;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-
-//   &::before {
-//     content: '\e604';
-//     width: 12px;
-//     height: 20px;
-//     margin-left: 5px;
-//     vertical-align: middle;
-//     font-size: 12px;
-//     line-height: 20px;
-//     border: 0;
-//   }
-// }
-
-// .show .dropdown-toggle::after {
-
-// }
-
-// .dropdown-menu::before,
-// .dropdown-menu::after {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   top: -20px;
-//   left: 35px;
-//   border-width: 10px;
-//   border-style: solid;
-//   border-color: transparent;
-//   border-bottom-color: $dropdown-border-color;
-//   width: 0;
-//   height: 0;
-//   // border: $dropdown-border-width solid $dropdown-border-color;
-// }
-
-// .dropdown-menu:after {
-//   top: -20px + $dropdown-border-width;
-//   border-bottom-color: $dropdown-bg;
-// }
-
-// .dropdown-item {
-//   @include hover-focus {
-//     font-weight: $font-weight-bold;
-//   }
-// }

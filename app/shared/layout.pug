@@ -33,7 +33,7 @@ html.no-js(lang='')
   body
     #page.wrapper
 
-      //- a.sr-only(href="#content") 跳转到内容区
+      a.sr-only(href="#content") 跳转到内容区
 
       include header
 
@@ -44,7 +44,7 @@ html.no-js(lang='')
     //- build:js assets/scripts/vendor.js
     //- bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
-    script(src='/bower_components/tether/dist/js/tether.js')
+    script(src='/bower_components/popper.js/index.js')
     //- endbower
     //- endbuild
 
@@ -53,7 +53,7 @@ html.no-js(lang='')
     //- script(src='/bower_components/bootstrap/js/dist/alert.js')
     //- script(src='/bower_components/bootstrap/js/dist/button.js')
     //- script(src='/bower_components/bootstrap/js/dist/carousel.js')
-    //- script(src='/bower_components/bootstrap/js/dist/collapse.js')
+    script(src='/bower_components/bootstrap/js/dist/collapse.js')
     script(src='/bower_components/bootstrap/js/dist/dropdown.js')
     //- script(src='/bower_components/bootstrap/js/dist/modal.js')
     //- script(src='/bower_components/bootstrap/js/dist/scrollspy.js')

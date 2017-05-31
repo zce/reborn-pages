@@ -1,10 +1,10 @@
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
-const browserSync = require('browser-sync').create()
+const mainBowerFiles = require('main-bower-files')
+const runSequence = require('run-sequence')
 const del = require('del')
 const wiredep = require('wiredep').stream
-const runSequence = require('run-sequence')
-const mainBowerFiles = require('main-bower-files')
+const browserSync = require('browser-sync').create()
 
 const $ = gulpLoadPlugins()
 

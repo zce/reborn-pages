@@ -13,7 +13,6 @@
  * https://www.iotacss.com/
  * The main stylesheet. It is required in all themes and contains the information header for your theme.
  */
-@charset 'UTF-8';
 
 // 1. Variables
 @import 'variables/variables';
@@ -21,12 +20,7 @@
 // 2. Helpers
 @import 'helpers/helpers';
 
-// 3. Vendors
-// bower:scss
-@import 'bower_components/bootstrap/scss/bootstrap.scss';
-// endbower
-
-// 4. Fonts
+// 3. Fonts
 @font-face {
 	font-family: 'againts';
 	src: url('../fonts/againts.eot');
@@ -35,6 +29,11 @@
 		url('../fonts/againts.woff') format('woff'),
 		url('../fonts/againts.ttf') format('truetype');
 }
+
+// 4. Vendors
+// bower:scss
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
+// endbower
 
 // 5. Components
 @import 'components/button';

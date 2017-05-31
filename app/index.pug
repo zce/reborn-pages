@@ -6,28 +6,29 @@ block global
 
 block wrapper
 
-  section#first.section
+  section.section.first.py-7.bg-faded
     .container
       .row
         .col-md-13
-          .article
+          article.article
             h2.title 忘掉那些不开心，发现生活中的美好
             p 艺术家罗丹说过：“生活中并不缺少美，缺少的是发现美的眼睛。”我坚信这句话，这不，我发现了身边的美。
             p 法国着名雕塑家罗丹曾说过：“美是到处都有的。对于我们的眼睛，不是缺少美，而是缺少发现。”我听了这话深有感触，于是便在公园里寻找起了美。
             p 风呼呼的吹，花儿随风摆动，显得那么美，我不由心想 风呼呼的吹，花儿随风摆动，显得那么美，我不由心想……
-            a.btn.btn-capsule.btn-lg(href="#") 继续阅读
-          .follow Follow me:
-            ul
-              li: a.icon-social-twitter(href="#")
-              li: a.icon-social-facebook(href="#")
-              li: a.icon-social-tumblr(href="#")
-              li: a.icon-social-github(href="#")
-              li: a.icon-social-google(href="#")
+            a.btn.btn-primary.btn-capsule(href="#") 继续阅读
+          ul.list-inline
+            li.list-inline-item Follow me:
+            li.list-inline-item: a.icon-social-twitter(href="#")
+            li.list-inline-item: a.icon-social-facebook(href="#")
+            li.list-inline-item: a.icon-social-tumblr(href="#")
+            li.list-inline-item: a.icon-social-github(href="#")
+            li.list-inline-item: a.icon-social-google(href="#")
         .col-md-10.offset-md-1
-          .feature
-            img(src="uploads/feature1.png", alt="忘掉那些不开心，发现生活中的美好")
+          figure.figure.d-block.p-4
+            a(href="#"): img.figure-img.img-fluid.w-100(src="uploads/feature1.png", alt="忘掉那些不开心，发现生活中的美好")
+            figcaption.figure-caption.sr-only 忘掉那些不开心，发现生活中的美好
 
-  section#second.section
+  section.section.second.py-7
     .container
       .heading
         h2 最近文章
@@ -44,8 +45,8 @@ block wrapper
               p.card-text 世上最美的红沙漠里有一个神秘的死亡谷
             div.card-footer.text-muted 旅行
 
-  section#third.section
+  section.section.third.py-7.bg-faded
 
-  section#fourth.section
+  section.section.fourth.py-7
 
-  section#sixth.section
+  section.section.sixth.py-7.bg-faded

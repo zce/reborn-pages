@@ -2,9 +2,11 @@
   "name": "reborn",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "v4-dev",
     "modernizr": "^2.8.1",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "jquery": "^3.2.1",
+    "popper.js": "https://unpkg.com/popper.js"
   },
   "overrides": {
     "bootstrap": {

@@ -1,13 +1,16 @@
-header#header
-  nav.navbar.navbar-toggleable-md.navbar-light
-    .container
-      button.navbar-toggler.navbar-toggler-right(data-toggle="collapse", data-target="#top-menu"): span.navbar-toggler-icon
-
+header.header
+  .navbar.navbar-toggleable-sm.navbar-light
+    .container.d-flex.justify-content-between
       a.navbar-brand(href="#")
         span.sr-only WEDN.NET
         img(src="assets/images/logo.svg", alt="WEDN.NET", height="50")
 
-      #top-menu.navbar-collapse.collapse
+      //- https://github.com/twbs/bootstrap/issues/21846
+      button.navbar-toggler(data-toggle="collapse", data-target="#top-menu")
+        span.navbar-toggler-icon
+
+      //- http://bootsnipp.com/snippets/featured/navbar-lateral-slide-menu
+      nav#top-menu.navbar-collapse.collapse
         ul.navbar-nav.mr-auto
           li.nav-item.active
             a.nav-link(href="#") 首页
@@ -31,9 +34,9 @@ header#header
 
   .cover
     .intro
-      h1.title One Belt, One Road
-      h3.slogan Thoughts, stories and ideas.
-      a.btn.btn-rounded.btn-lg(href="#first") Take me start
+      h1.title.display-1 One Belt, One Road
+      h3.slogan.display-4 Thoughts, stories and ideas.
+      a.btn.btn-primary.btn-capsule.btn-lg(href="#first") Take me start
     .media
       //- video(src="uploads/intro.mp4", width="2000", height="1200", autoplay, loop)
       img(src="uploads/intro.jpg", alt="WEDN.NET")
