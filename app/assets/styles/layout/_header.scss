@@ -2,13 +2,14 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 // https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
-/*
-Display
-Positioning
-Box model
-Colors and Typography
-Other
-*/
+// Display
+// Positioning
+// Box model
+// Colors and Typography
+// Other
+// --------------------------
+// TODO: when in `scrolled`
+// @include media-breakpoint-down('sm')
 
 #header {
   position: relative;
@@ -17,26 +18,12 @@ Other
   .navbar {
     position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 10;
     width: 100%;
-    padding-top: 6px;
-    padding-bottom: 6px;
     background-color: #fff;
-    // TODO: when in `scrolled`
-    // box-shadow: 0 .125rem .125rem rgba($color-4, .2);
-
-    .navbar-toggler {
-      top: 50%;
-      margin-top: -20px;
-    }
 
     .navbar-brand {
       min-width: 200px;
-      // > img {
-      //   // height: 50px;
-      //   // TODO: when in `scrolled`
-      //   // object-fit: cover;
-      // }
     }
 
     .nav-link {
@@ -59,13 +46,15 @@ Other
 
       i {
         position: absolute;
-        left: 10px;
+        left: 0;
+        top: 0;
+        margin: 11px;
         color: $color-6;
       }
 
       input {
         width: 160px;
-        padding-left: 32px;
+        padding-left: 38px;
         border-color: $color-b;
         transition: border-color .5s ease,
                     width .3s ease;
@@ -77,6 +66,10 @@ Other
           & + i {
             color: $color-4;
           }
+        }
+
+        @include media-breakpoint-down('sm') {
+          width: auto;
         }
       }
     }
@@ -143,6 +136,11 @@ Other
     }
   }
 }
+
+
+
+
+
 
 // TODO: Dropdown Arrow
 // .dropdown {
