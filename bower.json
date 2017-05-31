@@ -4,8 +4,8 @@
   "dependencies": {
     "bootstrap": "v4-dev",
     "modernizr": "^2.8.3",
-    "popper.js": "https://unpkg.com/popper.js",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "popper.js": "https://unpkg.com/popper.js"
   },
   "overrides": {
     "bootstrap": {
@@ -19,7 +19,8 @@
     },
     "simple-line-icons": {
       "main": [
-        "css/simple-line-icons.css"
+        "css/simple-line-icons.css",
+        "fonts/*"
       ]
     }
   }

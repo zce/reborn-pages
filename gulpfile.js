@@ -76,18 +76,24 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
 })
 
 gulp.task('images', () => {
-  return gulp.src(`${src}/**/images/**/*`, { base: src })
+  return gulp.src([`${src}/**/images/**/*`, `${src}/uploads/**/*`], { base: src })
     .pipe($.cache($.imagemin()))
     .pipe(gulp.dest(dist))
 })
 
 gulp.task('fonts', () => {
-  return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}').concat(`${src}/**/fonts/**/*`), { base: src })
+  if (!dev) {
+    // TODO: bower component folder structure
+    gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}'))
+      .pipe(gulp.dest(`${dist}/assets/fonts`))
+  }
+
+  return gulp.src(`${src}/**/fonts/**/*`, { base: src })
     .pipe($.if(dev, gulp.dest(temp), gulp.dest(dist)))
 })
 
 gulp.task('extras', () => {
-  return gulp.src([`${src}/*`, `!${src}/**/*.html`, `!${src}/**/*.pug`], { base: src, dot: true })
+  return gulp.src([`${src}/*.*`, `!${src}/**/*.html`, `!${src}/**/*.pug`], { base: src, dot: true })
     .pipe(gulp.dest(dist))
 })
 
