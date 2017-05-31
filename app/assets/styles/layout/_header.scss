@@ -43,6 +43,7 @@
 
     .form-inline > label {
       position: relative;
+      width: 100%;
 
       i {
         position: absolute;
@@ -53,14 +54,14 @@
       }
 
       input {
-        width: 160px;
+        max-width: 160px;
         padding-left: 38px;
         border-color: $color-b;
         transition: border-color .5s ease,
-                    width .3s ease;
+                    max-width .3s ease;
 
         &:focus {
-          width: 280px;
+          max-width: 280px;
           border-color: $color-6;
 
           & + i {
@@ -69,7 +70,7 @@
         }
 
         @include media-breakpoint-down('sm') {
-          width: auto;
+          width: 100%;
         }
       }
     }
