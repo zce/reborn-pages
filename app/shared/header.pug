@@ -1,43 +1,45 @@
 header.header
-  .navbar.navbar-expand-lg.navbar-light
+  .navbar.navbar-expand-lg.navbar-light.bg-faded
     .container
-      a.navbar-brand(href="#")
+      a.navbar-brand(href='#')
         span.sr-only WEDN.NET
-        img(src="assets/images/logo.svg", alt="WEDN.NET", height="50")
+        img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
 
       //- https://github.com/twbs/bootstrap/issues/21846
-      button.navbar-toggler(data-toggle="collapse", data-target="#top-menu")
+      button.navbar-toggler(data-toggle='collapse', data-target='#site-menu')
         span.navbar-toggler-icon
 
       //- http://bootsnipp.com/snippets/featured/navbar-lateral-slide-menu
-      nav#top-menu.navbar-collapse.collapse
+      nav#site-menu.navbar-collapse.collapse
         ul.navbar-nav.mr-auto
           li.nav-item.active
-            a.nav-link(href="#") 首页
+            a.nav-link(href='#') 首页
+              span.sr-only (current)
           li.nav-item
-            a.nav-link(href="#") 学习
+            a.nav-link(href='#') 学习
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") 博客
+            a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown') 博客
             .dropdown-menu
-              a.dropdown-item(href="#") 未分类
-              a.dropdown-item(href="#") 爱生活
-              a.dropdown-item(href="#") 爱旅行
-              a.dropdown-item(href="#") 音乐
-              a.dropdown-item(href="#") 诗和远方
+              a.dropdown-item(href='#') 未分类
+              a.dropdown-item(href='#') 爱生活
+              a.dropdown-item(href='#') 爱旅行
+              a.dropdown-item(href='#') 音乐
+              a.dropdown-item(href='#') 诗和远方
           li.nav-item
-            a.nav-link(href="#") 关于
+            a.nav-link(href='#') 关于
+          li.nav-item
+            a.nav-link(href='#') TRY IT
 
-        form.form-inline(action="/")
-          label
-            input.form-control(type="search", name="q", placeholder="搜索...", autocomplete="off")
-            i.icon-magnifier
+        form.form-inline(action='/')
+          input#search-form.form-control(type='search', name='q', placeholder='搜索...', autocomplete='off')
+          label(for='search-form'): i.icon-magnifier
 
   .cover
-    .intro
+    .intro.text-white.d-flex.flex-column.justify-content-center.align-items-center
       h1.title.display-1 One Belt, One Road
-      h3.slogan.display-4 Thoughts, stories and ideas.
-      a.btn.btn-primary.btn-capsule.btn-lg(href="#first") Take me start
+      h3.slogan.display-4.mb-5 Thoughts, stories and ideas.
+      a.btn.btn-primary.btn-capsule.btn-lg(href='#first') Take me start
     .media
-      img(src="uploads/intro.jpg", alt="WEDN.NET")
-      //- video(src="uploads/intro.mp4", width="2000", height="1200", autoplay, loop)
-      //- .mask
+      i.mask
+      img(src='uploads/intro.jpg', alt='WEDN.NET')
+      //- video(src='uploads/intro.mp4', width='2000', height='1200', autoplay, loop)

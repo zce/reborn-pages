@@ -8,104 +8,38 @@
 // Colors and Typography
 // Other
 // --------------------------
-// TODO: when in `scrolled`
-// @include media-breakpoint-down('sm')
 
 .header {
   position: relative;
   overflow: hidden;
 
   .navbar {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: #fff;
-
-    .navbar-brand {
-      min-width: 200px;
-    }
-
-    .nav-link {
-      color: $color-8;
-    }
-
-    .active .nav-link,
-    .nav-link:hover {
-      font-weight: $font-weight-bold;
-      color: $color-6;
-    }
-
-    .dropdown-item {
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    .form-inline > label {
+    .form-inline {
       position: relative;
-      width: 100%;
+      overflow: hidden;
 
-      i {
+      .form-control {
+        padding-left: $input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height;
+      }
+
+      label {
         position: absolute;
         left: 0;
         top: 0;
-        margin: 11px;
-        color: $color-6;
-      }
-
-      input {
-        max-width: 160px;
-        padding-left: 38px;
-        border-color: $color-b;
-        transition: border-color .5s ease,
-                    max-width .3s ease;
-
-        &:focus {
-          max-width: 280px;
-          border-color: $color-6;
-
-          & + i {
-            color: $color-4;
-          }
-        }
-
-        @include media-breakpoint-down('sm') {
-          width: 100%;
-        }
+        bottom: 0;
+        padding: (($input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height) - $font-size-base) / 2;
+        // font-size: $font-size-base;
       }
     }
   }
 
   .cover {
-    display: flex;
-    height: 680px;
-
     .intro {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      justify-content: center;
-      align-items: center;
-      margin-top: 70px;
+      height: 37.5rem;
+      text-align: center;
 
-      .title,
-      .slogan {
+      h1, h3 {
         font-family: 'againts';
-      }
-
-      .title {
-        font-size: 64px;
-        color: $color-e;
-      }
-
-      .slogan {
-        font-size: 32px;
-        color: $color-d;
-      }
-
-      .btn {
-        margin-top: 30px;
-        opacity: .9;
       }
     }
 
@@ -137,3 +71,134 @@
     }
   }
 }
+
+
+// TODO: when in `scrolled`
+// @include media-breakpoint-down('sm')
+
+// .header {
+//   position: relative;
+//   overflow: hidden;
+
+//   .navbar {
+//     position: absolute;
+//     top: 0;
+//     z-index: 10;
+//     width: 100%;
+//     background-color: #fff;
+
+//     .navbar-brand {
+//       min-width: 200px;
+//     }
+
+//     .nav-link {
+//       color: $color-8;
+//     }
+
+//     .active .nav-link,
+//     .nav-link:hover {
+//       font-weight: $font-weight-bold;
+//       color: $color-6;
+//     }
+
+//     .dropdown-item {
+//       font-size: 14px;
+//       line-height: 24px;
+//     }
+
+//     .form-inline > label {
+//       position: relative;
+//       width: 100%;
+
+//       i {
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         margin: 11px;
+//         color: $color-6;
+//       }
+
+//       input {
+//         max-width: 160px;
+//         padding-left: 38px;
+//         border-color: $color-b;
+//         transition: border-color .5s ease,
+//                     max-width .3s ease;
+
+//         &:focus {
+//           max-width: 280px;
+//           border-color: $color-6;
+
+//           & + i {
+//             color: $color-4;
+//           }
+//         }
+
+//         @include media-breakpoint-down('sm') {
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+
+//   .cover {
+//     display: flex;
+//     height: 680px;
+
+//     .intro {
+//       display: flex;
+//       flex-direction: column;
+//       flex: 1;
+//       justify-content: center;
+//       align-items: center;
+//       margin-top: 70px;
+
+//       .title,
+//       .slogan {
+//         font-family: 'againts';
+//       }
+
+//       .title {
+//         font-size: 64px;
+//         color: $color-e;
+//       }
+
+//       .slogan {
+//         font-size: 32px;
+//         color: $color-d;
+//       }
+
+//       .btn {
+//         margin-top: 30px;
+//         opacity: .9;
+//       }
+//     }
+
+//     .media {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//       z-index: -1;
+
+//       img,
+//       video {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+
+//       .mask {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         z-index: 100;
+//         background: url(../images/mask.png);
+//         opacity: .8;
+//       }
+//     }
+//   }
+// }
