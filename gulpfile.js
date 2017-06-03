@@ -10,7 +10,7 @@ const $ = gulpLoadPlugins()
 
 const src = 'app'
 const temp = '.tmp'
-const dist = 'dist'
+const dist = 'docs'
 
 let dev = true
 
