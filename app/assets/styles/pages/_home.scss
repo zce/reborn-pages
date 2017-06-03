@@ -73,13 +73,71 @@
     }
   }
 
-  .more {
-    @extend .text-center;
+  .card {
+    overflow: hidden;
+    box-shadow: 0 0 1rem #e0e0e0;
+    transition: box-shadow .5s;
+    @extend .border-0;
+    @extend .mb-5;
 
-    .btn {
-      padding-left: $input-btn-padding-x-lg * 2.5;
-      padding-right: $input-btn-padding-x-lg * 2.5;
+    .card-img-overlay {
+      z-index: 1;
+      margin-bottom: 8.875rem;
+      background: linear-gradient(transparent, #2b3b49);
+      transition: opacity .3s;
+
+      .icon-pin {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: $card-img-overlay-padding;
+        font-size: 81.25%;
+        @extend .text-white;
+      }
     }
+
+    .card-img-top {
+      max-height: 16.875rem;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+
+    .card-block {
+      z-index: 1;
+      background-color: #fff;
+
+      .card-title {
+
+      }
+
+      .card-text {
+        @extend .text-truncate;
+      }
+    }
+
+    .card-footer {
+      border-color: #f0f0f0;
+      background-color: transparent;
+      font-size: 81.25%;
+      @extend .d-flex;
+      @extend .justify-content-between;
+      @extend .text-muted;
+    }
+
+    &:hover {
+      .card-img-overlay {
+        opacity: .6;
+      }
+
+      .card-img-top {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .more {
+    @extend .mt-5;
+    @extend .text-center;
   }
 }
 
@@ -151,6 +209,54 @@
       @extend .mb-6;
     }
   }
+
+  .card {
+    overflow: hidden;
+    box-shadow: 0 0 1rem #e0e0e0;
+    transition: box-shadow .5s;
+
+    .card-img-overlay {
+      z-index: 1;
+      margin-bottom: 2.75rem;
+      background: linear-gradient(rgba($brand-primary, .1), rgba($brand-primary, .6));
+      transition: opacity .3s;
+      @extend .d-flex;
+      @extend .justify-content-center;
+      @extend .align-items-center;
+      @extend .text-center;
+    }
+
+    .card-img-top {
+      transition: transform .3s;
+    }
+
+    .card-block {
+      flex: 0;
+      background-color: rgba($brand-primary, .8);
+      @extend .py-3;
+      @extend .text-white;
+    }
+
+    .card-footer {
+      z-index: 1;
+      border-color: #f0f0f0;
+      background-color: #fff;
+      font-size: 81.25%;
+      @extend .d-flex;
+      @extend .justify-content-between;
+      @extend .text-muted;
+    }
+
+    &:hover {
+      .card-img-overlay {
+        opacity: .8;
+      }
+
+      .card-img-top {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 
 .fifth {
@@ -159,5 +265,6 @@
 }
 
 .sixth {
+  @extend .py-8;
   @extend .py-8;
 }

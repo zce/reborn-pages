@@ -10,138 +10,14 @@ block global
 
 block wrapper
 
-  section.first: .container: .row
-    .col-md-7
-      article.article
-        h3.title 忘掉那些不开心，发现生活中的美好
-        div.content
-          p 艺术家罗丹说过：“生活中并不缺少美，缺少的是发现美的眼睛。”我坚信这句话，这不，我发现了身边的美。
-          p 法国着名雕塑家罗丹曾说过：“美是到处都有的。对于我们的眼睛，不是缺少美，而是缺少发现。”我听了这话深有感触，于是便在公园里寻找起了美。
-          p 风呼呼的吹，花儿随风摆动，显得那么美，我不由心想 风呼呼的吹，花儿随风摆动，显得那么美，我不由心想……
-        a.btn.btn-primary.btn-capsule(href='#') 继续阅读
-      ul.share.list-inline
-        li.list-inline-item Follow me:
-        li.list-inline-item: a.btn.btn-secondary.btn-circle.icon-social-twitter(href='#')
-        li.list-inline-item: a.btn.btn-secondary.btn-circle.icon-social-facebook(href='#')
-        li.list-inline-item: a.btn.btn-secondary.btn-circle.icon-social-tumblr(href='#')
-        li.list-inline-item: a.btn.btn-secondary.btn-circle.icon-social-github(href='#')
-        li.list-inline-item: a.btn.btn-secondary.btn-circle.icon-social-google(href='#')
+  include shared/home/first
 
-    .col-md-5
-      a(href='#'): figure.feature
-        img(src='uploads/feature1.jpeg', alt='忘掉那些不开心，发现生活中的美好')
-        figcaption.sr-only 忘掉那些不开心，发现生活中的美好
+  include shared/home/second
 
-  section.second: .container
-    .heading
-      h2.title 最近文章
-      p.subtitle 留住生活中的点点滴滴，贵在记录和分享
-      hr
+  include shared/home/third
 
-    .row
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog1.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
+  include shared/home/fourth
 
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog2.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
+  include shared/home/fifth
 
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog3.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
-
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog4.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
-
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog5.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
-
-      .col-md-4: .card.card-blog
-        .card-header: a(href='#')
-          img.card-img-top(src='uploads/blog6.jpeg', alt='demo')
-          span.card-img-overlay: i.icon-pin  2017年12月11日
-        .card-block
-          h5.card-title: a(href='#') 神秘的死亡谷
-          p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-        .card-footer
-          i.icon-paper-clip  旅行、远方
-          a.card-link(href='#') 继续阅读...
-
-    .more
-      a.btn.btn-primary.btn-capsule.btn-lg(href='') 发现更多
-
-  section.third: .container: .row
-    .col-md-5
-      a(href='#'): figure.feature
-        img(src='uploads/feature2.jpeg', alt='身体和灵魂，总有一个要在路上')
-        figcaption.sr-only 身体和灵魂，总有一个要在路上
-
-    .col-md-7
-      article.article
-        h3.title 要么读书,要么旅行
-        h5.subtitle 身体和灵魂，总有一个要在路上
-        div.content
-          p 她是一个自小就拥有流浪梦的狮子座女孩。在美国硕士毕业之后，她决定去追逐内心的声音，做真正想成为的那个自己。于是，她开始了打工、旅行的生活。在为期三个月的打工过程中，她与之前从未接触过的人们相处、打拼，学会了如何去战胜自己，如何努力做好那些之前从未接触过的工作。
-          p 在结束打工后，她毅然背起背包，开始了独行之旅。她享受睡灰狗巴士、搭便车的时光，在奔波中懂得了珍惜和感恩。在与二十多个沙发主人的相处中，她走进了每个人不同的片断生活。
-          p 通过和他们一起旅行、画画、谈音乐、做美食，聊社会文化，她有了新的领悟和收获。这些用文字、镜头和画笔记录下来的旅程点滴，成为她成长经历的真实证明。这个历程对她来说，只是生命长度中极其微小的缩影。怀揣梦想，继续上路，她对自己说只要你愿意，你也可以。
-        a.btn.btn-primary.btn-capsule(href='#') 继续阅读
-
-  section.fourth: .container
-    .heading
-      h2.title 最新分享
-      p.subtitle 咱们一起来玩点新鲜的、好玩的、有意思的内容
-      hr
-
-    .row
-      .col-md-4: .card.card-course
-        img.card-img-top(src='uploads/share3.jpeg', alt='demo')
-        a(href='#')
-          .card-img-overlay
-            .card-block
-              h5.card-title 开始使用 Electron
-              h6.card-subtitle Getting start
-        .card-footer
-          span 2017-12-11
-          span Electron
-
-  //- section.fifth
-
-  //- section.sixth
+  include shared/home/sixth
