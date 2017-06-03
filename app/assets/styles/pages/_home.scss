@@ -33,7 +33,7 @@
   .feature {
     background-color: #fff;
     box-shadow: 0 0 1rem #c0c0c0;
-    @extend .mb-0;
+    @extend .mb-3;
     @extend .p-4;
 
     img {
@@ -74,7 +74,7 @@
   @extend .bg-faded;
 
   .article {
-    @extend .pr-5;
+    @extend .pr-md-5;
     @extend .mb-5;
 
     .content {
@@ -128,13 +128,8 @@
 .third {
   @extend .bg-faded;
 
-  .feature {
-    transform: rotate(-15deg);
-  }
-
   .article {
-    @extend .pl-7;
-
+    @extend .pl-md-7;
     .content {
       @extend .mt-3;
 
@@ -147,6 +142,12 @@
     .btn {
       @extend .m-5;
       @extend .float-right;
+    }
+  }
+
+  @include media-breakpoint-up (sm) {
+    .feature {
+      transform: rotate(-15deg);
     }
   }
 }
