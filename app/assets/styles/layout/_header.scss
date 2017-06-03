@@ -52,11 +52,11 @@
       }
 
       .title {
-        font-size: 6rem;
+        font-size: 4rem; // 6rem;
       }
 
       .slogan {
-        font-size: 3rem;
+        font-size: 2.5rem; // 3rem;
         @extend .mb-5;
       }
     }
