@@ -71,3 +71,54 @@
     box-shadow: 0 0 1rem #c0c0c0;
   }
 }
+
+.card-course {
+  overflow: hidden;
+  box-shadow: 0 0 1rem #e0e0e0;
+  transition: box-shadow .5s;
+  @extend .border-0;
+  @extend .mb-6;
+
+  .card-img-top {
+    max-height: 12.5rem;
+    object-fit: cover;
+    transition: transform .3s;
+  }
+
+  .card-img-overlay {
+    background: linear-gradient(transparent, #2b3b49);
+    opacity: 1;
+    transition: opacity .3s;
+    margin-bottom: .8125rem * 1.5 + 1.5rem;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .text-white;
+  }
+
+  .card-block {
+    flex: 0;
+    background: rgba(#2b3b49, .8);
+    @extend .text-center;
+  }
+
+  .card-footer {
+    z-index: 1;
+    background-color: #fff;
+    font-size: .8125rem;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .text-muted;
+  }
+
+  &:hover {
+    .card-img-top {
+      transform: scale(1.1);
+    }
+
+    .card-img-overlay {
+      opacity: .8;
+    }
+  }
+}
