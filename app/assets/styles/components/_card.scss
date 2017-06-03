@@ -7,22 +7,11 @@
 
   .card-img-overlay {
     z-index: 1;
-    margin-bottom: 8.875rem;
-    background: linear-gradient(transparent, #2b3b49);
     transition: opacity .3s;
-
-    .icon-pin {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: $card-img-overlay-padding;
-      font-size: 81.25%;
-      @extend .text-white;
-    }
+    @extend .d-flex;
   }
 
   .card-img-top {
-    max-height: 16.875rem;
     object-fit: cover;
     transition: transform .3s;
   }
@@ -30,22 +19,25 @@
   .card-block {
     z-index: 1;
     background-color: #fff;
+  }
 
-    .card-title {
+  .card-title {
 
-    }
+  }
 
-    .card-text {
-      @extend .text-truncate;
-    }
+  .card-subtitle,
+  .card-text {
+    @extend .text-truncate;
   }
 
   .card-footer {
+    z-index: 1;
     border-color: #f0f0f0;
-    background-color: transparent;
+    background-color: #fff;
     font-size: 81.25%;
     @extend .d-flex;
     @extend .justify-content-between;
+    @extend .align-items-center;
     @extend .text-muted;
   }
 
