@@ -1,158 +1,163 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+// Display
+// Positioning
+// Box model
+// Colors and Typography
+// Other
+// --------------------------
 
-// .section {
-//   padding: 120px 0;
-// }
+.first {
+  @extend .py-8;
+  @extend.bg-faded;
 
-// -----------------------------------------------------------
+  .article {
+    @extend .pr-5;
+    @extend .mb-5;
 
-// .section {
-//   padding: 120px 0;
+    .title {
+      @extend .text-gray-dark;
+    }
 
-//   .article {
-//     position: relative;
-//     height: 420px;
+    .content {
+      @extend .mt-5;
 
-//     h2 {
-//       margin-bottom: 30px;
-//       font-size: 34px;
-//       font-weight: normal;
-//       line-height: 48px;
-//       color: $color-5;
-//     }
+      p {
+        font-size: 1.125rem;
+        text-indent: 2em;
+        line-height: 2;
+      }
+    }
 
-//     p {
-//       font-size: 18px;
-//       text-indent: 2em;
-//       color: $color-6;
-//     }
+    .btn {
+      @extend .m-4;
+    }
+  }
 
-//     .btn-capsule {
-//       position: absolute;
-//       left: 30px;
-//       bottom: 0;
-//       border-radius: 25px;
-//     }
-//   }
+  .share {
+    position: absolute;
+    bottom: 0;
+    @extend .ml-3;
+  }
 
-//   .feature {
-//     padding: 20px;
-//     background: #fff;
-//     box-shadow: 0 2px 10px $color-a;
+  .feature {
+    background-color: #fff;
+    box-shadow: 0 0 1rem #c0c0c0;
+    @extend .mb-0;
+    @extend .p-4;
 
-//     img {
-//       width: 100%;
-//       height: 460px;
-//       object-fit: cover;
-//     }
-//   }
-// }
+    img {
+      @extend .w-100;
+    }
+  }
+}
 
-// #first {
-//   background-color: $color-e;
+.second {
+  @extend .py-8;
 
-//   .follow {
-//     display: flex;
-//     align-items: center;
-//     margin-top: 50px;
-//     font-size: 14px;
+  .heading {
+    @extend .text-center;
 
-//     ul {
-//       margin: 0;
-//       padding: 0;
-//       list-style-type: none;
-//     }
+    .title {
+      @extend .mb-4;
+    }
 
-//     li {
-//       float: left;
-//       margin-left: 10px;
+    .subtitle {
+      @extend .text-muted;
+    }
 
-//       a {
-//         display: inline-block;
-//         width: 30px;
-//         height: 30px;
-//         border: 1px solid $color-9;
-//         border-radius: 50%;
-//         color: $color-5;
-//         line-height: 30px;
-//         text-align: center;
-//         text-decoration: none;
+    hr {
+      @extend .w-25;
+      @extend .mb-6;
+    }
+  }
 
-//         @include on-event {
-//           color: $color-3;
-//         }
-//       }
-//     }
-//   }
-// }
+  .more {
+    @extend .text-center;
 
-// #second {
-//   background-color: $color-f;
+    .btn {
+      padding-left: $input-btn-padding-x-lg * 2.5;
+      padding-right: $input-btn-padding-x-lg * 2.5;
+    }
+  }
+}
 
-//   .heading {
-//     text-align: center;
+.third {
+  @extend .py-8;
+  @extend .bg-faded;
 
-//     h2 {
-//       margin-bottom: 20px;
-//       font-size: 36px;
-//       font-weight: normal;
-//       color: $color-5;
-//     }
+  .feature {
+    background-color: #fff;
+    box-shadow: 0 0 1rem #c0c0c0;
+    transform: rotate(-15deg);
+    @extend .mb-0;
+    @extend .p-4;
 
-//     p {
-//       margin-bottom: 20px;
-//       font-size: 18px;
-//       color: $color-7;
-//     }
+    img {
+      @extend .w-100;
+    }
+  }
 
-//     hr {
-//       margin-bottom: 50px;
-//       width: 100px;
-//     }
-//   }
+  .article {
+    @extend .pl-7;
 
-//   // .item {
-//   //   display: block;
-//   //   margin-bottom: 50px;
-//   //   background-color: $color-f;
-//   //   box-shadow: 0 2px 10px $color-d;
-//   //   color: $color-4;
-//   //   text-decoration: none;
-//   //   transition: box-shadow .3s ease;
+    .title {
+      @extend .text-gray-dark;
+    }
 
-//   //   @include on-event {
-//   //     color: $color-4;
-//   //     text-decoration: none;
-//   //   }
+    .subtitle {
+      font-weight: normal;
+      @extend .text-muted;
 
-//   //   .thumbnail {
-//   //     width: 100%;
-//   //     height: 270px;
-//   //     object-fit: cover;
-//   //   }
+      &::before {
+        content: ' —— '
+      }
+    }
 
-//   //   .time {
-//   //     margin: -34px 15px 10px;
-//   //     color: $color-e;
-//   //   }
+    .content {
+      @extend .mt-3;
 
-//   //   .title {
-//   //     margin: 28px 15px;
-//   //     font-size: 20px;
-//   //   }
+      p {
+        font-size: 1rem;
+        text-indent: 2em;
+        line-height: 1.8;
+      }
+    }
 
-//   //   .category {
+    .btn {
+      @extend .m-5;
+      @extend .float-right;
+    }
+  }
+}
 
-//   //   }
+.fourth {
+  @extend .py-8;
 
-//   //   &:hover {
-//   //     box-shadow: 0 2px 20px $color-c;
-//   //   }
-//   // }
-// }
+  .heading {
+    @extend .text-center;
 
-// #third {
-//   background-color: $color-f;
-// }
+    .title {
+      @extend .mb-4;
+    }
+
+    .subtitle {
+      @extend .text-muted;
+    }
+
+    hr {
+      @extend .w-25;
+      @extend .mb-6;
+    }
+  }
+}
+
+.fifth {
+  @extend .py-8;
+  @extend .bg-faded;
+}
+
+.sixth {
+  @extend .py-8;
+}

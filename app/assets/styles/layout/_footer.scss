@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.footer {
+  .widgets {
+    height: 14rem;
+    border-bottom: .0625rem solid #3b4b59;
+    background-color: #2b3b49;
+  }
+
+  .copyright {
+    background-color: #1b2b39;
+    color: #789;
+
+    p {
+      margin: 0;
+      line-height: 3;
+    }
+  }
+}
