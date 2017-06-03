@@ -1,10 +1,31 @@
-footer.footer
-  .widgets: .container: .row
-    .col-md-6
+footer.site-footer
+  aside.widgets: .container: .row
+    section.widget.col-md-6
+      h3.title 订阅我们
+      div.subscribe
+        p 现在就订阅我们，这样你就可以在第一时间收到我们的更新通知了！
+        .input-group.input-group-lg
+          input.form-control(type='text', placeholder='输入您的邮箱')
+          span.input-group-btn
+            button.btn.btn-primary 订阅
 
-    .col-md-3
+    section.widget.col-md-3
+      h3.title 友情链接
+      ul
+        li: a(href='#') 张三
+        li: a(href='#') 李思思
+        li: a(href='#') 王五五
+        li: a(href='#') 赵六六
+        li: a(href='#') 哈哈
 
-    .col-md-3
+    section.widget.col-md-3
+      h3.title 快速导航
+      ul
+        li: a(href='#') 首页
+        li: a(href='#') 全部归档
+        li: a(href='#') 全部分类
+        li: a(href='#') 全部标签
+        li: a(href='#') 关于
 
   .copyright
     .container.text-center

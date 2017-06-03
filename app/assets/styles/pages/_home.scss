@@ -8,52 +8,9 @@
 // Other
 // --------------------------
 
-.first {
-  @extend .py-8;
-  @extend.bg-faded;
-
-  .article {
-    @extend .pr-5;
-    @extend .mb-5;
-
-    .title {
-      @extend .text-gray-dark;
-    }
-
-    .content {
-      @extend .mt-5;
-
-      p {
-        font-size: 1.125rem;
-        text-indent: 2em;
-        line-height: 2;
-      }
-    }
-
-    .btn {
-      @extend .m-4;
-    }
-  }
-
-  .share {
-    position: absolute;
-    bottom: 0;
-    @extend .ml-3;
-  }
-
-  .feature {
-    background-color: #fff;
-    box-shadow: 0 0 1rem #c0c0c0;
-    @extend .mb-0;
-    @extend .p-4;
-
-    img {
-      @extend .w-100;
-    }
-  }
-}
-
-.second {
+// Section common styles
+// --------------------------
+.site-main > section {
   @extend .py-8;
 
   .heading {
@@ -73,37 +30,9 @@
     }
   }
 
-  .card {
-    .card-img-overlay {
-      margin-bottom: 8.875rem;
-      background: linear-gradient(transparent, #2b3b49);
-      @extend .align-items-end;
-
-      .icon-pin {
-        font-size: 81.25%;
-        @extend .text-white;
-      }
-    }
-
-    .card-img-top {
-      max-height: 16.875rem;
-    }
-  }
-
-  .more {
-    @extend .mt-5;
-    @extend .text-center;
-  }
-}
-
-.third {
-  @extend .py-8;
-  @extend .bg-faded;
-
   .feature {
     background-color: #fff;
     box-shadow: 0 0 1rem #c0c0c0;
-    transform: rotate(-15deg);
     @extend .mb-0;
     @extend .p-4;
 
@@ -113,8 +42,6 @@
   }
 
   .article {
-    @extend .pl-7;
-
     .title {
       @extend .text-gray-dark;
     }
@@ -129,11 +56,90 @@
     }
 
     .content {
+      p {
+        text-indent: 2em;
+      }
+    }
+  }
+
+  .more {
+    @extend .mt-5;
+    @extend .text-center;
+  }
+}
+
+// First section styles
+// --------------------------
+.first {
+  @extend .bg-faded;
+
+  .article {
+    @extend .pr-5;
+    @extend .mb-5;
+
+    .content {
+      @extend .mt-5;
+
+      p {
+        font-size: 1.125rem;
+        line-height: 2;
+      }
+    }
+
+    .btn {
+      @extend .m-4;
+    }
+  }
+
+  .share {
+    position: absolute;
+    bottom: 0;
+    @extend .ml-3;
+
+    .btn:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Second section styles
+// --------------------------
+.second {
+  .card {
+    .card-img-overlay {
+      margin-bottom: 8.875rem;
+      background: linear-gradient(transparent, #2b3b49);
+      @extend .align-items-end;
+    }
+
+    .icon-pin {
+      font-size: 81.25%;
+      @extend .text-white;
+    }
+
+    .card-img-top {
+      max-height: 16.875rem;
+    }
+  }
+}
+
+// Third section styles
+// --------------------------
+.third {
+  @extend .bg-faded;
+
+  .feature {
+    transform: rotate(-15deg);
+  }
+
+  .article {
+    @extend .pl-7;
+
+    .content {
       @extend .mt-3;
 
       p {
         font-size: 1rem;
-        text-indent: 2em;
         line-height: 1.8;
       }
     }
@@ -145,26 +151,9 @@
   }
 }
 
+// Fourth section styles
+// --------------------------
 .fourth {
-  @extend .py-8;
-
-  .heading {
-    @extend .text-center;
-
-    .title {
-      @extend .mb-4;
-    }
-
-    .subtitle {
-      @extend .text-muted;
-    }
-
-    hr {
-      @extend .w-25;
-      @extend .mb-6;
-    }
-  }
-
   .card {
     .card-img-overlay {
       margin-bottom: 2.75rem;
@@ -189,19 +178,15 @@
       border-top: .0625rem solid lighten($brand-primary, 40%);
     }
   }
-
-  .more {
-    @extend .mt-5;
-    @extend .text-center;
-  }
 }
 
+// Fifth section styles
+// --------------------------
 .fifth {
-  @extend .py-8;
   @extend .bg-faded;
 }
 
+// Sixth section styles
+// --------------------------
 .sixth {
-  @extend .py-8;
-  @extend .py-8;
 }
