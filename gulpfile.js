@@ -93,7 +93,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('extras', () => {
-  return gulp.src([`${src}/*.*`, `!${src}/**/*.html`, `!${src}/**/*.pug`], { base: src, dot: true })
+  return gulp.src([`${src}/*`, `${src}/*.*`, `!${src}/**/*.html`, `!${src}/**/*.pug`], { base: src, dot: true })
     .pipe(gulp.dest(dist))
 })
 
