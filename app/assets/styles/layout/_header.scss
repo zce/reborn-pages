@@ -31,6 +31,16 @@
 
       .form-control {
         padding-left: $input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height;
+        min-width: 3rem;
+        transition: border-color .5s, min-width .5s;
+
+        &:focus {
+          min-width: 17rem;
+
+          & + label {
+            @extend .text-gray-dark;
+          }
+        }
       }
 
       label {
@@ -39,7 +49,8 @@
         top: 0;
         bottom: 0;
         padding: (($input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height) - $font-size-base) / 2;
-        // font-size: $font-size-base;
+        transition: color .5s;
+        @extend .text-muted;
       }
     }
   }
@@ -64,6 +75,10 @@
       .slogan {
         font-size: 2.5rem; // 3rem;
         @extend .mb-5;
+      }
+
+      .btn {
+
       }
     }
 
