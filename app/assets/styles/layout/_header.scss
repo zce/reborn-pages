@@ -16,9 +16,15 @@
   overflow: hidden;
 
   .navbar {
-    // .navbar-nav {
-    //   @extend .mr-auto;
-    // }
+    .navbar-brand {
+      img {
+        height: 2.5rem;
+      }
+    }
+
+    .navbar-nav {
+      @extend .mr-auto;
+    }
 
     .form-inline {
       position: relative;

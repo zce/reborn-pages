@@ -12,6 +12,9 @@
  *
  * https://www.iotacss.com/
  * The main stylesheet. It is required in all themes and contains the information header for your theme.
+ *
+ * 值得参考的css理论：OOCSS、SMACSS与BEM - 庭院茶 - SegmentFault
+ * https://segmentfault.com/a/1190000000704006
  */
 
 // 1. Variables
@@ -50,11 +53,11 @@ html {
   }
 }
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 18px;
-  }
-}
+// @include media-breakpoint-up(md) {
+//   html {
+//     font-size: 18px;
+//   }
+// }
 
 // @include media-breakpoint-up(lg) {
 //   html {

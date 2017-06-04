@@ -74,8 +74,8 @@
   @extend .bg-faded;
 
   .article {
+    margin-bottom: 3rem;
     @extend .pr-md-5;
-    @extend .mb-5;
 
     .content {
       @extend .mt-5;
