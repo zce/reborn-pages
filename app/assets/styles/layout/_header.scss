@@ -16,6 +16,9 @@
   overflow: hidden;
 
   .navbar {
+    position: absolute;
+    width: 100%;
+
     .navbar-brand {
       img {
         height: 2.5rem;
@@ -58,6 +61,7 @@
   .cover {
     .intro {
       height: 37.5rem;
+      margin-top: 4.125rem;
       @extend .d-flex;
       @extend .flex-column;
       @extend .justify-content-center;
