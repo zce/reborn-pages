@@ -33,7 +33,7 @@
   .feature {
     background-color: #fff;
     box-shadow: 0 0 1rem #c0c0c0;
-    @extend .mb-3;
+    @extend .mb-5;
     @extend .p-4;
 
     img {
@@ -100,6 +100,12 @@
       transform: rotate(360deg);
     }
   }
+
+  @include media-breakpoint-down (sm) {
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 // Second section styles
@@ -108,7 +114,7 @@
   .card {
     .card-img-overlay {
       margin-bottom: 8.875rem;
-      background: linear-gradient(transparent, #2b3b49);
+      background: linear-gradient(transparent, $brand-primary);
       @extend .align-items-end;
     }
 

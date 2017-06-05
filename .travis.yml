@@ -17,10 +17,13 @@ notifications:
 
 cache:
   directories:
+    - bower_components
     - node_modules
 
 before_script:
-  - yarn global add gulp
+  - yarn global add bower
+  - yarn install
+  - bower install
 
 script:
   - yarn run build
