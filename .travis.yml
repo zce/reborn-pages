@@ -23,7 +23,7 @@ cache:
 before_script:
   - yarn global add bower
   - yarn install
-  - bower install
+  - bower install -f
 
 script:
   - yarn run build

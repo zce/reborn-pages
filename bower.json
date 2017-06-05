@@ -5,7 +5,7 @@
     "bootstrap": "v4-dev",
     "modernizr": "^2.8.3",
     "simple-line-icons": "^2.4.1",
-    "popper.js": "https://unpkg.com/popper.js"
+    "popper": "https://unpkg.com/popper.js"
   },
   "overrides": {
     "bootstrap": {
@@ -15,6 +15,9 @@
       ]
     },
     "modernizr": {
+      "main": []
+    },
+    "popper.js": {
       "main": []
     },
     "simple-line-icons": {

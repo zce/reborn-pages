@@ -18,6 +18,6 @@
 
 
 <!--
-  https://github.com/yeoman/generator-webapp/compare/42c2c6...master
-  https://github.com/twbs/bootstrap/compare/10a3e3...v4-dev
+  https://github.com/yeoman/generator-webapp/compare/a13c2f...master
+  https://github.com/twbs/bootstrap/compare/2d8789...v4-dev
 -->
