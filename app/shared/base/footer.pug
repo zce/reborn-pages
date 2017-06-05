@@ -1,15 +1,14 @@
 footer.site-footer
   aside.widgets: .container: .row
-    section.widget.col-md-6
+    section.col-md-5: .widget.widget-subscribe
       h3.title 订阅我们
-      div.subscribe
-        p 现在就订阅我们，这样你就可以在第一时间收到我们的更新通知了！
-        .input-group.input-group-lg
-          input.form-control(type='text', placeholder='输入您的邮箱')
-          span.input-group-btn
-            button.btn.btn-primary 订阅
+      p 现在就订阅我们，这样你就可以在第一时间收到我们的更新通知了！
+      .input-group
+        input.form-control(type='text', placeholder='输入您的邮箱')
+        span.input-group-btn
+          button.btn.btn-primary 订阅
 
-    section.widget.col-md-3
+    section.col-md-2: .widget.widget-links
       h3.title 友情链接
       ul
         li: a(href='#') 张三
@@ -18,15 +17,19 @@ footer.site-footer
         li: a(href='#') 赵六六
         li: a(href='#') 哈哈
 
-    section.widget.col-md-3
-      h3.title 快速导航
+    section.col-md-2: .widget.widget-socials
+      h3.title 社交网络
       ul
-        li: a(href='#') 首页
-        li: a(href='#') 全部归档
-        li: a(href='#') 全部分类
-        li: a(href='#') 全部标签
-        li: a(href='#') 关于
+        li: a.icon-social-linkedin(href='#')  LinkedIn
+        li: a.icon-social-twitter(href='#')  Twitter
+        li: a.icon-social-facebook(href='#')  Facebook
+        li: a.icon-social-github(href='#')  GitHub
+        li: a.icon-social-pinterest(href='#')  Pinterest
+
+    section.col-md-3: .widget.widget-qrcode
+      h3.title 微信订阅号
+      img(src='uploads/qrcode-wedn.jpg', alt='WEDN', width='260')
 
   .copyright
-    .container.text-center
+    .container
       p Copyright &copy; 2017 WEDN.NET. All Rights Reserved.

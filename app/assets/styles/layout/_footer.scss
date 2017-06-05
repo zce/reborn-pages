@@ -3,49 +3,63 @@
 // -----------------------------------------------------------------------------
 .site-footer {
   .widgets {
-    background-color: #2b3b49;
+    background-color: $brand-primary;
     font-size: .875rem;
-    @extend .py-6;
-    @extend .text-white;
+    @extend .pt-4;
+    @extend .text-center;
+    @extend .text-md-left;
+
+    &, a {
+      @extend .text-white;
+    }
+
+    img {
+      @extend .img-fluid;
+      @extend .px-5;
+    }
+
+    ul {
+      list-style: none;
+      @extend .px-2;
+    }
+
+    .widget {
+      @extend .mb-5;
+
+      @include media-breakpoint-down (sm) {
+        padding: 0 2rem;
+      }
+    }
 
     .title {
-      font-size: 1.125rem;
+      border-bottom: .0625rem dashed lighten($brand-primary, 12);
+      font-size: 1rem;
+      @extend .py-3;
       @extend .mb-3;
     }
 
-    .subscribe {
-      @extend .py-3;
-
-      .input-group {
-        @extend .mt-4;
-      }
-
-      .form-control {
-        border-color: lighten(#2b3b49, 12);
-        background-color: #2b3b49;
-        @extend .text-white;
-      }
-
-      .btn-primary {
-        border-color: lighten(#2b3b49, 12);
-        background-color: lighten(#2b3b49, 12);
-        @extend .px-5;
-      }
+    .form-control {
+      border-color: lighten($brand-primary, 12);
+      background-color: $brand-primary;
+      @extend .text-white;
     }
 
-    a {
-      @extend .text-white;
+    .btn-primary {
+      border-color: lighten($brand-primary, 12);
+      background-color: lighten($brand-primary, 12);
+      @extend .px-4;
     }
   }
 
   .copyright {
-    border-top: .0625rem solid lighten(#2b3b49, 5);
-    background-color: lighten(#2b3b49, 2);
-    color: lighten(#2b3b49, 60);
+    border-top: .0625rem solid lighten($brand-primary, 5);
+    background-color: lighten($brand-primary, 2);
+    color: lighten($brand-primary, 60);
+    @extend .text-center;
 
     p {
       margin: 0;
-      font-size: .875rem;
+      font-size: .8125rem;
       line-height: 3;
     }
   }
