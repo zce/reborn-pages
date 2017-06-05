@@ -23,12 +23,18 @@
       @extend .px-2;
     }
 
+    .row {
+      // @extend .flex-sm-column-reverse;
+      @extend .flex-column-reverse;
+      @extend .flex-md-row;
+      @extend .flex-md-wrap-reverse;
+      @extend .flex-lg-row;
+    }
+
     .widget {
       @extend .mb-5;
-
-      @include media-breakpoint-down (sm) {
-        padding: 0 2rem;
-      }
+      @extend .px-4;
+      @extend .px-sm-0;
     }
 
     .title {
