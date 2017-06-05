@@ -20,10 +20,10 @@ cache:
     - node_modules
 
 before_script:
-  - npm install -g gulp
+  - yarn global add gulp
 
 script:
-  - npm run build
+  - yarn run build
 
 after_script:
   - cd dist
