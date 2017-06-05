@@ -56,6 +56,39 @@
         @extend .text-muted;
       }
     }
+
+    // response menu
+    .navbar-collapse {
+      &.collapsing,
+      &.show {
+        padding: $navbar-padding-y $navbar-padding-x;
+      }
+    }
+    // @include media-breakpoint-down (sm) {
+    //   .navbar-collapse {
+    //     &.collapse {
+    //       position: fixed;
+    //       top: 0;
+    //       right: -100%;
+    //       bottom: 0;
+    //       // width: 50%;
+    //       margin-top: 4.125rem;
+    //       padding: $navbar-padding-y $navbar-padding-x;
+    //       border-top: .0625rem solid #f0f0f0;
+    //       overflow: hidden;
+    //       @include transition(right .35s);
+    //     }
+
+    //     &.collapsing {
+    //       height: auto !important;
+    //       right: -40%;
+    //     }
+
+    //     &.show {
+    //       right: 0;
+    //     }
+    //   }
+    // }
   }
 
   .cover {

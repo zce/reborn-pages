@@ -43,15 +43,15 @@
 @import 'components/card';
 
 // 6. Globals
-html {
-  font-size: 14px;
-}
+// html {
+//   font-size: 14px;
+// }
 
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 16px;
-  }
-}
+// @include media-breakpoint-up(sm) {
+//   html {
+//     font-size: 16px;
+//   }
+// }
 
 // @include media-breakpoint-up(md) {
 //   html {
