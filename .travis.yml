@@ -32,7 +32,7 @@ after_script:
   - cd dist
   - git init
   - git config user.name "iceStone"
-  - git config user.email "ice@wedn.net"
+  - git config user.email "ice@micua.com"
   - git add --all
   - git commit -m "Update pages"
   - git push -f "https://${GITHUB_TOKEN}@github.com/${REPO_NAME}.git" master:gh-pages
