@@ -51,6 +51,8 @@
     .subtitle {
       font-weight: normal;
       @extend .text-muted;
+      @extend .text-center;
+      @extend .text-md-right;
 
       &::before {
         content: ' —— '

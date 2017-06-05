@@ -5,7 +5,7 @@
   .widgets {
     background-color: $brand-primary;
     font-size: .875rem;
-    @extend .pt-4;
+    @extend .pt-6;
     @extend .text-center;
     @extend .text-md-left;
 
@@ -14,12 +14,14 @@
     }
 
     img {
+      max-height: 8.75rem;
+      object-fit: contain;
       @extend .img-fluid;
-      @extend .px-5;
     }
 
     ul {
       list-style: none;
+      line-height: 2;
       @extend .px-2;
     }
 
@@ -32,15 +34,15 @@
     }
 
     .widget {
-      @extend .mb-5;
+      @extend .mb-6;
       @extend .px-4;
-      @extend .px-sm-0;
+      @extend .px-md-0;
     }
 
     .title {
       border-bottom: .0625rem dashed lighten($brand-primary, 12);
       font-size: 1rem;
-      @extend .py-3;
+      @extend .pb-3;
       @extend .mb-3;
     }
 
