@@ -29,11 +29,23 @@
       @extend .mr-auto;
     }
 
+    // `.navbar-collapse` response menu
+    .collapsing, .show {
+      .navbar-nav {
+        padding-top: $navbar-padding-y;
+      }
+
+      .nav-item {
+        padding: 0 $navbar-padding-x;
+        border-top: .0625rem solid $gray-lighter;
+      }
+    }
+
     .form-inline {
       position: relative;
 
       .form-control {
-        padding-left: $input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height;
+        padding-left: ($input-btn-padding-y + .1875rem) * 2 + $font-size-base - .0625rem;
         min-width: 3rem;
         transition: border-color .5s, min-width .5s;
 
@@ -49,46 +61,24 @@
       label {
         position: absolute;
         left: 0;
-        top: 0;
         bottom: 0;
-        padding: (($input-btn-padding-y * 2 + $font-size-base * $input-btn-line-height) - $font-size-base) / 2;
+        margin: 0;
+        padding: $input-btn-padding-y + .1875rem;
         transition: color .5s;
         @extend .text-muted;
       }
-    }
 
-    // response menu
-    .navbar-collapse {
-      &.collapsing,
-      &.show {
-        padding: $navbar-padding-y $navbar-padding-x;
+      @include media-breakpoint-down (md) {
+        margin-bottom: 1rem;
+        border-top: .0625rem solid $gray-lighter;
+        padding-top: 1.25rem;
+
+
+        .form-control {
+          width: 100%;
+        }
       }
     }
-    // @include media-breakpoint-down (sm) {
-    //   .navbar-collapse {
-    //     &.collapse {
-    //       position: fixed;
-    //       top: 0;
-    //       right: -100%;
-    //       bottom: 0;
-    //       // width: 50%;
-    //       margin-top: 4.125rem;
-    //       padding: $navbar-padding-y $navbar-padding-x;
-    //       border-top: .0625rem solid #f0f0f0;
-    //       overflow: hidden;
-    //       @include transition(right .35s);
-    //     }
-
-    //     &.collapsing {
-    //       height: auto !important;
-    //       right: -40%;
-    //     }
-
-    //     &.show {
-    //       right: 0;
-    //     }
-    //   }
-    // }
   }
 
   .cover {
