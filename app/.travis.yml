@@ -1,0 +1,35 @@
+env:
+  global:
+    - REPO_NAME: "zce/reborn"
+    - secure: "3yOOW8v3Q4KrFYQi5hr3Mi9gmwQiH8i+95xsgBbTyslwmc5SylA3UOvYSjKwlJ6W5AYearYmtdn+bCQ3AJtBx7YINZTzTZRdDSn9IA78pCA42wtWgldGOLbBQqSSsati/T/uKD91F2jpf2LZpQsWbp/zJ+J4m6Sf6/JBKaYRE0yyX4PZs7t3832mzml++6J70zVU4mqFO7AkDo9BnaeCGBukwcfFiF+wWt+I4N/5GA+XFBREsYJPgiBvp8x0AHQ9TeVEheN89feTOCz4N3776P9qVV9IZk6xg4GY5I3S0YN8UrIZNzwjvClBSmRVi2241yolwc5Ldlv6LycXpT7PZSjm8qyye4UPJdsae9OZmT+LPwFMutFv0Or01rEg+FvUJOFHQ9GnObS1xl5PpoTnKgV5IbYcUKxa5DJUic1CDpmp3LHWnp0hwnCYlttKzP3T0TBpK5OjLx57K9uvIUWDT0Uy3q9CvIglZkDu//VnLSxiBlRCY839P9MvsEW3DwUkUi8BFV8QxyPtBty7Y84LgSxaC3opJSoCIVV6ooGKcncTD7Dtx0cnWKBgbpL6z38KahV72tv08jkyEE67uuyrAaIH/6tmZFVEB4OAupT7goiu2xgLh7kuRWYa+WkSjdnXdNaGR27VTHIqUGanc8yNE14Kg6WiJYomFfjIgjUJCJw="
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - stable
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - npm install -g gulp
+
+script:
+  - npm run build
+
+after_script:
+  - cd dist
+  - git init
+  - git config user.name "iceStone"
+  - git config user.email "ice@wedn.net"
+  - git add --all
+  - git commit -m "Update pages"
+  - git push -f "https://${GITHUB_TOKEN}@github.com/${REPO_NAME}.git" master:gh-pages
