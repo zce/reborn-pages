@@ -12,7 +12,7 @@
 // 1. Bootstrap || Custom
 
 .site-header {
-  position: relative;
+  // position: relative;
   overflow: hidden;
 
   .navbar {
@@ -81,7 +81,34 @@
     }
   }
 
-  .cover {
+  .media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    // bottom: 0;
+    z-index: -1;
+
+    img, video {
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero {
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background: url(../images/mask.png);
+      opacity: .8;
+    }
+
     .intro {
       height: 37.5rem;
       margin-top: 4.125rem;
@@ -90,50 +117,68 @@
       @extend .justify-content-center;
       @extend .align-items-center;
       @extend .text-white;
-
-      .title, .slogan {
-        font-family: 'againts';
-      }
-
-      .title {
-        font-size: 4rem; // 6rem;
-      }
-
-      .slogan {
-        font-size: 2.5rem; // 3rem;
-        @extend .mb-5;
-      }
-
-      .btn {
-
-      }
     }
 
-    .media {
+    .title, .slogan {
+      font-family: 'againts';
+    }
+
+    .title {
+      font-size: 4rem; // 6rem;
+    }
+
+    .slogan {
+      font-size: 2.5rem; // 3rem;
+      @extend .mb-5;
+    }
+
+    .btn {
+
+    }
+  }
+
+  .feature {
+    .container {
+      margin-top: 4.125rem;
+      @extend .text-white;
+    }
+
+    .mask {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: -1;
+      z-index: 1;
+      background-image: linear-gradient(transparent, #fff), url(../images/mask.png);
+    }
 
-      img,
-      video {
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    img, video {
+      filter: blur(.125rem);
+      @extend .mb-2;
+    }
+
+    .breadcrumb {
+      font-size: .875rem;
+
+      a {
+        @extend .text-white;
       }
+    }
 
-      .mask {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-        background: url(../images/mask.png);
-        opacity: .8;
+    .title {
+      font-size: 2.125rem; // 6rem;
+      line-height: 2.5;
+      @extend .mt-5;
+    }
+
+    .slogan {
+      font-size: 1.125rem; // 3rem;
+      text-indent: 2em;
+      @extend .mb-8;
+
+      &::before {
+        content: ' —— '
       }
     }
   }

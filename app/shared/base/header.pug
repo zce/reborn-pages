@@ -1,6 +1,6 @@
 header.site-header
   .navbar.navbar-expand-lg.navbar-light.bg-faded: .container
-    a.navbar-brand(href='#')
+    a.navbar-brand(href='index.html')
       span.sr-only WEDN.NET
       img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
 
@@ -12,34 +12,48 @@ header.site-header
     nav#site-menu.navbar-collapse.collapse
       ul.navbar-nav
         li.nav-item.active
-          a.nav-link(href='#') 首页
+          a.nav-link(href='index.html') Home
             span.sr-only (current)
         li.nav-item
           a.nav-link(href='#') 学习
         li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown') 博客
+          a.nav-link.dropdown-toggle(href='archive.html', data-toggle='dropdown') 博客
           .dropdown-menu
-            a.dropdown-item(href='#') 未分类
-            a.dropdown-item(href='#') 爱生活
-            a.dropdown-item(href='#') 爱旅行
-            a.dropdown-item(href='#') 音乐
-            a.dropdown-item(href='#') 诗和远方
+            a.dropdown-item(href='archive.html') 未分类
+            a.dropdown-item(href='archive.html') 爱生活
+            a.dropdown-item(href='archive.html') 旅行
+            a.dropdown-item(href='archive.html') 音乐
+            a.dropdown-item(href='archive.html') 诗和远方
         li.nav-item
-          a.nav-link(href='#') 关于
+          a.nav-link(href='#') 实验室
+        li.nav-item
+          a.nav-link(href='#') 问答
         li.nav-item
           a.nav-link(href='#') TRY IT
 
       form.form-inline(action='/')
         input#search-form.form-control(type='search', name='q', placeholder='搜索...', autocomplete='off')
         label.icon-magnifier(for='search-form')
+  if isHero
+    .hero
+      .intro
+        h1.title One Belt, One Road
+        h3.slogan Thoughts, stories and ideas.
+        a.btn.btn-outline-secondary.btn-xlg.btn-capsule(href='#first') Getting started
 
-  .cover
-    .intro
-      h1.title One Belt, One Road
-      h3.slogan Thoughts, stories and ideas.
-      a.btn.btn-outline-secondary.btn-xlg.btn-capsule(href='#first') Getting started
+      .media
+        i.mask
+        img(src='uploads/hero.jpeg', alt='WEDN.NET')
+        //- video(src='uploads/hero.mp4', width='2000', height='1200', autoplay, loop)
+  else
+    .feature
+      .container
+        ol.breadcrumb
+          li.breadcrumb-item: a(href='index.html') 首页
+          li.breadcrumb-item.active 旅行
+        h1.title 毕业季
+        h3.slogan 你总说毕业遥遥无期，转眼间就各奔东西。
 
-    .media
-      i.mask
-      img(src='uploads/intro.jpeg', alt='WEDN.NET')
-      //- video(src='uploads/intro.mp4', width='2000', height='1200', autoplay, loop)
+      .media
+        i.mask
+        img(src='uploads/feature.jpeg', alt='WEDN.NET')

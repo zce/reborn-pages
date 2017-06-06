@@ -1,3 +1,12 @@
+- let title = 'Layout'
+- let description = 'Hello world'
+- let keywords = 'wedn, wedn.net, zce, iceStone'
+- let author = 'iceStone <ice@wedn.net> (https://github.com/zce)'
+- let generator = 'WEDN.NET'
+
+- let isHero = true
+- let hasSidebar = false
+
 block global
 
 doctype html
@@ -5,69 +14,77 @@ html.no-js(lang='zh-CN')
 
   head
 
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content=description)
-    meta(name='keywords', content=keywords)
-    meta(name='author', content=author)
-    meta(name='generator', content=generator)
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description', content=description)
+  meta(name='keywords', content=keywords)
+  meta(name='author', content=author)
+  meta(name='generator', content=generator)
 
-    title #{ title } « REBORN
+  title #{ title } « REBORN
 
-    //- Place favicon.ico in the root directory
-    link(rel='apple-touch-icon', href='assets/images/apple-touch-icon.png')
+  //- Place favicon.ico in the root directory
+  link(rel='apple-touch-icon', href='assets/images/apple-touch-icon.png')
 
-    // build:css assets/styles/vendor.css
-    //- link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Great+Vibes')
-    //- bower:css
-    link(rel='stylesheet', href='/bower_components/simple-line-icons/css/simple-line-icons.css')
-    //- endbower
-    // endbuild
+  // build:css assets/styles/vendor.css
+  //- link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Great+Vibes')
+  //- bower:css
+  link(rel='stylesheet', href='/bower_components/simple-line-icons/css/simple-line-icons.css')
+  //- endbower
+  // endbuild
 
-    // build:css assets/styles/main.css
-    link(rel='stylesheet', href='assets/styles/main.css')
-    // endbuild
+  // build:css assets/styles/main.css
+  link(rel='stylesheet', href='assets/styles/main.css')
+  // endbuild
 
-    block styles
+  block styles
 
-    // build:js assets/scripts/modernizr.js
-    //- script(src='bower_components/modernizr/modernizr.js')
-    // endbuild
+  // build:js assets/scripts/modernizr.js
+  //- script(src='bower_components/modernizr/modernizr.js')
+  // endbuild
 
   body
 
-    a.sr-only.sr-only-focusable(href='#content') 跳转到内容区
+  a.sr-only.sr-only-focusable(href='#content') 跳转到内容区
 
-    include header
+  include header
 
+  if hasSidebar
+    .container: .row
+      .col-md-9
+        block wrapper
+      .col-md-3
+        include sidebar
+  else
     main.site-main
       block wrapper
 
-    include footer
 
-    // build:js assets/scripts/vendor.js
-    //- bower:js
-    script(src='/bower_components/jquery/dist/jquery.js')
-    script(src='/bower_components/popper/index.js')
-    //- endbower
-    // endbuild
+  include footer
 
-    // build:js assets/scripts/plugins.js
-    script(src='bower_components/bootstrap/js/dist/util.js')
-    //- script(src='bower_components/bootstrap/js/dist/alert.js')
-    //- script(src='bower_components/bootstrap/js/dist/button.js')
-    //- script(src='bower_components/bootstrap/js/dist/carousel.js')
-    script(src='bower_components/bootstrap/js/dist/collapse.js')
-    script(src='bower_components/bootstrap/js/dist/dropdown.js')
-    //- script(src='bower_components/bootstrap/js/dist/modal.js')
-    //- script(src='bower_components/bootstrap/js/dist/scrollspy.js')
-    //- script(src='bower_components/bootstrap/js/dist/tab.js')
-    //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
-    //- script(src='bower_components/bootstrap/js/dist/popover.js')
-    // endbuild
+  // build:js assets/scripts/vendor.js
+  //- bower:js
+  script(src='/bower_components/jquery/dist/jquery.js')
+  script(src='/bower_components/popper/index.js')
+  //- endbower
+  // endbuild
 
-    // build:js assets/scripts/main.js
-    script(src='assets/scripts/main.js')
-    // endbuild
+  // build:js assets/scripts/plugins.js
+  script(src='bower_components/bootstrap/js/dist/util.js')
+  //- script(src='bower_components/bootstrap/js/dist/alert.js')
+  //- script(src='bower_components/bootstrap/js/dist/button.js')
+  //- script(src='bower_components/bootstrap/js/dist/carousel.js')
+  script(src='bower_components/bootstrap/js/dist/collapse.js')
+  script(src='bower_components/bootstrap/js/dist/dropdown.js')
+  //- script(src='bower_components/bootstrap/js/dist/modal.js')
+  //- script(src='bower_components/bootstrap/js/dist/scrollspy.js')
+  //- script(src='bower_components/bootstrap/js/dist/tab.js')
+  //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
+  //- script(src='bower_components/bootstrap/js/dist/popover.js')
+  // endbuild
 
-    block scripts
+  // build:js assets/scripts/main.js
+  script(src='assets/scripts/main.js')
+  // endbuild
+
+  block scripts
