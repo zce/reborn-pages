@@ -84,9 +84,9 @@
   .media {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    // bottom: 0;
     z-index: -1;
 
     img, video {
@@ -155,7 +155,7 @@
 
     img, video {
       filter: blur(.125rem);
-      @extend .mb-2;
+      @extend .pb-2;
     }
 
     .breadcrumb {
