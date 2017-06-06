@@ -8,4 +8,23 @@ block global
 
 block wrapper
 
-  section.card(style='height: 2000px')
+  article.card.card-entry
+    .card-header
+      img.card-img-top(src='uploads/entry1.jpeg', alt='维多利亚港夜景')
+      .card-img-overlay
+        div.card-meta
+          span #[img(src='uploads/avatar.jpeg', alt='汪磊')] 汪磊
+          span #[i.icon-calendar] 2017年06月06日
+          span #[i.icon-bubble] 10
+          span #[i.icon-like] 90
+          span #[i.icon-dislike] 0
+          span #[i.icon-share-alt]
+    .card-block
+      h2.card-title: a(href='single.html') 有华人的地方，就有香港电影
+      .card-text
+        p 香港电影是中文电影的先驱者，“有华人的地方，就有香港电影”，港产片多年来风靡全球，成为华人文化的一大标记。 相较于中国电影、新加坡电影和台湾电影，香港电影的质素和数量已经有在长时间累积下来的实力及口碑。
+    .card-footer
+      i.icon-paper-clip #[a(href='archive.html') 生活]
+      i.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
+      a(href='single.html') #[span 继续阅读] #[span →]
+

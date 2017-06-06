@@ -88,6 +88,7 @@
     left: 0;
     right: 0;
     z-index: -1;
+    overflow: hidden;
 
     .mask {
       position: absolute;
@@ -151,8 +152,7 @@
     }
 
     img, video {
-      margin: 0 -.25rem;
-      padding-bottom: .25rem;
+      // padding-bottom: .25rem;
       filter: blur(.125rem);
     }
 

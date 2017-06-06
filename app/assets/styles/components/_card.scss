@@ -38,6 +38,10 @@
     @extend .justify-content-between;
     @extend .align-items-center;
     @extend .text-muted;
+
+    i::before {
+    @extend .mr-1;
+    }
   }
 
   &:hover {

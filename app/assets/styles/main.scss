@@ -61,7 +61,7 @@
 
 // @include media-breakpoint-up(lg) {
 //   html {
-//     font-size: 28px;
+//     font-size: 20px;
 //   }
 // }
 
@@ -77,3 +77,5 @@ body {
 
 // 7. Page-specific styles
 @import 'pages/home';
+@import 'pages/archive';
+@import 'pages/single';
