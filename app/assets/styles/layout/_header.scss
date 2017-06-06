@@ -170,12 +170,17 @@
       font-size: 2.125rem; // 6rem;
       line-height: 2.5;
       @extend .mt-5;
+      @extend .text-center;
+      @extend .text-sm-left;
     }
 
     .slogan {
       font-size: 1.125rem; // 3rem;
-      text-indent: 2em;
+      @extend .pl-sm-4;
+      @extend .pl-md-6;
       @extend .mb-8;
+      @extend .text-center;
+      @extend .text-sm-left;
 
       &::before {
         content: ' —— '
