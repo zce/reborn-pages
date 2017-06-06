@@ -1,6 +1,6 @@
 .card-item {
   overflow: hidden;
-  box-shadow: 0 0 1rem #e0e0e0;
+  box-shadow: 0 0 1rem #ddd;
   transition: box-shadow .5s;
   @extend .border-0;
   @extend .mb-5;
@@ -33,7 +33,6 @@
   .card-footer {
     z-index: 1;
     border-color: #f0f0f0;
-    background-color: #fff;
     font-size: 81.25%;
     @extend .d-flex;
     @extend .justify-content-between;
@@ -42,8 +41,10 @@
   }
 
   &:hover {
+    box-shadow: 0 0 1rem #c0c0c0;
+
     .card-img-overlay {
-      opacity: .6;
+      opacity: .5;
     }
 
     .card-img-top {

@@ -89,6 +89,15 @@
     right: 0;
     z-index: -1;
 
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
     img, video {
       z-index: -1;
       width: 100%;
@@ -99,12 +108,6 @@
 
   .hero {
     .mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
       background: url(../images/mask.png);
       opacity: .8;
     }
@@ -133,7 +136,7 @@
     }
 
     .btn {
-
+      @extend .text-white;
     }
   }
 
@@ -144,18 +147,13 @@
     }
 
     .mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
       background-image: linear-gradient(transparent, #fff), url(../images/mask.png);
     }
 
     img, video {
+      margin: 0 -.25rem;
+      padding-bottom: .25rem;
       filter: blur(.125rem);
-      @extend .pb-2;
     }
 
     .breadcrumb {

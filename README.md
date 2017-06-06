@@ -5,7 +5,7 @@
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
 
-[travis-image]: https://img.shields.io/travis/zce/reborn/vue.svg
+[travis-image]: https://img.shields.io/travis/zce/reborn.svg
 [travis-url]: https://travis-ci.org/zce/reborn
 [dependency-image]: https://img.shields.io/david/zce/reborn.svg
 [dependency-url]: https://david-dm.org/zce/reborn
