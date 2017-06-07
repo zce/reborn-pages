@@ -30,7 +30,7 @@
     }
 
     // `.navbar-collapse` response menu
-    .collapsing, .show {
+    @include media-breakpoint-down (md) {
       .navbar-nav {
         padding-top: $navbar-padding-y;
       }
@@ -38,6 +38,12 @@
       .nav-item {
         padding: 0 $navbar-padding-x;
         border-top: .0625rem solid $gray-lighter;
+        transform: rotate3d(1, 0, 0, 0);
+        transition: transform .5s;
+      }
+
+      .collapsing .nav-item {
+        transform: rotate3d(1, 0, 0, -90deg);
       }
     }
 
