@@ -8,23 +8,94 @@ block global
 
 block wrapper
 
-  article.card.card-entry
-    .card-header
-      img.card-img-top(src='uploads/entry1.jpeg', alt='维多利亚港夜景')
-      .card-img-overlay
-        div.card-meta
-          span #[img(src='uploads/avatar.jpeg', alt='汪磊')] 汪磊
-          span #[i.icon-calendar] 2017年06月06日
-          span #[i.icon-bubble] 10
-          span #[i.icon-like] 90
-          span #[i.icon-dislike] 0
-          span #[i.icon-share-alt]
-    .card-block
+  article.card.card-entry.sticky
+    header.card-header
+      a(href='single.html')
+        img.card-img-top(src='uploads/entry2.jpeg', alt='维多利亚港黄昏')
+      .card-sticky #[i] #[i] #[i]
+      .card-meta: .row
+        .col-sm-7
+          a(href='#'): span #[img(src='uploads/avatar.jpeg', alt='汪磊', width='30')]汪磊
+          a(href='#'): span.icon-paper-clip 生活
+          a(href='#'): span.icon-calendar 2017年06月06日
+        .col-sm-5
+          a(href='#'): span.icon-bubble 10
+          a(href='#'): span.icon-like 90
+          a(href='#'): span.icon-dislike 0
+          a(href='#'): span.icon-share-alt
+    content.card-block
       h2.card-title: a(href='single.html') 有华人的地方，就有香港电影
       .card-text
-        p 香港电影是中文电影的先驱者，“有华人的地方，就有香港电影”，港产片多年来风靡全球，成为华人文化的一大标记。 相较于中国电影、新加坡电影和台湾电影，香港电影的质素和数量已经有在长时间累积下来的实力及口碑。
-    .card-footer
-      i.icon-paper-clip #[a(href='archive.html') 生活]
+        p 香港电影是中文电影的先驱者，“有华人的地方，就有香港电影”，港产片多年来风靡全球，成为华人文化的一大标记。
+        p 相较于中国电影、新加坡电影和台湾电影，香港电影的质素和数量已经有在长时间累积下来的实力及口碑。......
+    footer.card-footer
       i.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
-      a(href='single.html') #[span 继续阅读] #[span →]
+      a(href='single.html') 继续阅读 →
+
+  article.card.card-entry
+    header.card-header
+      .card-meta: .row
+        .col-sm-7
+          a(href='#'): span #[img(src='uploads/avatar.jpeg', alt='汪磊', width='30')]汪磊
+          a(href='#'): span.icon-paper-clip 生活
+          a(href='#'): span.icon-calendar 2017年06月06日
+        .col-sm-5
+          a(href='#'): span.icon-bubble 10
+          a(href='#'): span.icon-like 90
+          a(href='#'): span.icon-dislike 0
+          a(href='#'): span.icon-share-alt
+    content.card-block
+      h2.card-title: a(href='single.html') 时代的精神正在消退
+      .card-text
+        p 我2007年在深圳时，还是一个自负的青年，说：“我代表了这个时代的最高精神。”这些年来，我一直在想，能不能配得上这句话，所以从那时到现在，我尽可能地在努力。
+        p 那么，我们这个时代的最高精神究竟是什么？......
+    footer.card-footer
+      i.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
+      a(href='single.html') 继续阅读 →
+
+  article.card.card-entry.quote
+    header.card-header
+      a(href='single.html')
+        span.card-img-top 人活着，总是需要一点精神的
+      .card-meta: .row
+        .col-sm-7
+          a(href='#'): span #[img(src='uploads/avatar.jpeg', alt='汪磊', width='30')]汪磊
+          a(href='#'): span.icon-paper-clip 生活
+          a(href='#'): span.icon-calendar 2017年06月06日
+        .col-sm-5
+          a(href='#'): span.icon-bubble 10
+          a(href='#'): span.icon-like 90
+          a(href='#'): span.icon-dislike 0
+          a(href='#'): span.icon-share-alt
+    content.card-block
+      h2.card-title: a(href='single.html') 时代的精神正在消退
+      .card-text
+        p 我2007年在深圳时，还是一个自负的青年，说：“我代表了这个时代的最高精神。”这些年来，我一直在想，能不能配得上这句话，所以从那时到现在，我尽可能地在努力。
+        p 那么，我们这个时代的最高精神究竟是什么？......
+    footer.card-footer
+      i.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
+      a(href='single.html') 继续阅读 →
+
+  article.card.card-entry
+    header.card-header
+      a(href='single.html')
+        img.card-img-top(src='uploads/entry3.jpeg', alt='苏格兰 - 奥克尼群岛')
+      .card-meta: .row
+        .col-sm-7
+          a(href='#'): span #[img(src='uploads/avatar.jpeg', alt='汪磊', width='30')]汪磊
+          a(href='#'): span.icon-paper-clip 生活
+          a(href='#'): span.icon-calendar 2017年06月06日
+        .col-sm-5
+          a(href='#'): span.icon-bubble 10
+          a(href='#'): span.icon-like 90
+          a(href='#'): span.icon-dislike 0
+          a(href='#'): span.icon-share-alt
+    content.card-block
+      h2.card-title: a(href='single.html') 【苏格兰】奥克尼群岛，天涯何处无芳草
+      .card-text
+        p 长久以来，没有由来的，对那些苏格兰周围，遥远而股票的岛屿，产生了一种向往
+        p 一直以为，那些地方是荒凉的、孤寂的、被人遗忘的，然而，旅行的功能之一，就是纠正偏见，再加上难得的阳光灿烂的好天气，这北方的岛屿，居然也不乏富饶的气质。......
+    footer.card-footer
+      i.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
+      a(href='single.html') 继续阅读 →
 

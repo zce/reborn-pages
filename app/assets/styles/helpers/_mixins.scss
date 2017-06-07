@@ -1,0 +1,7 @@
+@mixin link-color($color: $white) {
+  color: $color;
+
+  &:hover {
+    color: darken($color, 20%);
+  }
+}

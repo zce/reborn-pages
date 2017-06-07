@@ -21,9 +21,7 @@ cache:
     - node_modules
 
 before_script:
-  - yarn global add bower
   - yarn install
-  - bower install -f
 
 script:
   - yarn run build
