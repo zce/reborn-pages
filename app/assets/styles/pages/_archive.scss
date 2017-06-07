@@ -1,10 +1,15 @@
 .card-entry {
+  overflow: hidden;
   @extend .mb-7;
 
   .card-header {
     position: relative;
     background: none;
     @extend .p-0;
+  }
+
+  .card-img-top {
+    transition: transform .5s;
   }
 
   .card-meta {
@@ -46,7 +51,9 @@
   }
 
   .card-block {
+    z-index: 1;
     padding: 3% 6%;
+    background-color: #fff;
   }
 
   .card-title {
@@ -182,6 +189,12 @@
         bottom: 2rem;
         content: '”'
       }
+    }
+  }
+
+  @include hover {
+    .card-img-top {
+      transform: scale(1.1);
     }
   }
 }
