@@ -3,6 +3,7 @@
 
   .card-header {
     position: relative;
+    background: none;
     @extend .p-0;
   }
 
@@ -73,17 +74,19 @@
   }
 
   // Especial item
-  &.feature {
+  &.feature,
+  &.sticky,
+  &.quote {
     .card-meta {
       position: absolute;
       bottom: 0;
       width: 100%;
       height: 40%;
       background: linear-gradient(transparent, $brand-primary);
-    }
 
-    a {
-      @include link-color;
+      a {
+        @include link-color;
+      }
     }
   }
 
