@@ -1,0 +1,124 @@
+.terms {
+  padding: 0 .5rem;
+  border-bottom: .0625rem solid #e0e0e0;
+
+  .category,
+  .tags {
+    i {
+      margin-right: .75rem;
+      font-size: 1.25rem;
+      vertical-align: middle;
+    }
+  }
+
+  .tags {
+    a {
+      display: inline-block;
+      padding: .25rem .5rem;
+      border: .0625rem solid #e0e0e0;
+      border-radius: .25rem;
+      font-size: .875rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+.license {
+  padding: 2rem 0;
+  border-bottom: .0625rem solid #e0e0e0;
+  text-align: center;
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.author {
+  padding: 1rem 0;
+  border-bottom: .0625rem solid #e0e0e0;
+  @extend .media;
+
+  img {
+    display: flex;
+    width: 6.25rem;
+    margin: 0 1rem;
+    border-radius: 50%;
+  }
+
+  .info {
+    @extend .media-body;
+
+    .name {
+      margin-top: .5rem;
+      margin-bottom: 0;
+    }
+
+    .bio {
+      // margin-bottom: 0;
+    }
+
+    .socials {
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        & + li {
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  border-bottom: .0625rem solid #e0e0e0;
+
+  .prev {
+    text-align: left;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
+
+.related {
+  padding: 2rem 0;
+  border-bottom: .0625rem solid #e0e0e0;
+  @extend .row;
+
+  .item {
+    position: relative;
+    @extend .col-md-4;
+
+    img {
+      width: 100%;
+    }
+
+    .title {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 0;
+      margin: 0;
+      padding: .5rem;
+      background-color: rgba($brand-primary, .5);
+      text-align: center;
+
+      a {
+        @include link-color;
+      }
+    }
+  }
+}
+
+.comments {
+  padding: 2rem 0;
+  border-bottom: .0625rem solid #e0e0e0;
+}

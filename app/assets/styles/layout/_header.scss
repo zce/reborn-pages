@@ -164,6 +164,7 @@
 
     .breadcrumb {
       font-size: .875rem;
+      @extend .mb-0;
 
       a {
         @extend .text-white;

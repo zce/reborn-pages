@@ -34,26 +34,35 @@ header.site-header
       form.form-inline(action='/')
         input#search-form.form-control(type='search', name='q', placeholder='搜索...', autocomplete='off')
         label.icon-magnifier(for='search-form')
-  if isHero
-    .hero
-      .intro
-        h1.title One Belt, One Road
-        h3.slogan Thoughts, stories and ideas.
-        a.btn.btn-outline-secondary.btn-xlg.btn-capsule(href='#first') Getting started
-
-      .media
-        i.mask
-        img(src='uploads/hero.jpeg', alt='WEDN.NET')
-        //- video(src='uploads/hero.mp4', width='2000', height='1200', autoplay, loop)
-  else
-    .feature
-      .container
-        ol.breadcrumb
-          li.breadcrumb-item: a(href='index.html') 首页
-          li.breadcrumb-item.active 旅行
-        h1.title 毕业季
-        h3.slogan 你总说毕业遥遥无期，转眼间就各奔东西。
-
-      .media
-        i.mask
-        img(src='uploads/feature.jpeg', alt='WEDN.NET')
+  case cover
+    when 'hero'
+      .hero
+        .intro
+          h1.title One Belt, One Road
+          h3.slogan Thoughts, stories and ideas.
+          a.btn.btn-outline-secondary.btn-xlg.btn-capsule(href='#first') Getting started
+        .media
+          i.mask
+          img(src='uploads/hero.jpeg', alt='WEDN.NET')
+          //- video(src='uploads/hero.mp4', width='2000', height='1200', autoplay, loop)
+    when 'feature_with_title'
+      .feature
+        .container
+          ol.breadcrumb
+            li.breadcrumb-item: a(href='index.html') 首页
+            li.breadcrumb-item.active 旅行
+          h1.title 毕业季
+          h3.slogan 你总说毕业遥遥无期，转眼间就各奔东西。
+        .media
+          i.mask
+          img(src='uploads/feature1.jpeg', alt='WEDN.NET')
+    when 'feature'
+      .feature
+        .container
+          ol.breadcrumb
+            li.breadcrumb-item: a(href='index.html') 首页
+            li.breadcrumb-item: a(href='index.html') 旅行
+            li.breadcrumb-item.active 安特克拉，惊艳十足
+        .media
+          i.mask
+          img(src='uploads/feature2.jpeg', alt='WEDN.NET')
