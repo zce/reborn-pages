@@ -193,141 +193,33 @@
       min-height: 15rem;
       font-size: 2rem;
       text-align: center;
-      background-color: #2b3b49;
       @extend .text-white;
       @extend .px-5;
+      @extend .pb-4;
       @extend .d-flex;
       @extend .align-items-center;
       @extend .justify-content-center;
+      @extend .bg-primary;
 
       &::before,
       &::after {
         position: absolute;
-        font-size: 4rem;
+        font-size: 5rem;
         // font-family: $font-family-monospace;
         line-height: 4rem;
       }
 
       &::before {
-        left: 2rem;
-        top: 2rem;
+        left: 3rem;
+        top: 3rem;
         content: '“'
       }
 
       &::after {
-        right: 2rem;
-        bottom: 2rem;
+        right: 3rem;
+        bottom: 3rem;
         content: '”'
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .card-entry {
-//   .card-header {
-//     position: relative;
-//     overflow: hidden;
-//     @extend .p-0;
-//   }
-
-//   .card-img-overlay {
-//     background: linear-gradient(rgba(#fff, .1), rgba(#fff, .4));
-//     @extend .d-flex;
-//     @extend .flex-column;
-//     @extend .justify-content-end;
-//     @extend .p-0;
-//     @extend .text-white;
-//   }
-
-//   .card-meta {
-//     padding: $card-spacer-y $card-spacer-x;
-//     font-size: .875rem;
-//     line-height: 1rem;
-//     vertical-align: middle;
-//     @extend .d-flex;
-//     @extend .align-items-center;
-
-//     span {
-//       @extend .mr-1;
-
-//       &:nth-child(2) {
-//         @extend .mr-auto;
-//       }
-//     }
-
-//     img {
-//       width: 1.5rem;
-//       @extend .rounded-circle;
-//     }
-
-//     i {
-//       font-size: 1rem;
-//     }
-//   }
-
-//   .card-block {
-//     @extend .py-5;
-//     @extend .px-6;
-//   }
-
-//   .card-title {
-//     font-size: 1.5rem;
-//     @extend .mb-5;
-//   }
-
-//   .card-text p {
-//     text-indent: 2em;
-//     @extend .text-muted;
-//   }
-
-//   .card-footer {
-//     border-color: #f0f0f0;
-//     font-size: 81.25%;
-//     @extend .d-flex;
-//     @extend .align-items-center;
-//     @extend .text-muted;
-
-//     i {
-//       @extend .mr-2;
-
-//       &::before {
-//       @extend .mr-1;
-//       }
-//     }
-
-//     > a {
-//       @extend .ml-auto;
-//     }
-//   }
-// }
