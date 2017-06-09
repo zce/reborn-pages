@@ -70,15 +70,15 @@ block wrapper
           a(href='#') 下一篇 →#[br]《最红的太阳》
 
       .related
-        .item
-          img(src='uploads/related1.jpeg', alt='最红的太阳')
-          h5.title: a(href='#') 《最红的太阳》
-        .item
-          img(src='uploads/related1.jpeg', alt='最红的太阳')
-          h5.title: a(href='#') 《最红的太阳》
-        .item
-          img(src='uploads/related1.jpeg', alt='最红的太阳')
-          h5.title: a(href='#') 《最红的太阳》
-
-      .comments
-        h2.title 《安特克拉，惊艳十足》有 4 条评论
+        h4.sr-only 相关文章
+        .row
+          .col-md-4: .item
+            img(src='uploads/related1.jpeg', alt='最红的太阳')
+            h5.title: a(href='#') 《最红的太阳》
+          .col-md-4: .item
+            img(src='uploads/related2.jpeg', alt='最红的太阳')
+            h5.title: a(href='#') 《最红的太阳》
+          .col-md-4: .item
+            img(src='uploads/related3.jpeg', alt='最红的太阳')
+            h5.title: a(href='#') 《最红的太阳》
+  include shared/single/comments

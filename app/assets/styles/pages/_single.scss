@@ -89,13 +89,12 @@
 }
 
 .related {
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-bottom: .0625rem solid #e0e0e0;
-  @extend .row;
 
   .item {
     position: relative;
-    @extend .col-md-4;
+    margin-bottom: 1rem;
 
     img {
       width: 100%;
@@ -103,12 +102,13 @@
 
     .title {
       position: absolute;
-      left: 15px;
-      right: 15px;
+      left: 0;
+      right: 0;
       bottom: 0;
       margin: 0;
       padding: .5rem;
       background-color: rgba($brand-primary, .5);
+      font-size: 1.125rem;
       text-align: center;
 
       a {
@@ -119,6 +119,66 @@
 }
 
 .comments {
-  padding: 2rem 0;
-  border-bottom: .0625rem solid #e0e0e0;
+  margin-bottom: 5rem;
+  padding: 3% 6%;
+  @extend .card;
+
+  .comment-title {
+    margin: 2rem 0;
+  }
+
+  .comment-list {
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 1rem 0;
+
+      & + li {
+        border-top: .0625rem dashed #e5e5e5;
+      }
+    }
+
+    .media-body {
+      position: relative;
+    }
+
+    img {
+      display: flex;
+      // align-self: center;
+      margin-right: 1rem;
+      width: 6.25rem;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+
+    .time {
+      font-size: .875rem;
+      @extend .text-muted;
+    }
+
+    .content {
+      margin-top: .3125rem;
+      margin-bottom: 0;
+      font-size: .875rem;
+    }
+
+    .reply {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .comment-box {
+  }
+
+  .comment-form {
+    margin: 1rem 0;
+  }
 }
