@@ -10,18 +10,21 @@
 
 // Section common styles
 // --------------------------
+
 .site-main > section {
-  @extend .py-8;
+  @extend .py-7;
 
   .heading {
     @extend .text-center;
 
     .title {
-      @extend .mb-4;
+      @extend .mb-3;
     }
 
     .subtitle {
+      @extend .mb-3;
       @extend .text-muted;
+      @extend .lead;
     }
 
     hr {
@@ -31,10 +34,12 @@
   }
 
   .feature {
-    background-color: #fff;
-    box-shadow: 0 0 1rem #c0c0c0;
     padding: 5%;
+
+    box-shadow: 0 0 1rem rgba($indigo-2, .6);
+
     @extend .mb-5;
+    @extend .bg-white;
 
     img {
       @extend .w-100;
@@ -49,13 +54,13 @@
     }
 
     .subtitle {
-      font-weight: normal;
+      @extend .lead;
       @extend .text-muted;
       @extend .text-center;
       @extend .text-md-right;
 
       &::before {
-        content: ' —— '
+        content: '\2014 \00A0'; // ' —— '
       }
     }
 
@@ -67,63 +72,77 @@
   }
 
   .more {
-    @extend .mt-5;
+    @extend .mt-4;
     @extend .text-center;
   }
 }
 
 // First section styles
 // --------------------------
+
 .first {
   @extend .bg-faded;
 
+  .row {
+    @extend .flex-column-reverse;
+    @extend .flex-lg-row;
+  }
+
   .article {
-    margin-bottom: 3rem;
-    @extend .pr-md-5;
+    margin-bottom: 4.25rem;
+
+    @extend .pr-lg-5;
 
     .content {
       @extend .mt-5;
 
       p {
         font-size: 1.125rem;
-        line-height: 2;
+        line-height: 2.2;
       }
     }
 
     .btn {
-      @extend .m-4;
+      @extend .m-3;
+      @extend .d-block;
+      @extend .d-lg-inline-block;
     }
   }
 
   .share {
     position: absolute;
     bottom: 0;
-    @extend .ml-3;
+    padding: 0;
+    list-style: none;
+
+    @extend .m-3;
+
+    li {
+      display: inline-block;
+    }
 
     .btn:hover {
       transform: rotate(360deg);
-    }
-  }
-
-  @include media-breakpoint-down (md) {
-    .row {
-      flex-direction: column-reverse;
     }
   }
 }
 
 // Second section styles
 // --------------------------
+
 .second {
   .card {
     .card-img-overlay {
       margin-bottom: 8.875rem;
+
       background: linear-gradient(transparent, $brand-primary);
+
       @extend .align-items-end;
     }
 
     .icon-pin {
       font-size: 81.25%;
+
       @extend .text-white;
     }
 
@@ -135,8 +154,14 @@
 
 // Third section styles
 // --------------------------
+
 .third {
   @extend .bg-faded;
+  @include media-breakpoint-up (lg) {
+    .feature {
+      transform: rotate(-15deg);
+    }
+  }
 
   .article {
     @extend .pl-lg-7;
@@ -145,7 +170,7 @@
 
       p {
         font-size: 1rem;
-        line-height: 1.8;
+        line-height: 2;
       }
     }
 
@@ -154,21 +179,18 @@
       @extend .float-right;
     }
   }
-
-  @include media-breakpoint-up (lg) {
-    .feature {
-      transform: rotate(-15deg);
-    }
-  }
 }
 
 // Fourth section styles
 // --------------------------
+
 .fourth {
   .card {
     .card-img-overlay {
       margin-bottom: 2.75rem;
+
       background: linear-gradient(rgba($brand-primary, .1), rgba($brand-primary, .8));
+
       @extend .justify-content-center;
       @extend .align-items-center;
       @extend .text-center;
@@ -179,8 +201,9 @@
     }
 
     .card-block {
-      flex: 0;
       background-color: rgba($brand-primary, .7);
+
+      flex: 0;
       @extend .py-3;
       @extend .text-white;
     }
@@ -193,11 +216,13 @@
 
 // Fifth section styles
 // --------------------------
+
 .fifth {
   @extend .bg-faded;
 }
 
 // Sixth section styles
 // --------------------------
+
 .sixth {
 }

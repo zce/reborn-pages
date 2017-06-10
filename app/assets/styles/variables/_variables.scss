@@ -233,7 +233,7 @@ $font-size-h6: 1rem;
 
 $headings-margin-bottom: ($spacer / 2);
 $headings-font-family:   inherit;
-$headings-font-weight:   500;
+$headings-font-weight:   400;
 $headings-line-height:   1.1;
 $headings-color:         inherit;
 
@@ -260,7 +260,7 @@ $blockquote-font-size:    ($font-size-base * 1.25);
 $blockquote-border-color: $gray-lighter;
 $blockquote-border-width: .25rem;
 
-$hr-border-color: rgba($black, .1);
+$hr-border-color: $border-color;
 $hr-border-width: $border-width;
 
 $mark-padding: .2em;

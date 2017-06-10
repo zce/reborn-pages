@@ -213,7 +213,7 @@
       @extend .text-sm-left;
 
       &::before {
-        content: ' —— ';
+        content: '\2014 \00A0'; // ' —— ';
       }
     }
   }
