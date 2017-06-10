@@ -3,9 +3,9 @@ footer.site-footer
     section.col-md-12.col-lg-5: .widget.widget-subscribe
       h3.title 订阅我们
       p 现在就订阅我们，这样你就可以在第一时间收到我们的更新通知了！
-      .input-group
-        input.form-control(type='text', placeholder='输入您的邮箱')
-        span.input-group-btn: button.btn.btn-primary 订阅
+      form.input-group(action='#')
+        input.form-control(type='email', placeholder='输入您的邮箱')
+        span.input-group-btn: button.btn.btn-secondary(type='submit') 订阅
 
     section.col-md-4.col-lg-2: .widget.widget-links
       h3.title 友情链接

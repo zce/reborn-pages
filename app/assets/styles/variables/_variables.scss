@@ -95,6 +95,7 @@ $base-url: '../';
 $brand-height: 2.5rem;
 $title-color: $indigo-10;
 $subtitle-color: $indigo-9;
+$border-color: $indigo-7;
 
 // Bootstrap variables
 // --------------------------------------------------
@@ -574,8 +575,8 @@ $breadcrumb-padding-x:          1rem;
 $breadcrumb-item-padding:       .5rem;
 
 $breadcrumb-bg:                 none;
-$breadcrumb-divider-color:      $gray-lighter;
-$breadcrumb-active-color:       $gray-lightest;
+$breadcrumb-divider-color:      $indigo-7;
+$breadcrumb-active-color:       $indigo-6;
 $breadcrumb-divider:            '/';
 
 // Carousel

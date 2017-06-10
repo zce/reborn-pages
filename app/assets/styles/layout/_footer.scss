@@ -2,35 +2,37 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .site-footer {
+  @extend .bg-primary;
+
   .widgets {
-    background-color: $brand-primary;
     font-size: .875rem;
+
     @extend .pt-6;
     @extend .text-center;
     @extend .text-md-left;
-
-    &, a {
-      @extend .text-white;
-    }
+    @extend .text-light;
+    @include inverse-link-color;
 
     img {
       max-height: 8.75rem;
-      width: 100%;
-      height: 100%;
+
       object-fit: contain;
+      @extend .w-100;
+      @extend .h-100;
     }
 
     ul {
       list-style: none;
+
       line-height: 2;
+
       @extend .px-2;
     }
 
     .row {
-      // @extend .flex-sm-column-reverse;
       @extend .flex-column-reverse;
-      @extend .flex-md-row;
-      @extend .flex-md-wrap-reverse;
+      @extend .flex-sm-row;
+      @extend .flex-sm-wrap-reverse;
       @extend .flex-lg-row;
     }
 
@@ -41,33 +43,34 @@
     }
 
     .title {
-      border-bottom: .0625rem dashed lighten($brand-primary, 12);
-      font-size: 1rem;
-      @extend .pb-3;
+      border-bottom: border($border-color, dashed);
+
+      font-size: 1.125rem;
+
+      @extend .pb-2;
       @extend .mb-3;
     }
 
-    .form-control {
-      border-color: lighten($brand-primary, 12);
-      background-color: $brand-primary;
-      @extend .text-white;
+    .input-group {
+      @extend .mt-4;
+      @extend .mt-md-5;
     }
 
-    .btn-primary {
-      border-color: lighten($brand-primary, 12);
-      background-color: lighten($brand-primary, 12);
-      @extend .px-4;
+    .btn-secondary {
+      @extend .px-3;
     }
   }
 
   .copyright {
-    border-top: .0625rem solid lighten($brand-primary, 5);
+    border-top: border(lighten($brand-primary, 3));
     background-color: lighten($brand-primary, 2);
-    color: lighten($brand-primary, 60);
+
     @extend .text-center;
+    @extend .text-muted;
 
     p {
       margin: 0;
+
       font-size: .8125rem;
       line-height: 3;
     }
