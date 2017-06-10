@@ -192,11 +192,12 @@ $component-active-bg:    $brand-primary;
 
 $caret-width:            .3em;
 
-$transition-base:        all .2s ease-in-out;
-$transition-fade:        opacity .5s linear; // .15s
+$transition-base:        all .35s ease-in-out;
+$transition-fade:        opacity .35s linear; // .15s
 $transition-collapse:    height .35s ease;
 $transition-transform:   transform .35s ease;
-$transition-search:      border-color .5s, min-width .5s;
+$transition-color:       color .35s ease;
+$transition-background:  background .35s ease;
 
 // Fonts
 

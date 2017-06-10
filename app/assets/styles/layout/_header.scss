@@ -39,7 +39,7 @@
       .form-control {
         padding-left: ($input-btn-padding-y + .25rem) * 2 + .75rem;
         min-width: 3rem;
-        @include transition($transition-search);
+        @include transition(border-color .5s, min-width .5s);
 
         &:focus {
           min-width: 17rem;
@@ -52,12 +52,12 @@
 
       label {
         position: absolute;
+        top: 0;
         left: 0;
-        bottom: 0;
         margin: 0;
         padding: $input-btn-padding-y + .25rem;
         color: darken($input-border-color, 5%);
-        transition: color .5s;
+        @include transition($transition-color);
       }
     }
 
