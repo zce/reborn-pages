@@ -12,13 +12,14 @@
 // 1. Bootstrap || Custom
 
 .site-header {
-  // position: relative;
+  position: relative;
   overflow: hidden;
 
   .navbar {
     position: absolute;
-    z-index: 10;
-    width: 100%;
+    z-index: $zindex-sticky;
+    @extend .w-100;
+    @extend .bg-light;
 
     .navbar-brand {
       img {
@@ -28,39 +29,23 @@
 
     .navbar-nav {
       @extend .mr-auto;
-    }
-
-    // `.navbar-collapse` response menu
-    @include media-breakpoint-down (md) {
-      .navbar-nav {
-        padding-top: $navbar-padding-y;
-      }
-
-      .nav-item {
-        padding: 0 $navbar-padding-x;
-        border-top: .0625rem solid $gray-lighter;
-        transform: rotate3d(1, 0, 0, 0);
-        transition: transform .5s;
-      }
-
-      .collapsing .nav-item {
-        transform: rotate3d(1, 0, 0, -90deg);
-      }
+      // @extend .pt-2;
+      // @extend .pt-lg-0;
     }
 
     .form-inline {
       position: relative;
 
       .form-control {
-        padding-left: ($input-btn-padding-y + .1875rem) * 2 + $font-size-base - .0625rem;
+        padding-left: ($input-btn-padding-y + .25rem) * 2 + .75rem;
         min-width: 3rem;
-        transition: border-color .5s, min-width .5s;
+        @include transition($transition-search);
 
         &:focus {
           min-width: 17rem;
 
           & + label {
-            @extend .text-gray-dark;
+            color: darken($input-border-color-focus, 5%);
           }
         }
       }
@@ -70,19 +55,42 @@
         left: 0;
         bottom: 0;
         margin: 0;
-        padding: $input-btn-padding-y + .1875rem;
+        padding: $input-btn-padding-y + .25rem;
+        color: darken($input-border-color, 5%);
         transition: color .5s;
-        @extend .text-muted;
+      }
+    }
+
+    @include media-breakpoint-down (md) {
+      .navbar-nav {
+        border-top: border($indigo-8);
+        margin-top: $navbar-padding-y;
       }
 
-      @include media-breakpoint-down (md) {
-        margin-bottom: 1rem;
-        border-top: .0625rem solid $gray-lighter;
-        padding-top: 1.25rem;
+      .nav-item {
+        padding: 0 $navbar-padding-y;
+        border-bottom: border($indigo-8);
+        transform: rotateX(0);
+        @include transition($transition-transform);
+      }
 
+      .form-inline {
+        margin: 1.25rem 0 1rem;
+        opacity: 1;
+        @include transition($transition-fade);
+      }
 
-        .form-control {
-          width: 100%;
+      .form-control {
+        width: 100%;
+      }
+
+      .collapsing {
+        .nav-item {
+          transform: rotateX(-90deg);
+        }
+
+        .form-inline {
+          opacity: 0;
         }
       }
     }
@@ -103,11 +111,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 1;
     }
 
     img, video {
-      z-index: -1;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -116,8 +122,8 @@
 
   .hero {
     .mask {
-      background: url(../images/mask.png);
-      opacity: .8;
+      background: image('mask.png');
+      // opacity: .8;
     }
 
     .intro {

@@ -2,12 +2,17 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 
+@function border ($color, $style: solid) {
+  @return $border-width $style $color;
+}
+
+
 /// Native `url(..)` function wrapper
 /// @param {String} $base - base URL for the asset
 /// @param {String} $type - asset type folder (e.g. `fonts/`)
 /// @param {String} $path - asset path
 /// @return {Url}
-@function asset($base, $type, $path) {
+@function asset ($base, $type, $path) {
   @return url($base + $type + $path);
 }
 
@@ -16,7 +21,7 @@
 /// @param {String} $base [$base-url] - base URL
 /// @return {Url}
 /// @require $base-url
-@function image($path, $base: $base-url) {
+@function image ($path, $base: $base-url) {
   @return asset($base, 'images/', $path);
 }
 
@@ -25,6 +30,6 @@
 /// @param {String} $base [$base-url] - base URL
 /// @return {Url}
 /// @require $base-url
-@function font($path, $base: $base-url) {
+@function font ($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
 }

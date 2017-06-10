@@ -10,6 +10,8 @@
  * Text Domain: wedn
  * Tags: blog
  *
+ * http://getskeleton.com/
+ *
  * https://www.iotacss.com/
  * The main stylesheet. It is required in all themes and contains the information header for your theme.
  *
@@ -34,11 +36,10 @@
 }
 
 // 4. Vendors
-// bower:scss
-@import 'bower_components/bootstrap/scss/bootstrap.scss';
-// endbower
+@import 'vender/vender';
 
 // 5. Components
+@import 'components/utilities';
 @import 'components/button';
 @import 'components/card';
 

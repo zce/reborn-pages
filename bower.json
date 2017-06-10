@@ -9,10 +9,7 @@
   },
   "overrides": {
     "bootstrap": {
-      "main": [
-        "scss/bootstrap.scss",
-        "dist/js/bootstrap.js"
-      ]
+      "main": []
     },
     "modernizr": {
       "main": []

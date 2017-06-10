@@ -15,8 +15,9 @@
 
     img {
       max-height: 8.75rem;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      @extend .img-fluid;
     }
 
     ul {

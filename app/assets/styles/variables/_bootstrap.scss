@@ -14,8 +14,8 @@
 // Grid breakpoints
 // Grid containers
 // Grid columns
-// Fonts
 // Components
+// Fonts
 // Tables
 // Buttons
 // Forms
@@ -98,7 +98,7 @@ $red:    #d9534f !default;
 $orange: #f0ad4e !default;
 $yellow: #ffd500 !default;
 $green:  #5cb85c !default;
-$blue:   #2b3b49; // #0275d8 !default;
+$blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
@@ -140,16 +140,12 @@ $enable-print-styles:       true !default;
 
 $spacer: 1rem !default;
 $spacers: (
-  0: ($spacer * 0.00),
-  1: ($spacer * 0.25),
-  2: ($spacer * 0.50),
-  3: ($spacer * 1.00),
-  4: ($spacer * 1.50),
-  5: ($spacer * 2.00),
-  6: ($spacer * 3.00),
-  7: ($spacer * 4.00),
-  8: ($spacer * 5.00),
-  9: ($spacer * 7.50)
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
 ) !default;
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -174,7 +170,7 @@ $body-color:    $gray-dark !default;
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: none; // underline !default;
+$link-hover-decoration: underline !default;
 
 
 // Grid breakpoints
@@ -872,13 +868,13 @@ $figure-caption-color:     $gray-light !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:          1rem; // .75rem !default;
-$breadcrumb-padding-x:          0; // 1rem !default;
+$breadcrumb-padding-y:          .75rem !default;
+$breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 transparent; // $gray-lighter !default;
-$breadcrumb-divider-color:      $gray-lighter !default;
-$breadcrumb-active-color:       $gray-lighter !default;
+$breadcrumb-bg:                 $gray-lighter !default;
+$breadcrumb-divider-color:      $gray-light !default;
+$breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;
 
 
