@@ -1,3 +1,5 @@
 @include bg-variant('.bg-white', $white);
 
 @include bg-variant('.bg-light', $indigo-9);
+
+@include text-emphasis-variant('.text-light', $indigo-9);

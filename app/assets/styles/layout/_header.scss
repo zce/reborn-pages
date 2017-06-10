@@ -13,70 +13,39 @@
 
 .site-header {
   position: relative;
+
   overflow: hidden;
 
   .navbar {
     position: absolute;
     z-index: $zindex-sticky;
+
     @extend .w-100;
-    @extend .bg-light;
-
-    .navbar-brand {
-      img {
-        height: 2.5rem;
-      }
-    }
-
-    .navbar-nav {
-      @extend .mr-auto;
-      // @extend .pt-2;
-      // @extend .pt-lg-0;
-    }
-
-    .form-inline {
-      position: relative;
-
-      .form-control {
-        padding-left: ($input-btn-padding-y + .25rem) * 2 + .75rem;
-        min-width: 3rem;
-        @include transition(border-color .5s, min-width .5s);
-
-        &:focus {
-          min-width: 17rem;
-
-          & + label {
-            color: darken($input-border-color-focus, 5%);
-          }
-        }
-      }
-
-      label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: $input-btn-padding-y + .25rem;
-        color: darken($input-border-color, 5%);
-        @include transition($transition-color);
-      }
-    }
-
+    @extend .bg-white;
+    @extend .navbar-expand-lg;
+    @extend .navbar-light;
     @include media-breakpoint-down (md) {
       .navbar-nav {
-        border-top: border($indigo-8);
         margin-top: $navbar-padding-y;
+
+        border-top: border($indigo-8);
       }
 
       .nav-item {
         padding: 0 $navbar-padding-y;
-        border-bottom: border($indigo-8);
+
         transform: rotateX(0);
+
+        border-bottom: border($indigo-8);
+
         @include transition($transition-transform);
       }
 
       .form-inline {
         margin: 1.25rem 0 1rem;
+
         opacity: 1;
+
         @include transition($transition-fade);
       }
 
@@ -94,28 +63,73 @@
         }
       }
     }
+
+    .navbar-brand {
+      img {
+        height: $brand-height;
+      }
+    }
+
+    .navbar-nav {
+      @extend .mr-auto;
+    }
+
+    .form-inline {
+      position: relative;
+
+      .form-control {
+        min-width: 3rem;
+        padding-left: ($input-btn-padding-y + .25rem) * 2 + .75rem;
+
+        @include transition(border-color .5s, min-width .5s);
+
+        &:focus {
+          min-width: 17rem;
+
+          & + label {
+            color: darken($input-border-color-focus, 5%);
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        margin: 0;
+        padding: $input-btn-padding-y + .25rem;
+
+        color: darken($input-border-color, 5%);
+
+        @include transition($transition-color);
+      }
+    }
   }
 
   .media {
     position: absolute;
+    z-index: -1;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    z-index: -1;
+
     overflow: hidden;
 
     .mask {
       position: absolute;
+      z-index: 1;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
     }
 
     img, video {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
   }
@@ -127,13 +141,14 @@
     }
 
     .intro {
+      display: flex;
+      flex-direction: column;
+
       height: 37.5rem;
-      margin-top: 4.125rem;
-      @extend .d-flex;
-      @extend .flex-column;
-      @extend .justify-content-center;
-      @extend .align-items-center;
-      @extend .text-white;
+      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-height;
+
+      justify-content: center;
+      align-items: center;
     }
 
     .title, .slogan {
@@ -141,53 +156,56 @@
     }
 
     .title {
-      font-size: 4rem; // 6rem;
+      color: $title-color;
+
+      font-size: 4rem;
     }
 
     .slogan {
-      font-size: 2.5rem; // 3rem;
-      @extend .mb-5;
-    }
+      color: $subtitle-color;
 
-    .btn {
-      @extend .text-white;
+      font-size: 2.5rem;
+
+      @extend .mb-5;
     }
   }
 
   .feature {
     .container {
-      margin-top: 4.125rem;
-      @extend .text-white;
+      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-height;
     }
 
     .mask {
-      background-image: linear-gradient(transparent, #fff), url(../images/mask.png);
+      background-image: linear-gradient(transparent, $body-bg), url(../images/mask.png);
     }
 
     img, video {
-      // padding-bottom: .25rem;
       filter: blur(.125rem);
     }
 
     .breadcrumb {
       font-size: .875rem;
-      @extend .mb-0;
 
-      a {
-        @extend .text-white;
-      }
+      @extend .mb-0;
+      @include inverse-link-color;
     }
 
     .title {
-      font-size: 2.125rem; // 6rem;
+      color: $title-color;
+
+      font-size: 2.125rem;
       line-height: 2.5;
+
       @extend .mt-5;
       @extend .text-center;
       @extend .text-sm-left;
     }
 
     .slogan {
-      font-size: 1.125rem; // 3rem;
+      color: $subtitle-color;
+
+      font-size: 1.125rem;
+
       @extend .pl-sm-4;
       @extend .pl-md-6;
       @extend .mb-8;
@@ -195,7 +213,7 @@
       @extend .text-sm-left;
 
       &::before {
-        content: ' —— '
+        content: ' —— ';
       }
     }
   }

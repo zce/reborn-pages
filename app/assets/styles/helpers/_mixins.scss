@@ -1,7 +1,9 @@
-@mixin link-color($color: $white) {
-  color: $color;
+@mixin inverse-link-color($color: $indigo-10) {
+  a {
+    color: $color;
 
-  &:hover {
-    color: darken($color, 20%);
+    &:hover {
+      color: darken($color, 20%);
+    }
   }
 }

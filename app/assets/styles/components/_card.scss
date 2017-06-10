@@ -181,9 +181,7 @@
       z-index: 1;
       width: 100%;
 
-      a {
-        @include link-color;
-      }
+      @include inverse-link-color;
     }
   }
 

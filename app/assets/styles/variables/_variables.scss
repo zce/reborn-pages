@@ -77,8 +77,26 @@
   }
 }
 
-$base-url: '../';
+// My variables
+// --------------------------------------------------
 
+$indigo-1:                #0b0f13;
+$indigo-2:                #2b3b49;
+$indigo-3:                #40586d;
+$indigo-4:                #6284a2;
+$indigo-5:                #86a0b8;
+$indigo-6:                #aabdcd;
+$indigo-7:                #ced9e2;
+$indigo-8:                #e1e7ed;
+$indigo-9:                #f6f7f9;// #f8f9fb;
+$indigo-10:               #f9fafc;
+
+$base-url: '../';
+$brand-height: 2.5rem;
+$title-color: $indigo-10;
+$subtitle-color: $indigo-9;
+
+// Bootstrap variables
 // --------------------------------------------------
 
 // Colors
@@ -93,17 +111,6 @@ $blue:                    #0275d8;
 $teal:                    #5bc0de;
 $pink:                    #ff5b77;
 $purple:                  #613d7c;
-
-$indigo-1:                #0b0f13;
-$indigo-2:                #2b3b49;
-$indigo-3:                #40586d;
-$indigo-4:                #6284a2;
-$indigo-5:                #86a0b8;
-$indigo-6:                #aabdcd;
-$indigo-7:                #ced9e2;
-$indigo-8:                #e1e7ed;
-$indigo-9:                #f8f9fb;
-$indigo-10:               #f9fafc;
 
 $gray-dark:                 $indigo-2;
 $gray:                      $indigo-3;
@@ -562,7 +569,14 @@ $navbar-light-toggler-border-color: rgba($black, .1);
 
 // Breadcrumbs
 
+$breadcrumb-padding-y:          .75rem;
+$breadcrumb-padding-x:          1rem;
+$breadcrumb-item-padding:       .5rem;
 
+$breadcrumb-bg:                 none;
+$breadcrumb-divider-color:      $gray-lighter;
+$breadcrumb-active-color:       $gray-lightest;
+$breadcrumb-divider:            '/';
 
 // Carousel
 

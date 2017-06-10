@@ -111,9 +111,7 @@
       font-size: 1.125rem;
       text-align: center;
 
-      a {
-        @include link-color;
-      }
+      @include inverse-link-color;
     }
   }
 }
