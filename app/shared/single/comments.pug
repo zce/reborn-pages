@@ -33,20 +33,19 @@
           span.time 2017年06月09日 11:26
           p.content 嗨，这是一条评论。
           a.reply.icon-action-undo(href='#')
-  .comment-box
-    form.comment-form(action='#', method='post', novalidate)
-      h3.box-title 发表评论
-      p.box-subtitle 必填项已用 * 标注。请放心，电子邮件地址不会被公开。
-      .form-group
-        label.sr-only(for='comment') 评论
-        textarea#comment.form-control(name="comment", cols="40", rows="7", placeholder='随便说点什么吧......', required)
-      .form-group
-        label.sr-only(for='author') 昵称 *
-        input#author.form-control(name="author", placeholder='您的昵称 *', required)
-      .form-group
-        label.sr-only(for='email') 电子邮箱 *
-        input#email.form-control(name="email", placeholder='您的邮箱 *', required)
-      .form-group
-        label.sr-only(for='comment') 站点
-        input#comment.form-control(name="comment", placeholder='您的站点链接（选填）')
-      button.btn.btn-primary.btn-block(type='submit') 发表评论
+  form.comment-form(action='#', method='post', novalidate)
+    h3.box-title 发表评论
+    p.box-subtitle 必填项已用 * 标注。请放心，电子邮件地址不会被公开。
+    .form-group
+      label.sr-only(for='comment') 评论
+      textarea#comment.form-control(name="comment", cols="40", rows="7", placeholder='随便说点什么吧......', required)
+    .form-group
+      label.sr-only(for='author') 昵称 *
+      input#author.form-control(name="author", placeholder='您的昵称 *', required)
+    .form-group
+      label.sr-only(for='email') 电子邮箱 *
+      input#email.form-control(name="email", placeholder='您的邮箱 *', required)
+    .form-group
+      label.sr-only(for='comment') 站点
+      input#comment.form-control(name="comment", placeholder='您的站点链接（选填）')
+    button.btn.btn-primary.btn-block(type='submit') 发表评论

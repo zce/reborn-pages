@@ -1,4 +1,4 @@
-@mixin inverse-link-color($color: $indigo-9, $inner: false) {
+@mixin change-link-color($color: $indigo-9, $inner: false) {
   @if $inner {
     color: $color;
 

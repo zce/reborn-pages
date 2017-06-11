@@ -40,7 +40,7 @@ $card-prefix: '.card';
     }
 
     #{$card-prefix}-meta {
-      @include inverse-link-color;
+      @include change-link-color;
 
       .col-sm-7 {
         @extend .text-center;
@@ -260,10 +260,11 @@ $card-prefix: '.card';
 
     #{$card-prefix}-img-overlay {
       position: static;
+
       color: $brand-primary;
 
       #{$card-prefix}-meta {
-        @include inverse-link-color($brand-primary);
+        @include change-link-color($brand-primary);
       }
     }
 
@@ -401,13 +402,15 @@ $card-prefix: '.card';
   &#{$card-prefix}-widget {
     padding: .25rem 1rem;
 
-    @include inverse-link-color($gray-dark);
+    @include change-link-color($gray-dark);
 
     #{$card-prefix}-header {
       padding: .5rem 0;
+
+      border-width: $card-border-width;
+
       font-size: 1.125rem;
       line-height: 1.5;
-      border-width: $card-border-width;
     }
 
     .input-group {
@@ -605,7 +608,7 @@ $card-prefix: '.card';
 
 //       width: 100%;
 
-//       @include inverse-link-color;
+//       @include change-link-color;
 //     }
 //   }
 

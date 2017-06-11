@@ -208,7 +208,7 @@
       font-size: .875rem;
 
       @extend .mb-0;
-      @include inverse-link-color;
+      @include change-link-color;
     }
 
     .title {

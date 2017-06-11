@@ -1,8 +1,8 @@
 // Head room js styles
 .topbar {
   position: fixed !important;
-  will-change: transform;
 
+  will-change: transform;
   @include transition($transition-transform);
 
   &.is-pinned {

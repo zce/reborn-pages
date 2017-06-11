@@ -11,7 +11,7 @@
     @extend .text-center;
     @extend .text-md-left;
     @extend .text-light;
-    @include inverse-link-color;
+    @include change-link-color;
 
     img {
       max-height: 8.75rem;
