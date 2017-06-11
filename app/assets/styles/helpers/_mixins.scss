@@ -1,9 +1,17 @@
-@mixin inverse-link-color($color: $indigo-9) {
-  a {
+@mixin inverse-link-color($color: $indigo-9, $inner: false) {
+  @if $inner {
     color: $color;
 
-    &:hover {
+    @include hover-focus {
       color: darken($color, 20%);
+    }
+  } @else {
+    a {
+      color: $color;
+
+      @include hover-focus {
+        color: darken($color, 20%);
+      }
     }
   }
 }

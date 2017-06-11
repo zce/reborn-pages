@@ -88,11 +88,11 @@ $indigo-5:                #86a0b8;
 $indigo-6:                #aabdcd;
 $indigo-7:                #ced9e2;
 $indigo-8:                #e1e7ed;
-$indigo-9:                #f6f7f9;// #f8f9fb;
+$indigo-9:                #f6f7f9; // #f8f9fb;
 $indigo-10:               #f9fafc;
 
 $base-url: '../';
-$brand-height: 2.5rem;
+$brand-size: 2.5rem;
 $title-color: $indigo-10;
 $subtitle-color: $indigo-9;
 $border-color: $indigo-7;
@@ -113,10 +113,12 @@ $teal:                    #5bc0de;
 $pink:                    #ff5b77;
 $purple:                  #613d7c;
 
-$gray-dark:                 $indigo-2;
-$gray:                      $indigo-3;
+$gray-darkest:              $indigo-1;
+$gray-darker:               $indigo-2;
+$gray-dark:                 $indigo-3;
+$gray:                      $indigo-4;
 $gray-light:                $indigo-5;
-$gray-lighter:              $indigo-7;
+$gray-lighter:              $indigo-6;
 $gray-lightest:             $indigo-8;
 
 $brand-primary:             $indigo-3;
@@ -141,7 +143,7 @@ $enable-print-styles:       true;
 $spacer: 1rem;
 $spacers: (
   0: ($spacer * 0),
-  1: ($spacer * 0.125),
+  1: ($spacer * 0.25),
   2: ($spacer * 0.5),
   3: ($spacer * 1.125),
   4: ($spacer * 2),
@@ -182,7 +184,15 @@ $link-hover-decoration: none;
 
 // Grid columns
 
-
+$grid-columns:               12;
+$grid-gutter-width-base:     30px;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
 
 // Components
 
@@ -253,7 +263,7 @@ $lead-font-weight: 300;
 
 $small-font-size: 80%;
 
-$text-muted: $gray-light;
+$text-muted: $gray;
 
 $blockquote-small-color:  $gray-light;
 $blockquote-font-size:    ($font-size-base * 1.25);
@@ -462,7 +472,28 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8, %3Csvg xmln
 
 // Dropdowns
 
+$dropdown-min-width:             10rem;
+$dropdown-padding-y:             .5rem;
+$dropdown-margin-top:            .125rem;
+$dropdown-bg:                    $white;
+$dropdown-border-color:          $border-color;
+$dropdown-border-width:          $border-width;
+$dropdown-divider-bg:            $gray-lighter;
+$dropdown-box-shadow:            0 .5rem 1rem rgba($black, .175);
 
+$dropdown-link-color:            $gray-light;
+$dropdown-link-hover-color:      $gray;
+$dropdown-link-hover-bg:         $gray-lightest;
+
+$dropdown-link-active-color:     $component-active-color;
+$dropdown-link-active-bg:        $component-active-bg;
+
+$dropdown-link-disabled-color:   $gray-light;
+
+$dropdown-item-padding-y:        .25rem;
+$dropdown-item-padding-x:        1.25rem;
+
+$dropdown-header-color:          $gray-light;
 
 // Z-index master list
 
@@ -488,7 +519,7 @@ $nav-pills-active-link-bg:    $component-active-bg;
 
 // Navbar
 
-$navbar-padding-y:                  ($spacer / 2);
+$navbar-padding-y:                  ($spacer / 4); // ($spacer / 2);
 $navbar-padding-x:                  $spacer;
 
 $navbar-brand-font-size:            $font-size-lg;
@@ -509,12 +540,12 @@ $navbar-inverse-disabled-color:        rgba($white, .25);
 $navbar-inverse-toggler-icon-bg:         str-replace(url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-inverse-toggler-border-color:  rgba($white, .1);
 
-$navbar-light-color:                rgba($black, .5);
-$navbar-light-hover-color:          rgba($black, .7);
-$navbar-light-active-color:         rgba($black, .9);
-$navbar-light-disabled-color:       rgba($black, .3);
+$navbar-light-color:                  $gray;
+$navbar-light-hover-color:            $gray-dark;
+$navbar-light-active-color:           $gray-darker;
+$navbar-light-disabled-color:         $gray-lighter;
 $navbar-light-toggler-icon-bg:        str-replace(url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-$navbar-light-toggler-border-color: rgba($black, .1);
+$navbar-light-toggler-border-color:   $gray-lighter;
 
 // Pagination
 
@@ -530,7 +561,24 @@ $navbar-light-toggler-border-color: rgba($black, .1);
 
 // Cards
 
+$card-spacer-y:            .75rem;
+$card-spacer-x:            1.25rem;
+$card-border-width:        $border-width;
+$card-border-radius:       $border-radius;
+$card-border-color:        $border-color;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width});
+$card-cap-bg:              none;
+$card-bg:                  $white;
 
+$card-inverse-link-hover-color:    $white;
+
+$card-img-overlay-padding: .75rem 1.25rem;
+
+$card-deck-margin:          ($grid-gutter-width-base / 2);
+
+$card-columns-count:        3;
+$card-columns-gap:          1.25rem;
+$card-columns-margin:       $card-spacer-y;
 
 // Tooltips
 

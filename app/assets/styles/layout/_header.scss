@@ -41,6 +41,10 @@
         @include transition($transition-transform);
       }
 
+      .dropdown-menu {
+        margin-bottom: .5rem;
+      }
+
       .form-inline {
         margin: 1.25rem 0 1rem;
 
@@ -65,9 +69,20 @@
     }
 
     .navbar-brand {
-      img {
-        height: $brand-height;
+      // 1. Font icon brand
+      color: $navbar-light-color;
+
+      font-size: $brand-size;
+      line-height: $brand-size;
+
+      @include hover-focus {
+        color: $navbar-light-hover-color;
       }
+
+      // // 2. Image brand
+      // img {
+      //   height: $brand-size;
+      // }
     }
 
     .navbar-nav {
@@ -145,7 +160,7 @@
       flex-direction: column;
 
       height: 37.5rem;
-      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-height;
+      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
 
       justify-content: center;
       align-items: center;
@@ -172,7 +187,7 @@
 
   .feature {
     .container {
-      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-height;
+      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
     }
 
     .mask {

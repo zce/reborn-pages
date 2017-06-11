@@ -31,1373 +31,580 @@ $icon-prefix: 'icon-';
 }
 
 .#{$icon-prefix} {
-  &logo:before {
+  &logo::before {
     content: '\e900';
   }
-  &user-female:before {
+  &user-female::before {
     content: '\e000';
   }
-  &people:before {
+  &people::before {
     content: '\e001';
   }
-  &user-follow:before {
+  &user-follow::before {
     content: '\e002';
   }
-  &user-following:before {
+  &user-following::before {
     content: '\e003';
   }
-  &user-unfollow:before {
+  &user-unfollow::before {
     content: '\e004';
   }
-  &user:before {
+  &user::before {
     content: '\e005';
   }
-  &trophy:before {
+  &trophy::before {
     content: '\e006';
   }
-  &speedometer:before {
+  &speedometer::before {
     content: '\e007';
   }
-  &shield:before {
+  &shield::before {
     content: '\e00e';
   }
-  &screen-tablet:before {
+  &screen-tablet::before {
     content: '\e00f';
   }
-  &screen-smartphone:before {
+  &screen-smartphone::before {
     content: '\e010';
   }
-  &screen-desktop:before {
+  &screen-desktop::before {
     content: '\e011';
   }
-  &plane:before {
+  &plane::before {
     content: '\e012';
   }
-  &notebook:before {
+  &notebook::before {
     content: '\e013';
   }
-  &mustache:before {
+  &mustache::before {
     content: '\e014';
   }
-  &mouse:before {
+  &mouse::before {
     content: '\e015';
   }
-  &magnet:before {
+  &magnet::before {
     content: '\e016';
   }
-  &magic-wand:before {
+  &magic-wand::before {
     content: '\e017';
   }
-  &hourglass:before {
+  &hourglass::before {
     content: '\e018';
   }
-  &graduation:before {
+  &graduation::before {
     content: '\e019';
   }
-  &ghost:before {
+  &ghost::before {
     content: '\e01a';
   }
-  &game-controller:before {
+  &game-controller::before {
     content: '\e01b';
   }
-  &fire:before {
+  &fire::before {
     content: '\e01c';
   }
-  &eyeglass:before {
+  &eyeglass::before {
     content: '\e01d';
   }
-  &envelope-open:before {
+  &envelope-open::before {
     content: '\e01e';
   }
-  &envolope-letter:before {
+  &envolope-letter::before {
     content: '\e01f';
   }
-  &energy:before {
+  &energy::before {
     content: '\e020';
   }
-  &emotsmile:before {
+  &emotsmile::before {
     content: '\e021';
   }
-  &disc:before {
+  &disc::before {
     content: '\e022';
   }
-  &cursor-move:before {
+  &cursor-move::before {
     content: '\e023';
   }
-  &crop:before {
+  &crop::before {
     content: '\e024';
   }
-  &credit-card:before {
+  &credit-card::before {
     content: '\e025';
   }
-  &chemistry:before {
+  &chemistry::before {
     content: '\e026';
   }
-  &bell:before {
+  &bell::before {
     content: '\e027';
   }
-  &badge:before {
+  &badge::before {
     content: '\e028';
   }
-  &anchor:before {
+  &anchor::before {
     content: '\e029';
   }
-  &wallet:before {
+  &wallet::before {
     content: '\e02a';
   }
-  &vector:before {
+  &vector::before {
     content: '\e02b';
   }
-  &speech:before {
+  &speech::before {
     content: '\e02c';
   }
-  &puzzle:before {
+  &puzzle::before {
     content: '\e02d';
   }
-  &printer:before {
+  &printer::before {
     content: '\e02e';
   }
-  &present:before {
+  &present::before {
     content: '\e02f';
   }
-  &playlist:before {
+  &playlist::before {
     content: '\e030';
   }
-  &pin:before {
+  &pin::before {
     content: '\e031';
   }
-  &picture:before {
+  &picture::before {
     content: '\e032';
   }
-  &map:before {
+  &map::before {
     content: '\e033';
   }
-  &layers:before {
+  &layers::before {
     content: '\e034';
   }
-  &handbag:before {
+  &handbag::before {
     content: '\e035';
   }
-  &globe-alt:before {
+  &globe-alt::before {
     content: '\e036';
   }
-  &globe:before {
+  &globe::before {
     content: '\e037';
   }
-  &frame:before {
+  &frame::before {
     content: '\e038';
   }
-  &folder-alt:before {
+  &folder-alt::before {
     content: '\e039';
   }
-  &film:before {
+  &film::before {
     content: '\e03a';
   }
-  &feed:before {
+  &feed::before {
     content: '\e03b';
   }
-  &earphones-alt:before {
+  &earphones-alt::before {
     content: '\e03c';
   }
-  &earphones:before {
+  &earphones::before {
     content: '\e03d';
   }
-  &drop:before {
+  &drop::before {
     content: '\e03e';
   }
-  &drawar:before {
+  &drawar::before {
     content: '\e03f';
   }
-  &docs:before {
+  &docs::before {
     content: '\e040';
   }
-  &directions:before {
+  &directions::before {
     content: '\e041';
   }
-  &direction:before {
+  &direction::before {
     content: '\e042';
   }
-  &diamond:before {
+  &diamond::before {
     content: '\e043';
   }
-  &cup:before {
+  &cup::before {
     content: '\e044';
   }
-  &compass:before {
+  &compass::before {
     content: '\e045';
   }
-  &call-out:before {
+  &call-out::before {
     content: '\e046';
   }
-  &call-in:before {
+  &call-in::before {
     content: '\e047';
   }
-  &call-end:before {
+  &call-end::before {
     content: '\e048';
   }
-  &calculator:before {
+  &calculator::before {
     content: '\e049';
   }
-  &bubbles:before {
+  &bubbles::before {
     content: '\e04a';
   }
-  &briefcase:before {
+  &briefcase::before {
     content: '\e04b';
   }
-  &book-open:before {
+  &book-open::before {
     content: '\e04c';
   }
-  &basket-loaded:before {
+  &basket-loaded::before {
     content: '\e04d';
   }
-  &basket:before {
+  &basket::before {
     content: '\e04e';
   }
-  &bag:before {
+  &bag::before {
     content: '\e04f';
   }
-  &action-undo:before {
+  &action-undo::before {
     content: '\e050';
   }
-  &action-redo:before {
+  &action-redo::before {
     content: '\e051';
   }
-  &wrench:before {
+  &wrench::before {
     content: '\e052';
   }
-  &umbrella:before {
+  &umbrella::before {
     content: '\e053';
   }
-  &trash:before {
+  &trash::before {
     content: '\e054';
   }
-  &tag:before {
+  &tag::before {
     content: '\e055';
   }
-  &support:before {
+  &support::before {
     content: '\e056';
   }
-  &size-fullscreen:before {
+  &size-fullscreen::before {
     content: '\e057';
   }
-  &size-actual:before {
+  &size-actual::before {
     content: '\e058';
   }
-  &shuffle:before {
+  &shuffle::before {
     content: '\e059';
   }
-  &share-alt:before {
+  &share-alt::before {
     content: '\e05a';
   }
-  &share:before {
+  &share::before {
     content: '\e05b';
   }
-  &rocket:before {
+  &rocket::before {
     content: '\e05c';
   }
-  &question:before {
+  &question::before {
     content: '\e05d';
   }
-  &pie-chart:before {
+  &pie-chart::before {
     content: '\e05e';
   }
-  &pencil:before {
+  &pencil::before {
     content: '\e05f';
   }
-  &note:before {
+  &note::before {
     content: '\e060';
   }
-  &music-tone-alt:before {
+  &music-tone-alt::before {
     content: '\e061';
   }
-  &music-tone:before {
+  &music-tone::before {
     content: '\e062';
   }
-  &microphone:before {
+  &microphone::before {
     content: '\e063';
   }
-  &loop:before {
+  &loop::before {
     content: '\e064';
   }
-  &logout:before {
+  &logout::before {
     content: '\e065';
   }
-  &login:before {
+  &login::before {
     content: '\e066';
   }
-  &list:before {
+  &list::before {
     content: '\e067';
   }
-  &like:before {
+  &like::before {
     content: '\e068';
   }
-  &home:before {
+  &home::before {
     content: '\e069';
   }
-  &grid:before {
+  &grid::before {
     content: '\e06a';
   }
-  &graph:before {
+  &graph::before {
     content: '\e06b';
   }
-  &equalizer:before {
+  &equalizer::before {
     content: '\e06c';
   }
-  &dislike:before {
+  &dislike::before {
     content: '\e06d';
   }
-  &cursor:before {
+  &cursor::before {
     content: '\e06e';
   }
-  &control-start:before {
+  &control-start::before {
     content: '\e06f';
   }
-  &control-rewind:before {
+  &control-rewind::before {
     content: '\e070';
   }
-  &control-play:before {
+  &control-play::before {
     content: '\e071';
   }
-  &control-pause:before {
+  &control-pause::before {
     content: '\e072';
   }
-  &control-forward:before {
+  &control-forward::before {
     content: '\e073';
   }
-  &control-end:before {
+  &control-end::before {
     content: '\e074';
   }
-  &calender:before {
+  &calender::before {
     content: '\e075';
   }
-  &bulb:before {
+  &bulb::before {
     content: '\e076';
   }
-  &chart:before {
+  &chart::before {
     content: '\e077';
   }
-  &arrow-up-circle:before {
+  &arrow-up-circle::before {
     content: '\e078';
   }
-  &arrow-right-circle:before {
+  &arrow-right-circle::before {
     content: '\e079';
   }
-  &arrow-left-circle:before {
+  &arrow-left-circle::before {
     content: '\e07a';
   }
-  &arrow-down-circle:before {
+  &arrow-down-circle::before {
     content: '\e07b';
   }
-  &ban:before {
+  &ban::before {
     content: '\e07c';
   }
-  &bubble:before {
+  &bubble::before {
     content: '\e07d';
   }
-  &camrecorder:before {
+  &camrecorder::before {
     content: '\e07e';
   }
-  &camera:before {
+  &camera::before {
     content: '\e07f';
   }
-  &check:before {
+  &check::before {
     content: '\e080';
   }
-  &clock:before {
+  &clock::before {
     content: '\e081';
   }
-  &close:before {
+  &close::before {
     content: '\e082';
   }
-  &cloud-download:before {
+  &cloud-download::before {
     content: '\e083';
   }
-  &cloud-upload:before {
+  &cloud-upload::before {
     content: '\e084';
   }
-  &doc:before {
+  &doc::before {
     content: '\e085';
   }
-  &envolope:before {
+  &envolope::before {
     content: '\e086';
   }
-  &eye:before {
+  &eye::before {
     content: '\e087';
   }
-  &flag:before {
+  &flag::before {
     content: '\e088';
   }
-  &folder:before {
+  &folder::before {
     content: '\e089';
   }
-  &heart:before {
+  &heart::before {
     content: '\e08a';
   }
-  &info:before {
+  &info::before {
     content: '\e08b';
   }
-  &key:before {
+  &key::before {
     content: '\e08c';
   }
-  &link:before {
+  &link::before {
     content: '\e08d';
   }
-  &lock:before {
+  &lock::before {
     content: '\e08e';
   }
-  &lock-open:before {
+  &lock-open::before {
     content: '\e08f';
   }
-  &magnifier:before {
+  &magnifier::before {
     content: '\e090';
   }
-  &magnifier-add:before {
+  &magnifier-add::before {
     content: '\e091';
   }
-  &magnifier-remove:before {
+  &magnifier-remove::before {
     content: '\e092';
   }
-  &paper-clip:before {
+  &paper-clip::before {
     content: '\e093';
   }
-  &paper-plane:before {
+  &paper-plane::before {
     content: '\e094';
   }
-  &plus:before {
+  &plus::before {
     content: '\e095';
   }
-  &location:before {
+  &location::before {
     content: '\e096';
   }
-  &power:before {
+  &power::before {
     content: '\e097';
   }
-  &refresh:before {
+  &refresh::before {
     content: '\e098';
   }
-  &reload:before {
+  &reload::before {
     content: '\e099';
   }
-  &settings:before {
+  &settings::before {
     content: '\e09a';
   }
-  &star:before {
+  &star::before {
     content: '\e09b';
   }
-  &symble-female:before {
+  &symble-female::before {
     content: '\e09c';
   }
-  &symbol-male:before {
+  &symbol-male::before {
     content: '\e09d';
   }
-  &target:before {
+  &target::before {
     content: '\e09e';
   }
-  &volume-down:before {
+  &volume-down::before {
     content: '\e09f';
   }
-  &volume-up:before {
+  &volume-up::before {
     content: '\e0a0';
   }
-  &volume-off:before {
+  &volume-off::before {
     content: '\e0a1';
   }
-  &phone:before {
+  &phone::before {
     content: '\e600';
   }
-  &menu:before {
+  &menu::before {
     content: '\e601';
   }
-  &options-vertical:before {
+  &options-vertical::before {
     content: '\e602';
   }
-  &options:before {
+  &options::before {
     content: '\e603';
   }
-  &arrow-down:before {
+  &arrow-down::before {
     content: '\e604';
   }
-  &arrow-left:before {
+  &arrow-left::before {
     content: '\e605';
   }
-  &arrow-right:before {
+  &arrow-right::before {
     content: '\e606';
   }
-  &arrow-up:before {
+  &arrow-up::before {
     content: '\e607';
   }
-  &paypal:before {
+  &paypal::before {
     content: '\e608';
   }
-  &minus:before {
+  &minus::before {
     content: '\e615';
   }
-  &organization:before {
+  &organization::before {
     content: '\e616';
   }
-  &exclamation:before {
+  &exclamation::before {
     content: '\e617';
   }
-  &event:before {
+  &event::before {
     content: '\e619';
   }
-  &apple:before {
+  &apple::before {
     content: '\e901';
   }
-  &baidu:before {
+  &baidu::before {
     content: '\e903';
   }
-  &codepen:before {
+  &codepen::before {
     content: '\e905';
   }
-  &dribbble:before {
+  &dribbble::before {
     content: '\e906';
   }
-  &evernote:before {
+  &evernote::before {
     content: '\e907';
   }
-  &facebook:before {
+  &facebook::before {
     content: '\e909';
   }
-  &github:before {
+  &github::before {
     content: '\e90a';
   }
-  &google:before {
+  &google::before {
     content: '\e90b';
   }
-  &whatsapp:before {
+  &whatsapp::before {
     content: '\e90c';
   }
-  &brand13:before {
+  &brand13::before {
     content: '\e90d';
   }
-  &instagram:before {
+  &instagram::before {
     content: '\e90e';
   }
-  &linkedin:before {
+  &linkedin::before {
     content: '\e90f';
   }
-  &pocket:before {
+  &pocket::before {
     content: '\e910';
   }
-  &rss:before {
+  &rss::before {
     content: '\e911';
   }
-  &weibo:before {
+  &weibo::before {
     content: '\e912';
   }
-  &slack:before {
+  &slack::before {
     content: '\e913';
   }
-  &qq:before {
+  &qq::before {
     content: '\e915';
   }
-  &twitter:before {
+  &twitter::before {
     content: '\e916';
   }
-  &visa:before {
+  &visa::before {
     content: '\e919';
   }
-  &wechat:before {
+  &wechat::before {
     content: '\e91a';
   }
-  &wordpress:before {
+  &wordpress::before {
     content: '\e91b';
   }
-  &youtube:before {
+  &youtube::before {
     content: '\e91d';
   }
 }
-
-
-// // Default Variables
-// $icon-font-path: '../fonts/';
-// $icon-font-family: 'simple';
-// $icon-prefix: 'icon-';
-
-// // Fonts
-// @font-face {
-//   font-family: '#{$icon-font-family}';
-//   font-weight: normal;
-//   font-style: normal;
-
-//   src: url('#{$icon-font-path}simple.eot?v=2.4.0');
-//   src: url('#{$icon-font-path}simple.eot?v=2.4.0#iefix') format('embedded-opentype'),
-//     url('#{$icon-font-path}simple.woff2?v=2.4.0') format('woff2'),
-//     url('#{$icon-font-path}simple.ttf?v=2.4.0') format('truetype'),
-//     url('#{$icon-font-path}simple.woff?v=2.4.0') format('woff'),
-//     url('#{$icon-font-path}simple.svg?v=2.4.0#simple-line-icons') format('svg');
-// }
-
-// [class^='#{$icon-prefix}']::before {
-//   text-transform: none;
-
-//   font-family: '#{$icon-font-family}';
-//   font-weight: normal;
-//   font-style: normal;
-//   font-variant: normal;
-//   line-height: 1;
-
-//   speak: none;
-//   // Better Font Rendering ===========
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// .#{$icon-prefix} {
-//   &user:before {
-//     content: '\e005';
-//   }
-
-//   &people:before {
-//     content: '\e001';
-//   }
-
-//   &user-female:before {
-//     content: '\e000';
-//   }
-
-//   &user-follow:before {
-//     content: '\e002';
-//   }
-
-//   &user-following:before {
-//     content: '\e003';
-//   }
-
-//   &user-unfollow:before {
-//     content: '\e004';
-//   }
-
-//   &login:before {
-//     content: '\e066';
-//   }
-
-//   &logout:before {
-//     content: '\e065';
-//   }
-
-//   &emotsmile:before {
-//     content: '\e021';
-//   }
-
-//   &phone:before {
-//     content: '\e600';
-//   }
-
-//   &call-end:before {
-//     content: '\e048';
-//   }
-
-//   &call-in:before {
-//     content: '\e047';
-//   }
-
-//   &call-out:before {
-//     content: '\e046';
-//   }
-
-//   &map:before {
-//     content: '\e033';
-//   }
-
-//   &location-pin:before {
-//     content: '\e096';
-//   }
-
-//   &direction:before {
-//     content: '\e042';
-//   }
-
-//   &directions:before {
-//     content: '\e041';
-//   }
-
-//   &compass:before {
-//     content: '\e045';
-//   }
-
-//   &layers:before {
-//     content: '\e034';
-//   }
-
-//   &menu:before {
-//     content: '\e601';
-//   }
-
-//   &list:before {
-//     content: '\e067';
-//   }
-
-//   &options-vertical:before {
-//     content: '\e602';
-//   }
-
-//   &options:before {
-//     content: '\e603';
-//   }
-
-//   &arrow-down:before {
-//     content: '\e604';
-//   }
-
-//   &arrow-left:before {
-//     content: '\e605';
-//   }
-
-//   &arrow-right:before {
-//     content: '\e606';
-//   }
-
-//   &arrow-up:before {
-//     content: '\e607';
-//   }
-
-//   &arrow-up-circle:before {
-//     content: '\e078';
-//   }
-
-//   &arrow-left-circle:before {
-//     content: '\e07a';
-//   }
-
-//   &arrow-right-circle:before {
-//     content: '\e079';
-//   }
-
-//   &arrow-down-circle:before {
-//     content: '\e07b';
-//   }
-
-//   &check:before {
-//     content: '\e080';
-//   }
-
-//   &clock:before {
-//     content: '\e081';
-//   }
-
-//   &plus:before {
-//     content: '\e095';
-//   }
-
-//   &minus:before {
-//     content: '\e615';
-//   }
-
-//   &close:before {
-//     content: '\e082';
-//   }
-
-//   &event:before {
-//     content: '\e619';
-//   }
-
-//   &exclamation:before {
-//     content: '\e617';
-//   }
-
-//   &organization:before {
-//     content: '\e616';
-//   }
-
-//   &trophy:before {
-//     content: '\e006';
-//   }
-
-//   &screen-smartphone:before {
-//     content: '\e010';
-//   }
-
-//   &screen-desktop:before {
-//     content: '\e011';
-//   }
-
-//   &plane:before {
-//     content: '\e012';
-//   }
-
-//   &notebook:before {
-//     content: '\e013';
-//   }
-
-//   &mustache:before {
-//     content: '\e014';
-//   }
-
-//   &mouse:before {
-//     content: '\e015';
-//   }
-
-//   &magnet:before {
-//     content: '\e016';
-//   }
-
-//   &energy:before {
-//     content: '\e020';
-//   }
-
-//   &disc:before {
-//     content: '\e022';
-//   }
-
-//   &cursor:before {
-//     content: '\e06e';
-//   }
-
-//   &cursor-move:before {
-//     content: '\e023';
-//   }
-
-//   &crop:before {
-//     content: '\e024';
-//   }
-
-//   &chemistry:before {
-//     content: '\e026';
-//   }
-
-//   &speedometer:before {
-//     content: '\e007';
-//   }
-
-//   &shield:before {
-//     content: '\e00e';
-//   }
-
-//   &screen-tablet:before {
-//     content: '\e00f';
-//   }
-
-//   &magic-wand:before {
-//     content: '\e017';
-//   }
-
-//   &hourglass:before {
-//     content: '\e018';
-//   }
-
-//   &graduation:before {
-//     content: '\e019';
-//   }
-
-//   &ghost:before {
-//     content: '\e01a';
-//   }
-
-//   &game-controller:before {
-//     content: '\e01b';
-//   }
-
-//   &fire:before {
-//     content: '\e01c';
-//   }
-
-//   &eyeglass:before {
-//     content: '\e01d';
-//   }
-
-//   &envelope-open:before {
-//     content: '\e01e';
-//   }
-
-//   &envelope-letter:before {
-//     content: '\e01f';
-//   }
-
-//   &bell:before {
-//     content: '\e027';
-//   }
-
-//   &badge:before {
-//     content: '\e028';
-//   }
-
-//   &anchor:before {
-//     content: '\e029';
-//   }
-
-//   &wallet:before {
-//     content: '\e02a';
-//   }
-
-//   &vector:before {
-//     content: '\e02b';
-//   }
-
-//   &speech:before {
-//     content: '\e02c';
-//   }
-
-//   &puzzle:before {
-//     content: '\e02d';
-//   }
-
-//   &printer:before {
-//     content: '\e02e';
-//   }
-
-//   &present:before {
-//     content: '\e02f';
-//   }
-
-//   &playlist:before {
-//     content: '\e030';
-//   }
-
-//   &pin:before {
-//     content: '\e031';
-//   }
-
-//   &picture:before {
-//     content: '\e032';
-//   }
-
-//   &handbag:before {
-//     content: '\e035';
-//   }
-
-//   &globe-alt:before {
-//     content: '\e036';
-//   }
-
-//   &globe:before {
-//     content: '\e037';
-//   }
-
-//   &folder-alt:before {
-//     content: '\e039';
-//   }
-
-//   &folder:before {
-//     content: '\e089';
-//   }
-
-//   &film:before {
-//     content: '\e03a';
-//   }
-
-//   &feed:before {
-//     content: '\e03b';
-//   }
-
-//   &drop:before {
-//     content: '\e03e';
-//   }
-
-//   &drawer:before {
-//     content: '\e03f';
-//   }
-
-//   &docs:before {
-//     content: '\e040';
-//   }
-
-//   &doc:before {
-//     content: '\e085';
-//   }
-
-//   &diamond:before {
-//     content: '\e043';
-//   }
-
-//   &cup:before {
-//     content: '\e044';
-//   }
-
-//   &calculator:before {
-//     content: '\e049';
-//   }
-
-//   &bubbles:before {
-//     content: '\e04a';
-//   }
-
-//   &briefcase:before {
-//     content: '\e04b';
-//   }
-
-//   &book-open:before {
-//     content: '\e04c';
-//   }
-
-//   &basket-loaded:before {
-//     content: '\e04d';
-//   }
-
-//   &basket:before {
-//     content: '\e04e';
-//   }
-
-//   &bag:before {
-//     content: '\e04f';
-//   }
-
-//   &action-undo:before {
-//     content: '\e050';
-//   }
-
-//   &action-redo:before {
-//     content: '\e051';
-//   }
-
-//   &wrench:before {
-//     content: '\e052';
-//   }
-
-//   &umbrella:before {
-//     content: '\e053';
-//   }
-
-//   &trash:before {
-//     content: '\e054';
-//   }
-
-//   &tag:before {
-//     content: '\e055';
-//   }
-
-//   &support:before {
-//     content: '\e056';
-//   }
-
-//   &frame:before {
-//     content: '\e038';
-//   }
-
-//   &size-fullscreen:before {
-//     content: '\e057';
-//   }
-
-//   &size-actual:before {
-//     content: '\e058';
-//   }
-
-//   &shuffle:before {
-//     content: '\e059';
-//   }
-
-//   &share-alt:before {
-//     content: '\e05a';
-//   }
-
-//   &share:before {
-//     content: '\e05b';
-//   }
-
-//   &rocket:before {
-//     content: '\e05c';
-//   }
-
-//   &question:before {
-//     content: '\e05d';
-//   }
-
-//   &pie-chart:before {
-//     content: '\e05e';
-//   }
-
-//   &pencil:before {
-//     content: '\e05f';
-//   }
-
-//   &note:before {
-//     content: '\e060';
-//   }
-
-//   &loop:before {
-//     content: '\e064';
-//   }
-
-//   &home:before {
-//     content: '\e069';
-//   }
-
-//   &grid:before {
-//     content: '\e06a';
-//   }
-
-//   &graph:before {
-//     content: '\e06b';
-//   }
-
-//   &microphone:before {
-//     content: '\e063';
-//   }
-
-//   &music-tone-alt:before {
-//     content: '\e061';
-//   }
-
-//   &music-tone:before {
-//     content: '\e062';
-//   }
-
-//   &earphones-alt:before {
-//     content: '\e03c';
-//   }
-
-//   &earphones:before {
-//     content: '\e03d';
-//   }
-
-//   &equalizer:before {
-//     content: '\e06c';
-//   }
-
-//   &like:before {
-//     content: '\e068';
-//   }
-
-//   &dislike:before {
-//     content: '\e06d';
-//   }
-
-//   &control-start:before {
-//     content: '\e06f';
-//   }
-
-//   &control-rewind:before {
-//     content: '\e070';
-//   }
-
-//   &control-play:before {
-//     content: '\e071';
-//   }
-
-//   &control-pause:before {
-//     content: '\e072';
-//   }
-
-//   &control-forward:before {
-//     content: '\e073';
-//   }
-
-//   &control-end:before {
-//     content: '\e074';
-//   }
-
-//   &volume-1:before {
-//     content: '\e09f';
-//   }
-
-//   &volume-2:before {
-//     content: '\e0a0';
-//   }
-
-//   &volume-off:before {
-//     content: '\e0a1';
-//   }
-
-//   &calendar:before {
-//     content: '\e075';
-//   }
-
-//   &bulb:before {
-//     content: '\e076';
-//   }
-
-//   &chart:before {
-//     content: '\e077';
-//   }
-
-//   &ban:before {
-//     content: '\e07c';
-//   }
-
-//   &bubble:before {
-//     content: '\e07d';
-//   }
-
-//   &camrecorder:before {
-//     content: '\e07e';
-//   }
-
-//   &camera:before {
-//     content: '\e07f';
-//   }
-
-//   &cloud-download:before {
-//     content: '\e083';
-//   }
-
-//   &cloud-upload:before {
-//     content: '\e084';
-//   }
-
-//   &envelope:before {
-//     content: '\e086';
-//   }
-
-//   &eye:before {
-//     content: '\e087';
-//   }
-
-//   &flag:before {
-//     content: '\e088';
-//   }
-
-//   &heart:before {
-//     content: '\e08a';
-//   }
-
-//   &info:before {
-//     content: '\e08b';
-//   }
-
-//   &key:before {
-//     content: '\e08c';
-//   }
-
-//   &link:before {
-//     content: '\e08d';
-//   }
-
-//   &lock:before {
-//     content: '\e08e';
-//   }
-
-//   &lock-open:before {
-//     content: '\e08f';
-//   }
-
-//   &magnifier:before {
-//     content: '\e090';
-//   }
-
-//   &magnifier-add:before {
-//     content: '\e091';
-//   }
-
-//   &magnifier-remove:before {
-//     content: '\e092';
-//   }
-
-//   &paper-clip:before {
-//     content: '\e093';
-//   }
-
-//   &paper-plane:before {
-//     content: '\e094';
-//   }
-
-//   &power:before {
-//     content: '\e097';
-//   }
-
-//   &refresh:before {
-//     content: '\e098';
-//   }
-
-//   &reload:before {
-//     content: '\e099';
-//   }
-
-//   &settings:before {
-//     content: '\e09a';
-//   }
-
-//   &star:before {
-//     content: '\e09b';
-//   }
-
-//   &symbol-female:before {
-//     content: '\e09c';
-//   }
-
-//   &symbol-male:before {
-//     content: '\e09d';
-//   }
-
-//   &target:before {
-//     content: '\e09e';
-//   }
-
-//   &credit-card:before {
-//     content: '\e025';
-//   }
-
-//   &paypal:before {
-//     content: '\e608';
-//   }
-
-//   &social-tumblr:before {
-//     content: '\e00a';
-//   }
-
-//   &social-twitter:before {
-//     content: '\e009';
-//   }
-
-//   &social-facebook:before {
-//     content: '\e00b';
-//   }
-
-//   &social-instagram:before {
-//     content: '\e609';
-//   }
-
-//   &social-linkedin:before {
-//     content: '\e60a';
-//   }
-
-//   &social-pinterest:before {
-//     content: '\e60b';
-//   }
-
-//   &social-github:before {
-//     content: '\e60c';
-//   }
-
-//   &social-google:before {
-//     content: '\e60d';
-//   }
-
-//   &social-reddit:before {
-//     content: '\e60e';
-//   }
-
-//   &social-skype:before {
-//     content: '\e60f';
-//   }
-
-//   &social-dribbble:before {
-//     content: '\e00d';
-//   }
-
-//   &social-behance:before {
-//     content: '\e610';
-//   }
-
-//   &social-foursqare:before {
-//     content: '\e611';
-//   }
-
-//   &social-soundcloud:before {
-//     content: '\e612';
-//   }
-
-//   &social-spotify:before {
-//     content: '\e613';
-//   }
-
-//   &social-stumbleupon:before {
-//     content: '\e614';
-//   }
-
-//   &social-youtube:before {
-//     content: '\e008';
-//   }
-
-//   &social-dropbox:before {
-//     content: '\e00c';
-//   }
-
-//   &social-vkontakte:before {
-//     content: '\e618';
-//   }
-
-//   &social-steam:before {
-//     content: '\e620';
-//   }
-// }

@@ -36,7 +36,7 @@
   .feature {
     padding: 5%;
 
-    box-shadow: 0 0 1rem rgba($indigo-2, .6);
+    box-shadow: 0 0 1rem $gray-light;
 
     @extend .mb-5;
     @extend .bg-white;
@@ -89,12 +89,12 @@
   }
 
   .article {
-    margin-bottom: 4.25rem;
+    margin-bottom: 4rem;
 
     @extend .pr-lg-5;
 
     .content {
-      @extend .mt-5;
+      @extend .mt-3;
 
       p {
         font-size: 1.125rem;
@@ -103,7 +103,7 @@
     }
 
     .btn {
-      @extend .m-3;
+      @extend .m-4;
       @extend .d-block;
       @extend .d-lg-inline-block;
     }
@@ -112,13 +112,14 @@
   .share {
     position: absolute;
     bottom: 0;
+    margin: 2rem 0 0;
     padding: 0;
     list-style: none;
 
-    @extend .m-3;
-
     li {
       display: inline-block;
+      color: $indigo-3;
+      @extend .ml-1;
     }
 
     .btn:hover {
@@ -132,23 +133,7 @@
 
 .second {
   .card {
-    .card-img-overlay {
-      margin-bottom: 8.875rem;
-
-      background: linear-gradient(transparent, $brand-primary);
-
-      @extend .align-items-end;
-    }
-
-    .icon-pin {
-      font-size: 81.25%;
-
-      @extend .text-white;
-    }
-
-    .card-img-top {
-      max-height: 16.875rem;
-    }
+    @extend .card-shadow;
   }
 }
 
@@ -186,31 +171,7 @@
 
 .fourth {
   .card {
-    .card-img-overlay {
-      margin-bottom: 2.75rem;
-
-      background: linear-gradient(rgba($brand-primary, .1), rgba($brand-primary, .8));
-
-      @extend .justify-content-center;
-      @extend .align-items-center;
-      @extend .text-center;
-    }
-
-    .card-img-top {
-      max-height: 12.5rem;
-    }
-
-    .card-block {
-      background-color: rgba($brand-primary, .7);
-
-      flex: 0;
-      @extend .py-3;
-      @extend .text-white;
-    }
-
-    .card-subtitle {
-      border-top: .0625rem solid lighten($brand-primary, 40%);
-    }
+    @extend .card-shadow;
   }
 }
 

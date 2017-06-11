@@ -1,8 +1,11 @@
 header.site-header
   .navbar: .container
-    a.navbar-brand(href='index.html')
+    //- a.navbar-brand(href='index.html')
+    //-   span.sr-only WEDN.NET
+    //-   img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
+
+    a.navbar-brand.icon-logo(href='index.html')
       span.sr-only WEDN.NET
-      img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
 
     button.navbar-toggler.collapsed(data-toggle='collapse', data-target='#site-menu')
       span.navbar-toggler-icon
@@ -54,7 +57,7 @@ header.site-header
           h3.slogan 你总说毕业遥遥无期，转眼间就各奔东西。
         .media
           i.mask
-          img(src='uploads/feature1.jpeg', alt='WEDN.NET')
+          img(src='uploads/feature-1.jpeg', alt='WEDN.NET')
     when 'feature'
       .feature
         .container
@@ -64,4 +67,4 @@ header.site-header
             li.breadcrumb-item.active 安特克拉，惊艳十足
         .media
           i.mask
-          img(src='uploads/feature2.jpeg', alt='WEDN.NET')
+          img(src='uploads/feature-2.jpeg', alt='WEDN.NET')
