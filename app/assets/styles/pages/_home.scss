@@ -80,7 +80,9 @@
     }
 
     .card {
+      @extend .card-thumbnail;
       @extend .card-shadow;
+      @extend .card-interactive;
     }
 
     .more {

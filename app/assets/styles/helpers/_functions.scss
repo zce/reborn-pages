@@ -2,8 +2,8 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 
-@function border ($color, $style: solid) {
-  @return $border-width $style $color;
+@function border ($color, $style: solid, $width: $border-width) {
+  @return $width $style $color;
 }
 
 
