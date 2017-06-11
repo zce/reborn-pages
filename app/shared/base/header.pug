@@ -4,7 +4,6 @@ header.site-header
       span.sr-only WEDN.NET
       img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
 
-    //- https://github.com/twbs/bootstrap/issues/21846
     button.navbar-toggler.collapsed(data-toggle='collapse', data-target='#site-menu')
       span.navbar-toggler-icon
 
@@ -12,10 +11,9 @@ header.site-header
     nav#site-menu.navbar-collapse.collapse
       ul.navbar-nav
         li.nav-item.active
-          a.nav-link(href='index.html') Home
-            span.sr-only (current)
+          a.nav-link(href='index.html') Home #[span.sr-only (current)]
         li.nav-item
-          a.nav-link(href='#') 学习
+          a.nav-link(href='single.html') 学习
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle(href='archive.html', data-toggle='dropdown') 博客
           .dropdown-menu
@@ -25,7 +23,7 @@ header.site-header
             a.dropdown-item(href='archive.html') 音乐
             a.dropdown-item(href='archive.html') 诗和远方
         li.nav-item
-          a.nav-link(href='#') 实验室
+          a.nav-link(href='demo.html') 实验室
         li.nav-item
           a.nav-link(href='#') 问答
         li.nav-item
@@ -34,6 +32,7 @@ header.site-header
       form.form-inline(action='/')
         input#search-form.form-control(type='search', name='q', placeholder='搜索...', autocomplete='off')
         label.icon-magnifier(for='search-form')
+
   case cover
     when 'hero'
       .hero
