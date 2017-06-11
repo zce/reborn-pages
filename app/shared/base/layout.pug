@@ -41,46 +41,46 @@ html.no-js(lang='zh-CN')
 
   body
 
-  a.sr-only.sr-only-focusable(href='#content') 跳转到内容区
+    a.sr-only.sr-only-focusable(href='#content') 跳转到内容区
 
-  include header
+    include header
 
-  if hasSidebar
-    .container: .row
-      .col-lg-9
+    if hasSidebar
+      .container: .row
+        .col-lg-9
+          block wrapper
+        .col-lg-3
+          include sidebar
+    else
+      main.site-main
         block wrapper
-      .col-lg-3
-        include sidebar
-  else
-    main.site-main
-      block wrapper
 
 
-  include footer
+    include footer
 
-  // build:js assets/scripts/vendor.js
-  //- bower:js
-  script(src='/bower_components/jquery/dist/jquery.js')
-  script(src='/bower_components/popper/index.js')
-  //- endbower
-  // endbuild
+    // build:js assets/scripts/vendor.js
+    //- bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/popper/index.js')
+    //- endbower
+    // endbuild
 
-  // build:js assets/scripts/plugins.js
-  script(src='bower_components/bootstrap/js/dist/util.js')
-  //- script(src='bower_components/bootstrap/js/dist/alert.js')
-  //- script(src='bower_components/bootstrap/js/dist/button.js')
-  //- script(src='bower_components/bootstrap/js/dist/carousel.js')
-  script(src='bower_components/bootstrap/js/dist/collapse.js')
-  script(src='bower_components/bootstrap/js/dist/dropdown.js')
-  //- script(src='bower_components/bootstrap/js/dist/modal.js')
-  //- script(src='bower_components/bootstrap/js/dist/scrollspy.js')
-  //- script(src='bower_components/bootstrap/js/dist/tab.js')
-  //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
-  //- script(src='bower_components/bootstrap/js/dist/popover.js')
-  // endbuild
+    // build:js assets/scripts/plugins.js
+    script(src='bower_components/bootstrap/js/dist/util.js')
+    //- script(src='bower_components/bootstrap/js/dist/alert.js')
+    //- script(src='bower_components/bootstrap/js/dist/button.js')
+    //- script(src='bower_components/bootstrap/js/dist/carousel.js')
+    script(src='bower_components/bootstrap/js/dist/collapse.js')
+    script(src='bower_components/bootstrap/js/dist/dropdown.js')
+    //- script(src='bower_components/bootstrap/js/dist/modal.js')
+    //- script(src='bower_components/bootstrap/js/dist/scrollspy.js')
+    //- script(src='bower_components/bootstrap/js/dist/tab.js')
+    //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
+    //- script(src='bower_components/bootstrap/js/dist/popover.js')
+    // endbuild
 
-  // build:js assets/scripts/main.js
-  script(src='assets/scripts/main.js')
-  // endbuild
+    // build:js assets/scripts/main.js
+    script(src='assets/scripts/main.js')
+    // endbuild
 
-  block scripts
+    block scripts

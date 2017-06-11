@@ -121,10 +121,11 @@
       }
     }
 
-    .scrolled & {
-      position: fixed;
-      box-shadow: 0 0 1rem $gray;
-    }
+    // // fixed when scrolled
+    // .scrolled & {
+    //   position: fixed;
+    //   box-shadow: 0 0 1rem $gray;
+    // }
   }
 
   .media {

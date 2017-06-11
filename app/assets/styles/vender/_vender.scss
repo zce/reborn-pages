@@ -1,8 +1,13 @@
 // Simple Line Icons
+// ==============================
+
 @import 'icons';
 
 // bower:scss
 // endbower
+
+// Bootstrap
+// ==============================
 
 // Core variables and mixins
 // @import 'bower_components/bootstrap/scss/custom';
@@ -49,3 +54,9 @@
 
 // Utility classes
 @import 'bower_components/bootstrap/scss/utilities';
+
+
+// Headroom
+// ==============================
+
+@import 'headroom';
