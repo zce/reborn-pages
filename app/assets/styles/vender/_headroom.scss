@@ -1,19 +1,19 @@
 // Head room js styles
-.headroom {
+.topbar {
   position: fixed !important;
   will-change: transform;
 
   @include transition($transition-transform);
 
-  &--pinned {
+  &.is-pinned {
     transform: translateY(0);
   }
 
-  &--unpinned {
+  &.is-unpinned {
     transform: translateY(-110%);
   }
 
-  &--not-top {
+  &.is-not-top {
     box-shadow: 0 0 1rem $gray;
   }
 }

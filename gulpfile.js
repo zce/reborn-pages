@@ -45,7 +45,7 @@ gulp.task('views', () => {
     .pipe($.plumber())
     .pipe($.pug({ pretty: true }))
     .pipe(gulp.dest(temp))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('lint', () => {
