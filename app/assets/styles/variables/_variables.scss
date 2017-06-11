@@ -618,13 +618,13 @@ $card-columns-margin:       $card-spacer-y;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:          .75rem;
-$breadcrumb-padding-x:          1rem;
+$breadcrumb-padding-y:          1rem;
+$breadcrumb-padding-x:          .5rem;
 $breadcrumb-item-padding:       .5rem;
 
 $breadcrumb-bg:                 none;
-$breadcrumb-divider-color:      $indigo-7;
-$breadcrumb-active-color:       $indigo-6;
+$breadcrumb-divider-color:      $gray-lighter;
+$breadcrumb-active-color:       $gray-lighter;
 $breadcrumb-divider:            '/';
 
 // Carousel

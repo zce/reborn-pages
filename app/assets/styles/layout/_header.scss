@@ -207,7 +207,6 @@
     .breadcrumb {
       font-size: .875rem;
 
-      @extend .mb-0;
       @include change-link-color;
     }
 
