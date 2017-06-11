@@ -6,7 +6,6 @@ $card-prefix: '.card';
 
   #{$card-prefix}-img-top {
     object-fit: cover;
-    @include transition($transition-transform);
   }
 
   #{$card-prefix}-img-overlay {
@@ -144,6 +143,10 @@ $card-prefix: '.card';
 
   // 2. Interactive
   &#{$card-prefix}-interactive {
+    #{$card-prefix}-img-top {
+      @include transition(transform .5s ease-in-out);
+    }
+
     #{$card-prefix}-header {
       &::after {
         position: absolute;
@@ -159,7 +162,7 @@ $card-prefix: '.card';
 
         background: linear-gradient(transparent, $brand-primary);
 
-        @include transition(bottom .5s ease);
+        @include transition(bottom .5s ease-in-out);
       }
 
       // // Header hover
@@ -272,6 +275,7 @@ $card-prefix: '.card';
   // 3. Sticky post entry
   &#{$card-prefix}-sticky {
     @include card-entry;
+    @extend #{$card-prefix}-interactive;
 
     #{$card-prefix}-sticky {
       position: absolute;
@@ -340,6 +344,7 @@ $card-prefix: '.card';
   // 3. Quote post entry
   &#{$card-prefix}-quote {
     @include card-entry;
+    @extend #{$card-prefix}-interactive;
 
     #{$card-prefix}-img-top {
       display: flex;
@@ -389,6 +394,7 @@ $card-prefix: '.card';
   // 4. Feature post entry
   &#{$card-prefix}-feature {
     @include card-entry;
+    @extend #{$card-prefix}-interactive;
   }
 }
 
