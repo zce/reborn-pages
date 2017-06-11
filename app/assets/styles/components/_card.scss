@@ -396,76 +396,72 @@ $card-prefix: '.card';
     @include card-entry;
     @extend #{$card-prefix}-interactive;
   }
-}
 
-.card-widget {
-  margin-bottom: 2.25rem;
-  padding: .25rem 1rem;
+  // 4. Widget
+  &#{$card-prefix}-widget {
+    padding: .25rem 1rem;
 
-  .card-header {
-    padding: .625rem 0;
+    @include inverse-link-color($gray-dark);
 
-    background: none;
-
-    font-size: 1.125rem;
-    line-height: 1.5;
-
-    &::after {
-      content: none;
+    #{$card-prefix}-header {
+      padding: .5rem 0;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      border-width: $card-border-width;
     }
-  }
 
-  .card-block {
-    padding: 0;
-  }
+    .input-group {
+      margin: 1rem 0;
+    }
 
-  .input-group {
-    margin: 1rem 0;
-  }
+    ul {
+      margin: .75rem 0;
+      padding-left: 1.5rem;
 
-  ul {
-    margin: .75rem 0;
-    padding-left: 1.5rem;
+      font-size: .875rem;
+      line-height: 1.8;
+    }
 
-    font-size: .875rem;
-    line-height: 1.8;
-  }
+    .categories,
+    .archives,
+    .tags {
+      padding-left: 0;
 
-  .categories,
-  .archives,
-  .tags {
-    padding-left: 0;
+      list-style-type: none;
+    }
 
-    list-style-type: none;
-  }
+    .categories,
+    .archives {
+      margin: .25rem 0;
+      li {
+        padding: 0 .5rem;
 
-  .categories,
-  .archives {
-    margin: .25rem 0;
-    li {
-      padding: 0 .5rem;
+        line-height: 2.5;
 
-      line-height: 2.5;
-
-      & + li {
-        border-top: .0625rem solid #f0f0f0;
+        & + li {
+          border-top: .0625rem solid #f0f0f0;
+        }
       }
     }
-  }
 
-  .tags {
-    li {
-      display: inline-block;
+    .tags {
+      li {
+        display: inline-block;
 
-      margin-bottom: .5rem;
-      padding: .125rem .5rem;
+        margin-bottom: .5rem;
+        padding: .125rem .5rem;
 
-      border: .0625rem solid #f0f0f0;
-      border-radius: .25rem;
+        border: .0625rem solid #f0f0f0;
+        border-radius: .25rem;
 
-      &:hover {
-        border-color: #e0e0e0;
+        &:hover {
+          border-color: #e0e0e0;
+        }
       }
+    }
+
+    #{$card-prefix}-block {
+      padding: 0;
     }
   }
 }
