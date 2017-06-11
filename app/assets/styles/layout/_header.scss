@@ -120,6 +120,11 @@
         @include transition($transition-color);
       }
     }
+
+    .scrolled & {
+      position: fixed;
+      box-shadow: 0 0 1rem $gray;
+    }
   }
 
   .media {

@@ -65,14 +65,15 @@
     border-top: border(lighten($brand-primary, 3));
     background-color: lighten($brand-primary, 2);
 
-    @extend .text-center;
-    @extend .text-muted;
-
     p {
-      margin: 0;
+      margin-bottom: 0;
+
+      color: $gray-lighter;
 
       font-size: .8125rem;
       line-height: 3;
+
+      @extend .text-center;
     }
   }
 }

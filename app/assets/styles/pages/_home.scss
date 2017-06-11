@@ -8,183 +8,187 @@
 // Other
 // --------------------------
 
-// Section common styles
-// --------------------------
+.site-main {
 
-.site-main > section {
-  @extend .py-7;
+  // Section common styles
+  // --------------------------
 
-  .heading {
-    @extend .text-center;
+  > section {
+    @extend .py-7;
 
-    .title {
-      @extend .mb-3;
-    }
-
-    .subtitle {
-      @extend .mb-3;
-      @extend .text-muted;
-      @extend .lead;
-    }
-
-    hr {
-      @extend .w-25;
-      @extend .mb-6;
-    }
-  }
-
-  .feature {
-    padding: 5%;
-
-    box-shadow: 0 0 1rem $gray-light;
-
-    @extend .mb-5;
-    @extend .bg-white;
-
-    img {
-      @extend .w-100;
-    }
-  }
-
-  .article {
-    .title {
-      @extend .text-gray-dark;
+    .heading {
       @extend .text-center;
-      @extend .text-md-left;
-    }
 
-    .subtitle {
-      @extend .lead;
-      @extend .text-muted;
-      @extend .text-center;
-      @extend .text-md-right;
+      .title {
+        @extend .mb-3;
+      }
 
-      &::before {
-        content: '\2014 \00A0'; // ' —— '
+      .subtitle {
+        @extend .mb-3;
+        @extend .text-muted;
+        @extend .lead;
+      }
+
+      hr {
+        @extend .w-25;
+        @extend .mb-6;
       }
     }
 
-    .content {
-      p {
-        text-indent: 2em;
-      }
-    }
-  }
-
-  .more {
-    @extend .mt-4;
-    @extend .text-center;
-  }
-}
-
-// First section styles
-// --------------------------
-
-.first {
-  @extend .bg-faded;
-
-  .row {
-    @extend .flex-column-reverse;
-    @extend .flex-lg-row;
-  }
-
-  .article {
-    margin-bottom: 4rem;
-
-    @extend .pr-lg-5;
-
-    .content {
-      @extend .mt-3;
-
-      p {
-        font-size: 1.125rem;
-        line-height: 2.2;
-      }
-    }
-
-    .btn {
-      @extend .m-4;
-      @extend .d-block;
-      @extend .d-lg-inline-block;
-    }
-  }
-
-  .share {
-    position: absolute;
-    bottom: 0;
-    margin: 2rem 0 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: inline-block;
-      color: $indigo-3;
-      @extend .ml-1;
-    }
-
-    .btn:hover {
-      transform: rotate(360deg);
-    }
-  }
-}
-
-// Second section styles
-// --------------------------
-
-.second {
-  .card {
-    @extend .card-shadow;
-  }
-}
-
-// Third section styles
-// --------------------------
-
-.third {
-  @extend .bg-faded;
-  @include media-breakpoint-up (lg) {
     .feature {
-      transform: rotate(-15deg);
-    }
-  }
+      padding: 5%;
 
-  .article {
-    @extend .pl-lg-7;
-    .content {
-      @extend .mt-3;
+      box-shadow: 0 0 1rem $gray-light;
 
-      p {
-        font-size: 1rem;
-        line-height: 2;
+      @extend .mb-4;
+      @extend .bg-white;
+
+      img {
+        @extend .w-100;
       }
     }
 
-    .btn {
-      @extend .m-5;
-      @extend .float-right;
+    .article {
+      .title {
+        @extend .text-gray-dark;
+        @extend .text-center;
+        @extend .text-md-left;
+      }
+
+      .subtitle {
+        @extend .lead;
+        @extend .text-muted;
+        @extend .text-center;
+        @extend .text-md-right;
+
+        &::before {
+          content: '\2014 \00A0'; // ' —— ';
+        }
+      }
+
+      .content {
+        p {
+          text-indent: 2em;
+        }
+      }
+
+      .btn {
+        @extend .m-4;
+        @extend .d-block;
+        @extend .d-lg-inline-block;
+      }
+    }
+
+    .card {
+      @extend .card-shadow;
+    }
+
+    .more {
+      @extend .mt-4;
+      @extend .text-center;
+    }
+
+    &:nth-child(2n + 1) {
+      @extend .bg-faded;
     }
   }
-}
 
-// Fourth section styles
-// --------------------------
+  // First section styles
+  // --------------------------
 
-.fourth {
-  .card {
-    @extend .card-shadow;
+  .first {
+    .row {
+      @extend .flex-column-reverse;
+      @extend .flex-lg-row;
+    }
+
+    .article {
+      @extend .mb-7;
+      @extend .pr-lg-5;
+
+      .content {
+        @extend .mt-3;
+
+        p {
+          font-size: 1.125rem;
+          line-height: 2.2;
+        }
+      }
+    }
+
+    .share {
+      position: absolute;
+      bottom: 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      @extend .mb-4;
+
+      li {
+        display: inline-block;
+
+        color: $indigo-3;
+
+        @extend .ml-1;
+      }
+
+      .btn:hover {
+        transform: rotate(360deg);
+      }
+    }
   }
-}
 
-// Fifth section styles
-// --------------------------
+  // Second section styles
+  // --------------------------
 
-.fifth {
-  @extend .bg-faded;
-}
+  .second {
+  }
 
-// Sixth section styles
-// --------------------------
+  // Third section styles
+  // --------------------------
 
-.sixth {
-  color: #000;
+  .third {
+    @include media-breakpoint-up (lg) {
+      .feature {
+        transform: rotate(-15deg);
+      }
+    }
+
+    .article {
+      @extend .pl-lg-7;
+
+      .content {
+        @extend .mt-3;
+
+        p {
+          font-size: 1rem;
+          line-height: 2;
+        }
+      }
+
+      .btn {
+        @extend .float-lg-right;
+      }
+    }
+  }
+
+  // Fourth section styles
+  // --------------------------
+
+  .fourth {
+  }
+
+  // Fifth section styles
+  // --------------------------
+
+  .fifth {
+  }
+
+  // Sixth section styles
+  // --------------------------
+
+  .sixth {
+  }
 }
