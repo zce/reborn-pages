@@ -16,10 +16,9 @@
 
     img {
       max-height: 8.75rem;
+      max-width: 100%;
 
       object-fit: contain;
-      @extend .w-100;
-      @extend .h-100;
     }
 
     ul {
