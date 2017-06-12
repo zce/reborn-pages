@@ -195,3 +195,11 @@ gulp.task('default', () => {
     runSequence(['clean', 'wiredep'], 'build', resolve)
   })
 })
+
+gulp.task('deploy', ['default'], () => {
+  return gulp.src(`${dist}/**/*`)
+    .pipe($.ghPages({
+      remoteUrl: 'https://git.coding.net/zce/reborn.git',
+      branch: 'master'
+    }))
+})

@@ -14,9 +14,10 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "build": "gulp",
+    "build": "gulp default",
     "dev": "gulp serve",
-    "start": "gulp serve:dist"
+    "start": "gulp serve:dist",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -39,6 +40,7 @@
     "gulp-cssnano": "^2.0.0",
     "gulp-eslint": "^3.0.0",
     "gulp-filter": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.0.1",
