@@ -1,14 +1,7 @@
 /*!
- * Theme Name: WEDN.NET
- * Theme URI: https://github.com/zce/wp-theme-wedn
- * Description: WEDN.NET site theme
- * Version: 0.1.0
- * Author: iceStone
- * Author URI: https://github.com/zce
- * License: GNU General Public License v2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: wedn
- * Tags: blog
+ * WEDN.NET (http://wedn.net)
+ * Copyright 2011-2017 WEDN.NET.
+ * Licensed under MIT (https://github.com/zce/reborn/blob/master/LICENSE)
  */
 
 //  * http://getskeleton.com/
@@ -45,9 +38,9 @@
 // endbower
 
 // 5. Components
-@import 'components/utilities';
-@import 'components/button';
 @import 'components/card';
+@import 'components/button';
+@import 'components/utilities';
 
 // 6. Layout
 @import 'layout/global';
