@@ -197,8 +197,6 @@
   @mixin card-entry {
     #{$this}-title {
       font-size: 2rem;
-
-      @extend .mt-2;
     }
 
     #{$this}-subtitle {
@@ -212,6 +210,8 @@
     }
 
     #{$this}-text {
+      margin-top: 1.5rem;
+
       p {
         text-indent: 1em;
 
@@ -220,7 +220,7 @@
     }
 
     #{$this}-block {
-      padding: 3% 6%;
+      padding: 4% 6%;
     }
   }
 

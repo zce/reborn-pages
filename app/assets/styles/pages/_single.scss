@@ -42,6 +42,10 @@ $item-space: 2.5rem;
 
   border-bottom: border(lighten($card-border-color, 5%));
 
+  img {
+    width: 8rem;
+  }
+
   p {
     margin-top: 1rem;
     margin-bottom: 0;
