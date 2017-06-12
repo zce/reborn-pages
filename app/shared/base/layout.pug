@@ -26,7 +26,7 @@ html.no-js(lang='zh-CN')
     //- Place favicon.ico in the root directory
     link(rel='apple-touch-icon', href='assets/images/icon.png')
 
-    // build:css assets/styles/main.css
+    // build:css assets/styles/global.css
     //- link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Great+Vibes')
     //- bower:css
     //- endbower
@@ -58,14 +58,17 @@ html.no-js(lang='zh-CN')
 
     include footer
 
+    // build:js assets/scripts/jquery.js
+    script(src='bower_components/jquery/dist/jquery.js')
+    // endbuild
+
     // build:js assets/scripts/vendor.js
     //- bower:js
-    script(src='/bower_components/jquery/dist/jquery.js')
-    script(src='/bower_components/popper/index.js')
     //- endbower
     // endbuild
 
-    // build:js assets/scripts/plugins.js
+    // build:js assets/scripts/global.js
+    script(src='bower_components/popper/index.js')
     script(src='bower_components/bootstrap/js/dist/util.js')
     //- script(src='bower_components/bootstrap/js/dist/alert.js')
     //- script(src='bower_components/bootstrap/js/dist/button.js')
@@ -78,9 +81,6 @@ html.no-js(lang='zh-CN')
     //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
     //- script(src='bower_components/bootstrap/js/dist/popover.js')
     script(src='assets/scripts/headroom.js')
-    // endbuild
-
-    // build:js assets/scripts/main.js
     script(src='assets/scripts/main.js')
     // endbuild
 
