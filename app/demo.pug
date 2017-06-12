@@ -3,32 +3,9 @@ extends shared/base/layout
 block global
 
   - title = 'Demo'
-  - cover = 'feature'
+  - cover = 'none'
 
 block wrapper
 
-  .container: .row
-    .col-md-6.col-lg-4: .card
-      .card-header
-        a(href='single.html')
-          img.card-img-top(src='uploads/blog1.jpeg', alt='demo')
-        .card-img-overlay
-          i.icon-pin 2017年12月11日
-      .card-block
-        h3.card-title: a(href='single.html') 神秘的死亡谷
-        p.card-text 世上最美的红沙漠里有一个神秘的死亡谷，那些花儿世上最美的红沙漠里有一个神秘的死亡谷，那些花儿
-      .card-footer
-        i.icon-paper-clip #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
-        a(href='single.html') 继续阅读...
-
-    .col-md-6.col-lg-4: .card
-      .card-header
-        a(href='single.html')
-          img.card-img-top(src='uploads/share1.jpeg', alt='demo')
-        .card-img-overlay
-          a.card-heading(href='#')
-            h3.card-title 美食: 开始使用
-            h6.card-subtitle 美食: Getting started
-      .card-footer
-        span 2017-12-11
-        span: a(href='single.html') 美食
+  .container
+    h1.display-1 Hello world

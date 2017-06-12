@@ -1,14 +1,13 @@
-$card-prefix: '.card';
+.card {
+  $this: &;
 
-#{$card-prefix} {
-  // overflow: hidden;
   @extend .mb-5;
 
-  #{$card-prefix}-img-top {
+  #{$this}-img-top {
     object-fit: cover;
   }
 
-  #{$card-prefix}-img-overlay {
+  #{$this}-img-overlay {
     z-index: 1;
     top: auto;
 
@@ -24,22 +23,23 @@ $card-prefix: '.card';
       @extend .mr-1;
     }
 
-    #{$card-prefix}-heading {
+    #{$this}-heading {
       display: block;
 
-      margin: 2.25rem 1.5rem;
+      margin: 3.5rem 2rem;
       padding: 1rem 0;
 
       text-align: center;
 
       color: $gray-lightest;
+      background-color: rgba($gray-darker, .5);
 
       @include hover-focus {
         color: lighten($gray-lightest, 20%);
       }
     }
 
-    #{$card-prefix}-meta {
+    #{$this}-meta {
       @include change-link-color;
 
       .col-sm-7 {
@@ -72,7 +72,7 @@ $card-prefix: '.card';
     }
   }
 
-  #{$card-prefix}-header {
+  #{$this}-header {
     position: relative;
 
     overflow: hidden;
@@ -82,36 +82,7 @@ $card-prefix: '.card';
     border-width: 0;
   }
 
-  #{$card-prefix}-title {
-    // font-size: 1.25rem;
-  }
-
-  #{$card-prefix}-subtitle {
-    // overflow: hidden;
-
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-  }
-
-  #{$card-prefix}-text {
-    // display: -webkit-box;
-    // overflow: hidden;
-
-    // height: .875rem * $line-height-base * 2;
-
-    // text-overflow: ellipsis;
-
-    // font-size: .875rem;
-
-    // -webkit-line-clamp: 2;
-    // -webkit-box-orient: vertical;
-    // @extend .text-muted;
-  }
-
-  #{$card-prefix}-block {
-  }
-
-  #{$card-prefix}-footer {
+  #{$this}-footer {
     border-color: lighten($card-border-color, 8%);
 
     font-size: 81.25%;
@@ -130,7 +101,7 @@ $card-prefix: '.card';
   // ====================
 
   // 1. With shadow
-  &#{$card-prefix}-shadow {
+  &#{$this}-shadow {
     box-shadow: 0 0 1rem $gray-lightest;
 
     @extend .border-0;
@@ -142,12 +113,12 @@ $card-prefix: '.card';
   }
 
   // 2. Interactive
-  &#{$card-prefix}-interactive {
-    #{$card-prefix}-img-top {
+  &#{$this}-interactive {
+    #{$this}-img-top {
       @include transition(transform .5s ease-in-out);
     }
 
-    #{$card-prefix}-header {
+    #{$this}-header {
       &::after {
         position: absolute;
         right: 0;
@@ -160,7 +131,7 @@ $card-prefix: '.card';
 
         content: '';
 
-        background: linear-gradient(transparent, $brand-primary);
+        background: linear-gradient(transparent, $gray-dark);
 
         @include transition(bottom .5s ease-in-out);
       }
@@ -170,7 +141,7 @@ $card-prefix: '.card';
       //   &::after {
       //     bottom: -100%;
       //   }
-      //   #{$card-prefix}-img-top {
+      //   #{$this}-img-top {
       //     transform: scale(1.1);
       //   }
       // }
@@ -178,11 +149,11 @@ $card-prefix: '.card';
 
     // Card full hover
     &:hover {
-      #{$card-prefix}-header::after {
+      #{$this}-header::after {
         bottom: -100%;
       }
 
-      #{$card-prefix}-img-top {
+      #{$this}-img-top {
         transform: scale(1.1);
       }
     }
@@ -192,19 +163,21 @@ $card-prefix: '.card';
   // ====================
 
   // 1. Thumbnail
-  &#{$card-prefix}-thumbnail {
-    #{$card-prefix}-title {
+  &#{$this}-thumbnail {
+    @extend #{$this}-shadow;
+
+    #{$this}-title {
       font-size: 1.25rem;
     }
 
-    #{$card-prefix}-subtitle {
+    #{$this}-subtitle {
       overflow: hidden;
 
       white-space: nowrap;
       text-overflow: ellipsis;
     }
 
-    #{$card-prefix}-text {
+    #{$this}-text {
       display: -webkit-box;
       overflow: hidden;
 
@@ -218,20 +191,17 @@ $card-prefix: '.card';
       -webkit-box-orient: vertical;
       @extend .text-muted;
     }
-
-    #{$card-prefix}-block {
-    }
   }
 
   // - Common post entry
   @mixin card-entry {
-    #{$card-prefix}-title {
+    #{$this}-title {
       font-size: 2rem;
 
       @extend .mt-2;
     }
 
-    #{$card-prefix}-subtitle {
+    #{$this}-subtitle {
       @extend .text-right;
       @extend .text-muted;
       @extend .mb-3;
@@ -241,7 +211,7 @@ $card-prefix: '.card';
       }
     }
 
-    #{$card-prefix}-text {
+    #{$this}-text {
       p {
         text-indent: 1em;
 
@@ -249,36 +219,36 @@ $card-prefix: '.card';
       }
     }
 
-    #{$card-prefix}-block {
+    #{$this}-block {
       padding: 3% 6%;
     }
   }
 
   // 2. Normal post entry
-  &#{$card-prefix}-normal {
+  &#{$this}-normal {
     @include card-entry;
 
-    #{$card-prefix}-img-overlay {
+    #{$this}-img-overlay {
       position: static;
 
       color: $brand-primary;
 
-      #{$card-prefix}-meta {
+      #{$this}-meta {
         @include change-link-color($brand-primary);
       }
     }
 
-    #{$card-prefix}-header {
+    #{$this}-header {
       border-width: $card-border-width;
     }
   }
 
   // 3. Sticky post entry
-  &#{$card-prefix}-sticky {
+  &#{$this}-sticky {
     @include card-entry;
-    @extend #{$card-prefix}-interactive;
+    @extend #{$this}-interactive;
 
-    #{$card-prefix}-sticky {
+    #{$this}-sticky {
       position: absolute;
       z-index: 1;
       right: 0;
@@ -343,11 +313,11 @@ $card-prefix: '.card';
   }
 
   // 3. Quote post entry
-  &#{$card-prefix}-quote {
+  &#{$this}-quote {
     @include card-entry;
-    @extend #{$card-prefix}-interactive;
+    @extend #{$this}-interactive;
 
-    #{$card-prefix}-img-top {
+    #{$this}-img-top {
       display: flex;
 
       min-height: 15rem;
@@ -387,24 +357,24 @@ $card-prefix: '.card';
       }
     }
 
-    #{$card-prefix}-header::after {
-      background: linear-gradient(transparent, rgba($card-cap-bg, .15));
+    #{$this}-header::after {
+      background: linear-gradient(transparent, rgba($card-cap-bg, .1));
     }
   }
 
   // 4. Feature post entry
-  &#{$card-prefix}-feature {
+  &#{$this}-feature {
     @include card-entry;
-    @extend #{$card-prefix}-interactive;
+    @extend #{$this}-interactive;
   }
 
   // 4. Widget
-  &#{$card-prefix}-widget {
+  &#{$this}-widget {
     padding: .25rem 1rem;
 
     @include change-link-color($gray-dark);
 
-    #{$card-prefix}-header {
+    #{$this}-header {
       padding: .5rem 0;
 
       border-width: $card-border-width;
@@ -463,267 +433,8 @@ $card-prefix: '.card';
       }
     }
 
-    #{$card-prefix}-block {
+    #{$this}-block {
       padding: 0;
     }
   }
 }
-
-// .card-entry {
-//   overflow: hidden;
-
-//   @extend .mb-7;
-
-//   .card-header {
-//     position: relative;
-
-//     overflow: hidden;
-
-//     background: none;
-
-//     @extend .p-0;
-//     // hover
-//     @include hover {
-//       &::after {
-//         bottom: -50% !important;
-//       }
-
-//       .card-img-top {
-//         transform: scale(1.1);
-//       }
-//     }
-//   }
-
-//   .card-img-top {
-//     transition: transform .5s;
-//   }
-
-//   .card-meta {
-//     padding: $card-spacer-y $card-spacer-x;
-
-//     font-size: .875rem;
-
-//     @extend .d-flex;
-//     @extend .flex-column;
-//     // response
-//     @include media-breakpoint-down (xs) {
-//       font-size: 1rem;
-//       line-height: 1.5;
-//     }
-
-//     .row {
-//       @extend .mt-auto;
-//     }
-
-//     span {
-//       display: inline-block;
-
-//       line-height: 1.5rem;
-
-//       @extend .mr-2;
-
-//       img {
-//         width: 1.5rem;
-//         height: auto;
-
-//         @extend .mr-1;
-//         @extend .rounded-circle;
-//       }
-
-//       &::before {
-//         @extend .mr-1;
-//       }
-//     }
-
-//     .col-sm-7 {
-//       @extend .text-center;
-//       @extend .text-sm-left;
-//     }
-
-//     .col-sm-5 {
-//       @extend .text-center;
-//       @extend .text-sm-right;
-//     }
-//   }
-
-//   .card-block {
-//     padding: 3% 6%;
-
-//     background-color: #fff;
-//   }
-
-//   .card-title {
-//     // font-size: 1.5rem;
-//     @extend .mt-3;
-//     @extend .mb-5;
-//   }
-
-//   .card-text p {
-//     text-indent: 1em;
-
-//     line-height: 1.8;
-//   }
-
-//   .card-footer {
-//     font-size: 81.25%;
-
-//     @extend .d-flex;
-//     @extend .align-items-center;
-//     @extend .justify-content-between;
-//     @extend .text-muted;
-
-//     i {
-//       &::before {
-//         @extend .mr-1;
-//       }
-//     }
-//   }
-
-//   // Especial item
-//   &.feature,
-//   &.sticky,
-//   &.quote {
-//     .card-header {
-//       &::after {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-
-//         display: block;
-
-//         width: 100%;
-//         height: 50%;
-
-//         content: ' ';
-//         transition: bottom .5s;
-
-//         background: linear-gradient(transparent, $brand-primary);
-//       }
-//     }
-
-//     .card-meta {
-//       position: absolute;
-//       z-index: 1;
-//       bottom: 0;
-
-//       width: 100%;
-
-//       @include change-link-color;
-//     }
-//   }
-
-//   &.sticky {
-//     .card-header {
-//       @extend .border-0;
-//     }
-
-//     .card-sticky {
-//       position: absolute;
-//       z-index: 1;
-//       right: 0;
-//       bottom: 0;
-//       left: 0;
-
-//       padding: .5rem 10%;
-
-//       border-bottom: .0625rem dashed #e0e0e0;
-//       background-color: #fff;
-
-//       @extend .d-flex;
-//       @extend .align-items-center;
-//       @extend .justify-content-around;
-
-//       i {
-//         display: inline-block;
-
-//         width: 1.25rem;
-//         height: 1.25rem;
-
-//         border-radius: 50%;
-//         background-color: #f5f5f5;
-//         box-shadow: inset 0 0 .1875rem rgba($brand-primary, .6);
-//       }
-
-//       & ~ .card-meta {
-//         margin-bottom: 2.5rem;
-//       }
-//     }
-
-//     &::before,
-//     &::after {
-//       position: absolute;
-
-//       height: 1rem;
-
-//       content: '';
-
-//       border: $card-border-width solid $card-border-color;
-//       border-radius: calc(0.25rem - 1px);
-//     }
-
-//     &::before {
-//       z-index: -1;
-//       right: .625rem;
-//       bottom: -.3125rem;
-//       left: .625rem;
-//       // border-color: lighten($card-border-color, 1%);
-//       // background-color: lighten($card-cap-bg, 1%);
-//     }
-
-//     &::after {
-//       z-index: -2;
-//       right: 1.25rem;
-//       bottom: -.5625rem;
-//       left: 1.25rem;
-//       // border-color: lighten($card-border-color, 2%);
-//       // background-color: lighten($card-cap-bg, 2%);
-//     }
-//   }
-
-//   &.quote {
-//     .card-header {
-//       &::after {
-//         background: linear-gradient(transparent, rgba(#fff, .1));
-//       }
-//     }
-
-//     .card-img-top {
-//       min-height: 15rem;
-
-//       text-align: center;
-
-//       font-size: 2rem;
-
-//       @extend .text-white;
-//       @extend .px-8;
-//       @extend .pb-4;
-//       @extend .d-flex;
-//       @extend .align-items-center;
-//       @extend .justify-content-center;
-//       @extend .bg-primary;
-
-//       &::before,
-//       &::after {
-//         position: absolute;
-
-//         font-size: 5rem;
-//         // font-family: $font-family-monospace;
-//         line-height: 4rem;
-//       }
-
-//       &::before {
-//         top: 2.5rem;
-//         left: 2.5rem;
-
-//         content: '“'
-//       }
-
-//       &::after {
-//         right: 2.5rem;
-//         bottom: 2.5rem;
-
-//         content: '”'
-//       }
-//     }
-//   }
-// }

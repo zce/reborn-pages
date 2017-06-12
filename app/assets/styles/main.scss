@@ -9,21 +9,23 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wedn
  * Tags: blog
- *
- * http://getskeleton.com/
- *
- * https://www.iotacss.com/
- * The main stylesheet. It is required in all themes and contains the information header for your theme.
- *
- * 值得参考的css理论：OOCSS、SMACSS与BEM - 庭院茶 - SegmentFault
- * https://segmentfault.com/a/1190000000704006
  */
+
+//  * http://getskeleton.com/
+//  *
+//  * https://www.iotacss.com/
+//  * The main stylesheet. It is required in all themes and contains the information header for your theme.
+//  *
+//  * 值得参考的css理论：OOCSS、SMACSS与BEM - 庭院茶 - SegmentFault
+//  * https://segmentfault.com/a/1190000000704006
 
 // 1. Variables
 @import 'variables/variables';
+@import 'variables/bootstrap';
 
 // 2. Helpers
-@import 'helpers/helpers';
+@import 'helpers/functions';
+@import 'helpers/mixins';
 
 // 3. Fonts
 @font-face {
@@ -36,43 +38,21 @@
 }
 
 // 4. Vendors
-@import 'vender/vender';
+@import 'vender/icons';
+@import 'vender/bootstrap';
+@import 'vender/headroom';
+// bower:scss
+// endbower
 
 // 5. Components
 @import 'components/utilities';
 @import 'components/button';
 @import 'components/card';
 
-// 6. Globals
-// html {
-//   font-size: 14px;
-// }
-
-// @include media-breakpoint-up(sm) {
-//   html {
-//     font-size: 16px;
-//   }
-// }
-
-// @include media-breakpoint-up(md) {
-//   html {
-//     font-size: 18px;
-//   }
-// }
-
-// @include media-breakpoint-up(lg) {
-//   html {
-//     font-size: 20px;
-//   }
-// }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // 6. Layout
+@import 'layout/global';
 @import 'layout/header';
+@import 'layout/main';
 @import 'layout/sidebar';
 @import 'layout/footer';
 

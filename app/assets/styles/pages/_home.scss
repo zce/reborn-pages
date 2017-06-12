@@ -1,12 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-// Display
-// Positioning
-// Box model
-// Colors and Typography
-// Other
-// --------------------------
 
 .site-main {
 
@@ -79,12 +73,6 @@
       }
     }
 
-    .card {
-      @extend .card-thumbnail;
-      @extend .card-shadow;
-      @extend .card-interactive;
-    }
-
     .more {
       @extend .mt-4;
       @extend .text-center;
@@ -146,6 +134,10 @@
   // --------------------------
 
   .second {
+    .card {
+      @extend .card-thumbnail;
+      @extend .card-interactive;
+    }
   }
 
   // Third section styles
@@ -180,6 +172,9 @@
   // --------------------------
 
   .fourth {
+    .card {
+      @extend .card-thumbnail;
+    }
   }
 
   // Fifth section styles
