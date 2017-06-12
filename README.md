@@ -30,6 +30,6 @@
 - [ ] Single page style
 
 <!--
-  https://github.com/yeoman/generator-webapp/compare/a13c2f...master
-  https://github.com/twbs/bootstrap/compare/2d8789...v4-dev
+  https://github.com/yeoman/generator-webapp/compare/2a6113f3e6c8e67a0f48d2bb96e4570a20143877...master
+  https://github.com/twbs/bootstrap/compare/1a0a1a0600f70452513f14368beac81b5e3c0c6e...v4-dev
 -->
