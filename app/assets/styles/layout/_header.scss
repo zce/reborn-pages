@@ -134,7 +134,7 @@
     z-index: -1;
     top: 0;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     left: 0;
 
     overflow: hidden;
@@ -146,6 +146,7 @@
       right: 0;
       bottom: 0;
       left: 0;
+      background: $mask-bg-image;
     }
 
     img, video {
@@ -157,11 +158,6 @@
   }
 
   .hero {
-    .mask {
-      background: image('mask.png');
-      // opacity: .8;
-    }
-
     .intro {
       display: flex;
       flex-direction: column;
@@ -198,7 +194,7 @@
     }
 
     .mask {
-      background-image: linear-gradient(transparent, $body-bg), url(../images/mask.png);
+      background: linear-gradient(transparent, $body-bg), $mask-bg-image;
     }
 
     img, video {
