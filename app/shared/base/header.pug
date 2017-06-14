@@ -1,11 +1,16 @@
-header.site-header
+header.site-header(role='banner')
   .navbar: .container
     //- a.navbar-brand(href='index.html')
     //-   span.sr-only WEDN.NET
     //-   img(src='assets/images/logo.svg', alt='WEDN.NET', height='50')
 
-    a.navbar-brand.icon-logo(href='index.html')
-      span.sr-only WEDN.NET
+    case cover
+      when 'hero'
+        h1: a.navbar-brand.icon-logo(href='index.html', rel='home')
+          span.sr-only WEDN.NET
+      default
+        a.navbar-brand.icon-logo(href='index.html', rel='home')
+          span.sr-only WEDN.NET
 
     button.navbar-toggler.collapsed(data-toggle='collapse', data-target='#site-menu')
       span.navbar-toggler-icon
