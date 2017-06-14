@@ -79,7 +79,7 @@
 
     padding: 0;
 
-    border-width: 0;
+    border-bottom: border(lighten($card-border-color, 8%), solid, 0);
   }
 
   #{$this}-footer {
@@ -166,6 +166,10 @@
   &#{$this}-thumbnail {
     @extend #{$this}-shadow;
 
+    #{$this}-img-top {
+      max-height: 17.5rem;
+    }
+
     #{$this}-title {
       font-size: 1.25rem;
     }
@@ -195,6 +199,10 @@
 
   // - Common post entry
   @mixin card-entry {
+    #{$this}-img-top {
+      max-height: 30rem;
+    }
+
     #{$this}-title {
       font-size: 2rem;
     }
@@ -243,76 +251,13 @@
     }
   }
 
-  // 3. Sticky post entry
-  &#{$this}-sticky {
+  // 3. Feature post entry
+  &#{$this}-featured {
     @include card-entry;
     @extend #{$this}-interactive;
-
-    #{$this}-sticky {
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      display: flex;
-
-      padding: .5rem 10%;
-
-      border-bottom: border($card-border-color, dashed);
-      background-color: $card-bg;
-
-      align-items: center;
-      justify-content: space-around;
-
-      i {
-        width: 1.25rem;
-        height: 1.25rem;
-
-        border-radius: 50%;
-        background-color: darken($card-bg, 3%);
-        box-shadow: inset 0 0 .125rem rgba($brand-primary, .6);
-      }
-
-      & ~ .card-img-overlay {
-        margin-bottom: 2.5rem;
-      }
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-
-      min-height: 1rem;
-
-      content: '';
-
-      border: border($card-border-color, solid, $card-border-width);
-      border-radius: $card-inner-border-radius;
-    }
-
-    &::before {
-      z-index: -1;
-      right: .625rem;
-      bottom: -.3125rem;
-      left: .625rem;
-
-      border-color: lighten($card-border-color, 1%);
-      background-color: lighten($card-cap-bg, 1%);
-    }
-
-    &::after {
-      z-index: -2;
-      right: 1.25rem;
-      bottom: -.5625rem;
-      left: 1.25rem;
-
-      border-color: lighten($card-border-color, 2%);
-      background-color: lighten($card-cap-bg, 2%);
-    }
   }
 
-  // 3. Quote post entry
+  // 4. Quote post entry
   &#{$this}-quote {
     @include card-entry;
     @extend #{$this}-interactive;
@@ -321,7 +266,7 @@
       display: flex;
 
       min-height: 15rem;
-      padding: 1rem 4.5rem 3rem;
+      padding: 1rem 4.5rem 2.5rem;
 
       text-align: center;
 
@@ -362,13 +307,85 @@
     }
   }
 
-  // 4. Feature post entry
-  &#{$this}-feature {
-    @include card-entry;
-    @extend #{$this}-interactive;
+  // Sticky post entry
+  &.sticky {
+    // modify default
+    #{$this}-header {
+      border-width: 0;
+    }
+
+    span#{$this}-img-top {
+      padding-bottom: 4rem;
+    }
+
+    // Sticky
+    #{$this}-sticky {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+
+      padding: .5rem 10%;
+
+      border-top: border($card-border-color, dashed);
+      border-bottom: border($card-border-color, dashed);
+      background-color: $card-bg;
+
+      align-items: center;
+      justify-content: space-around;
+
+      i {
+        width: 1.25rem;
+        height: 1.25rem;
+
+        border-radius: 50%;
+        background-color: darken($card-bg, 3%);
+        box-shadow: inset 0 0 .125rem rgba($brand-primary, .6);
+      }
+
+      & ~ .card-img-overlay {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    // Bottom border
+    &::before,
+    &::after {
+      position: absolute;
+
+      min-height: 1rem;
+
+      content: '';
+
+      border: border($card-border-color, solid, $card-border-width);
+      border-radius: $card-inner-border-radius;
+    }
+
+    &::before {
+      z-index: -1;
+      right: .625rem;
+      bottom: -.3125rem;
+      left: .625rem;
+
+      border-color: lighten($card-border-color, 1%);
+      background-color: lighten($card-cap-bg, 1%);
+    }
+
+    &::after {
+      z-index: -2;
+      right: 1.25rem;
+      bottom: -.5625rem;
+      left: 1.25rem;
+
+      border-color: lighten($card-border-color, 2%);
+      background-color: lighten($card-cap-bg, 2%);
+    }
   }
 
-  // 4. Widget
+  // 5. Widget
   &#{$this}-widget {
     padding: .25rem 1rem;
 
