@@ -14,21 +14,6 @@
     @extend .text-light;
     @include change-link-color;
 
-    img {
-      max-height: 8.75rem;
-      max-width: 100%;
-
-      object-fit: contain;
-    }
-
-    ul {
-      list-style: none;
-
-      line-height: 2;
-
-      @extend .px-2;
-    }
-
     .row {
       @extend .flex-column-reverse;
       @extend .flex-sm-row;
@@ -59,13 +44,32 @@
     .btn-secondary {
       @extend .px-3;
     }
+
+    ul {
+      list-style: none;
+
+      line-height: 2;
+
+      @extend .px-2;
+
+      i, a::before {
+        @extend .mr-2;
+      }
+    }
+
+    img {
+      max-height: 8.75rem;
+      max-width: 100%;
+
+      object-fit: contain;
+    }
   }
 
   .copyright {
     border-top: border(lighten($brand-primary, 3));
     background-color: lighten($brand-primary, 2);
 
-    p {
+    p, a {
       margin-bottom: 0;
 
       color: $gray-lighter;

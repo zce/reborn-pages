@@ -1,5 +1,5 @@
 footer.site-footer
-  aside.widgets: .container: .row
+  aside.widgets(role='complementary'): .container: .row
     section.col-md-12.col-lg-5: .widget.widget-subscribe
       h3.title 订阅我们
       p 现在就订阅我们，这样你就可以在第一时间收到我们的更新通知了！
@@ -19,15 +19,15 @@ footer.site-footer
     section.col-md-4.col-lg-2: .widget.widget-socials
       h3.title 社交网络
       ul
-        li: a(href='#') #[i.icon-social-linkedin] LinkedIn
-        li: a(href='#') #[i.icon-social-twitter] Twitter
-        li: a(href='#') #[i.icon-social-facebook] Facebook
-        li: a(href='#') #[i.icon-social-github] GitHub
-        li: a(href='#') #[i.icon-social-pinterest] Pinterest
+        li: a.icon-linkedin(href='#') LinkedIn
+        li: a.icon-twitter(href='#') Twitter
+        li: a.icon-facebook(href='#') Facebook
+        li: a.icon-github(href='#') GitHub
+        li: a.icon-pocket(href='#') Pocket
 
     section.col-md-4.col-lg-3: .widget.widget-qrcode
       h3.title 微信订阅号
       img(src='uploads/qrcode.jpeg', alt='WEDN', width='344')
 
   .copyright
-    p.container Copyright &copy; 2017 WEDN.NET. All Rights Reserved.
+    p.container Copyright &copy; 2017 #[a(href='#') WEDN.NET]. All Rights Reserved.
