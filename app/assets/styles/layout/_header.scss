@@ -3,17 +3,9 @@
 // -----------------------------------------------------------------------------
 
 // https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
-// Display
-// Positioning
-// Box model
-// Colors and Typography
-// Other
-// --------------------------
-// TODOS:
-// 1. Bootstrap || Custom
 
 .site-header {
-  // position: relative;
+  $navbar-height: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
 
   overflow: hidden;
 
@@ -138,7 +130,6 @@
     z-index: -1;
     top: 0;
     right: 0;
-    // bottom: 0;
     left: 0;
 
     overflow: hidden;
@@ -153,9 +144,11 @@
       background: $mask-bg-image;
     }
 
-    img, video {
+    img,
+    video {
       width: 100%;
       height: 100%;
+      min-height: 42.5rem;
 
       object-fit: cover;
     }
@@ -167,7 +160,7 @@
       flex-direction: column;
 
       height: 37.5rem;
-      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
+      margin-top: $navbar-height;
 
       justify-content: center;
       align-items: center;
@@ -194,18 +187,20 @@
 
   .featured {
     .container {
-      margin-top: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
+      margin-top: $navbar-height;
     }
 
     .mask {
       background: linear-gradient(transparent, $body-bg), $mask-bg-image;
     }
 
-    img, video {
+    img,
+    video {
       filter: blur(.125rem);
     }
 
     .breadcrumb {
+      margin-bottom: 0;
       font-size: .875rem;
 
       @include change-link-color;
@@ -214,8 +209,7 @@
     .title {
       color: $title-color;
 
-      font-size: 2.125rem;
-      line-height: 2.5;
+      line-height: 2;
 
       @extend .mt-5;
       @extend .text-center;
@@ -227,9 +221,8 @@
 
       font-size: 1.125rem;
 
-      @extend .pl-sm-4;
-      @extend .pl-md-6;
-      @extend .mb-8;
+      @extend .pl-sm-6;
+      @extend .mb-7;
       @extend .text-center;
       @extend .text-sm-left;
 
