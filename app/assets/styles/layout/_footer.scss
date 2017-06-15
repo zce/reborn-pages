@@ -6,7 +6,7 @@
   @extend .bg-primary;
 
   .widgets {
-    font-size: .875rem;
+    font-size: $font-size-sm;
 
     @extend .pt-6;
     @extend .text-center;
@@ -30,7 +30,7 @@
     .title {
       border-bottom: border($border-color, dashed);
 
-      font-size: 1.125rem;
+      font-size: $font-size-lg;
 
       @extend .pb-2;
       @extend .mb-3;

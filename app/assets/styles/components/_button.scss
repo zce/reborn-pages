@@ -3,7 +3,7 @@
 
   border-radius: 50%;
 
-  font-size: .875rem;
+  font-size: $font-size-sm;
   line-height: 1;
 
   @include button-variant($indigo-4, $indigo-10, $indigo-6);
@@ -25,6 +25,6 @@
   @include button-size($input-btn-padding-y-lg * 1.5, $input-btn-padding-x-lg * 2, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-capsule {
+.btn-pill {
   border-radius: 50px;
 }

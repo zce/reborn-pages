@@ -201,7 +201,7 @@
 
     .breadcrumb {
       margin-bottom: 0;
-      font-size: .875rem;
+      font-size: $font-size-sm;
 
       @include change-link-color;
     }
@@ -219,7 +219,7 @@
     .slogan {
       color: $subtitle-color;
 
-      font-size: 1.125rem;
+      font-size: $font-size-lg;
 
       @extend .pl-sm-6;
       @extend .mb-7;

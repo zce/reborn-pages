@@ -97,10 +97,10 @@
       @extend .pr-lg-5;
 
       .content {
-        @extend .mt-3;
+        @extend .mt-4;
 
         p {
-          font-size: 1.125rem;
+          font-size: $font-size-lg;
           line-height: 2.2;
         }
       }
@@ -157,7 +157,7 @@
         @extend .mt-3;
 
         p {
-          font-size: 1rem;
+          font-size: $font-size-base;
           line-height: 2;
         }
       }

@@ -3,20 +3,21 @@
 // -----------------------------------------------------------------------------
 
 $item-space: 2.5rem;
+$item-divider-border: border(lighten($card-border-color, 8%));
 
 .terms {
   padding: 0 .5rem $item-space / 2;
 
-  border-bottom: border(lighten($card-border-color, 5%));
+  border-bottom: $item-divider-border;
 
   .category,
   .tags {
     i {
-      margin-right: .75rem;
+      margin-right: .625rem;
 
       vertical-align: middle;
 
-      font-size: 1.25rem;
+      font-size: $font-size-lg;
     }
   }
 
@@ -26,10 +27,10 @@ $item-space: 2.5rem;
 
       padding: .25rem .5rem;
 
-      border: border(lighten($card-border-color, 5%));
-      border-radius: .25rem;
+      border: $item-divider-border;
+      @include border-radius($card-border-radius);
 
-      font-size: .875rem;
+      font-size: $font-size-sm;
       line-height: 1.2;
     }
   }
@@ -40,7 +41,7 @@ $item-space: 2.5rem;
 
   text-align: center;
 
-  border-bottom: border(lighten($card-border-color, 5%));
+  border-bottom: $item-divider-border;
 
   img {
     width: 8rem;
@@ -55,7 +56,7 @@ $item-space: 2.5rem;
 .author {
   padding: $item-space 0;
 
-  border-bottom: border(lighten($card-border-color, 5%));
+  border-bottom: $item-divider-border;
 
   @extend .media;
 
@@ -101,7 +102,7 @@ $item-space: 2.5rem;
 
   padding: $item-space 1rem;
 
-  border-bottom: border(lighten($card-border-color, 5%));
+  border-bottom: $item-divider-border;
 
   justify-content: space-between;
 
@@ -139,7 +140,7 @@ $item-space: 2.5rem;
 
       background-color: rgba($brand-primary, .5);
 
-      font-size: 1.125rem;
+      font-size: $font-size-lg;
 
       @include change-link-color;
     }
@@ -148,9 +149,9 @@ $item-space: 2.5rem;
 
 .comments {
   margin-bottom: 5rem;
-  padding: 3% 6%;
+  padding: 2% 5%;
   background-color: $card-bg;
-  border: $card-border-width solid $card-border-color;
+  border: border($card-border-color, $width: $card-border-width);
   @include border-radius($card-border-radius);
 
   .comment-title {
@@ -190,11 +191,11 @@ $item-space: 2.5rem;
     .name {
       margin: 0;
 
-      font-size: 1.125rem;
+      font-size: $font-size-lg;
     }
 
     .time {
-      font-size: .875rem;
+      font-size: $font-size-sm;
 
       @extend .text-muted;
     }
@@ -203,7 +204,7 @@ $item-space: 2.5rem;
       margin-top: .3125rem;
       margin-bottom: 0;
 
-      font-size: .875rem;
+      font-size: $font-size-sm;
     }
 
     .reply {
