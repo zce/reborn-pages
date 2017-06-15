@@ -34,7 +34,7 @@ html.no-js(lang='zh-CN')
     block styles
 
     // build:js assets/scripts/modernizr.js
-    script(src='bower_components/modernizr/modernizr.js')
+    script(src='assets/scripts/modernizr.js')
     // endbuild
 
   body
@@ -57,22 +57,22 @@ html.no-js(lang='zh-CN')
     include footer
 
     // build:js assets/scripts/jquery.js
-    script(src='bower_components/jquery/dist/jquery.js')
+    script(src='node_modules/jquery/dist/jquery.js')
     // endbuild
 
     // build:js assets/scripts/global.js
-    script(src='bower_components/popper/index.js')
-    script(src='bower_components/bootstrap/js/dist/util.js')
-    //- script(src='bower_components/bootstrap/js/dist/alert.js')
-    //- script(src='bower_components/bootstrap/js/dist/button.js')
-    //- script(src='bower_components/bootstrap/js/dist/carousel.js')
-    script(src='bower_components/bootstrap/js/dist/collapse.js')
-    script(src='bower_components/bootstrap/js/dist/dropdown.js')
-    //- script(src='bower_components/bootstrap/js/dist/modal.js')
-    //- script(src='bower_components/bootstrap/js/dist/scrollspy.js')
-    //- script(src='bower_components/bootstrap/js/dist/tab.js')
-    //- script(src='bower_components/bootstrap/js/dist/tooltip.js')
-    //- script(src='bower_components/bootstrap/js/dist/popover.js')
+    script(src='node_modules/popper.js/dist/umd/popper.js')
+    script(src='node_modules/bootstrap/js/dist/util.js')
+    //- script(src='node_modules/bootstrap/js/dist/alert.js')
+    //- script(src='node_modules/bootstrap/js/dist/button.js')
+    //- script(src='node_modules/bootstrap/js/dist/carousel.js')
+    script(src='node_modules/bootstrap/js/dist/collapse.js')
+    script(src='node_modules/bootstrap/js/dist/dropdown.js')
+    //- script(src='node_modules/bootstrap/js/dist/modal.js')
+    //- script(src='node_modules/bootstrap/js/dist/scrollspy.js')
+    //- script(src='node_modules/bootstrap/js/dist/tab.js')
+    //- script(src='node_modules/bootstrap/js/dist/tooltip.js')
+    //- script(src='node_modules/bootstrap/js/dist/popover.js')
     script(src='assets/scripts/headroom.js')
     script(src='assets/scripts/main.js')
     // endbuild

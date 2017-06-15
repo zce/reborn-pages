@@ -165,14 +165,16 @@ $item-space: 2.5rem;
 
     li {
       padding: 1rem 0;
+      @extend .media;
 
       & + li {
         border-top: .0625rem dashed #e5e5e5;
       }
     }
 
-    .media-body {
+    div {
       position: relative;
+      @extend .media-body;
     }
 
     img {

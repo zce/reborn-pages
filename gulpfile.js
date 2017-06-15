@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
-const mainBowerFiles = require('main-bower-files')
 const runSequence = require('run-sequence')
 const del = require('del')
 const browserSync = require('browser-sync').create()
@@ -77,12 +76,6 @@ gulp.task('images', () => {
 })
 
 gulp.task('fonts', () => {
-  if (!dev) {
-    // TODO: bower component folder structure
-    gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}'))
-      .pipe(gulp.dest(`${dist}/assets/fonts`))
-  }
-
   return gulp.src(`${src}/**/fonts/**/*`, { base: src })
     .pipe($.if(dev, gulp.dest(temp), gulp.dest(dist)))
 })
@@ -102,7 +95,7 @@ gulp.task('serve', () => {
       server: {
         baseDir: [temp, src],
         routes: {
-          '/bower_components': 'bower_components'
+          '/node_modules': 'node_modules'
         }
       }
     })
@@ -117,7 +110,6 @@ gulp.task('serve', () => {
     gulp.watch(`${src}/**/*.scss`, ['styles'])
     gulp.watch(`${src}/**/*.js`, ['scripts'])
     gulp.watch(`${src}/**/fonts/**/*`, ['fonts'])
-    gulp.watch('bower.json', ['fonts'])
   })
 })
 
