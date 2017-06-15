@@ -18,7 +18,7 @@ gulp.task('styles', () => {
   return gulp.src(`${src}/**/*.scss`, { base: src })
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.sass.sync({outputStyle: 'expanded'}).on('error', $.sass.logError))
+    .pipe($.sass.sync({ outputStyle: 'expanded' }).on('error', $.sass.logError))
     // https://github.com/gulp-sourcemaps/gulp-sourcemaps/issues/60
     .pipe($.if(!dev, $.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] })))
     .pipe($.if(dev, $.sourcemaps.write()))
