@@ -1,6 +1,5 @@
 .card {
   $this: &;
-
   @extend .mb-5;
 
   #{$this}-img-top {
@@ -135,16 +134,6 @@
 
         @include transition(bottom .5s ease-in-out);
       }
-
-      // // Header hover
-      // &:hover {
-      //   &::after {
-      //     bottom: -100%;
-      //   }
-      //   #{$this}-img-top {
-      //     transform: scale(1.1);
-      //   }
-      // }
     }
 
     // Card full hover
@@ -232,8 +221,8 @@
     }
   }
 
-  // 2. Normal post entry
-  &#{$this}-normal {
+  // 2. Standard post entry
+  &#{$this}-standard {
     @include card-entry;
 
     #{$this}-img-overlay {

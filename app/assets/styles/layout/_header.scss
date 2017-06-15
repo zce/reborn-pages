@@ -107,7 +107,7 @@
           min-width: 17rem;
 
           & + label {
-            color: darken($input-border-color-focus, 5%);
+            color: darken($input-focus-border-color, 5%);
           }
         }
       }
