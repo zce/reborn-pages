@@ -135,7 +135,6 @@
 
   .second {
     .card {
-      @extend .card-thumbnail;
       @extend .card-interactive;
     }
   }
@@ -173,7 +172,6 @@
 
   .fourth {
     .card {
-      @extend .card-thumbnail;
     }
   }
 
