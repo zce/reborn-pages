@@ -3,7 +3,6 @@ const gulpLoadPlugins = require('gulp-load-plugins')
 const mainBowerFiles = require('main-bower-files')
 const runSequence = require('run-sequence')
 const del = require('del')
-const wiredep = require('wiredep').stream
 const browserSync = require('browser-sync').create()
 
 const $ = gulpLoadPlugins()
@@ -96,7 +95,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, [temp, dist]))
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['views', 'styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean'], ['views', 'styles', 'scripts', 'fonts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
@@ -118,7 +117,7 @@ gulp.task('serve', () => {
     gulp.watch(`${src}/**/*.scss`, ['styles'])
     gulp.watch(`${src}/**/*.js`, ['scripts'])
     gulp.watch(`${src}/**/fonts/**/*`, ['fonts'])
-    gulp.watch('bower.json', ['wiredep', 'fonts'])
+    gulp.watch('bower.json', ['fonts'])
   })
 })
 
@@ -132,55 +131,6 @@ gulp.task('serve:dist', ['default'], () => {
   })
 })
 
-// inject bower components
-gulp.task('wiredep', () => {
-  gulp.src(`${src}/**/*.scss`, { base: src })
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/,
-      fileTypes: {
-        scss: {
-          block: /(([ \t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
-          detect: {
-            css: /@import\s['"](.+css)['"]/gi,
-            sass: /@import\s['"](.+sass)['"]/gi,
-            scss: /@import\s['"](.+scss)['"]/gi
-          },
-          replace: {
-            css: '@import \'{{filePath}}\';',
-            sass: '@import \'{{filePath}}\';',
-            scss: '@import \'{{filePath}}\';'
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest(src))
-
-  // https://github.com/taptapship/wiredep/pull/239
-  // node_modules/wiredep/lib/default-file-types.js
-  // jade => pug
-  gulp.src(`${src}/**/*.pug`)
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      exclude: ['bootstrap'],
-      ignorePath: /^(\.\.\/)*\.\./,
-      fileTypes: {
-        pug: {
-          block: /(([ \t]*)\/\/-?\s*bower:*(\S*))(\n|\r|.)*?(\/\/-?\s*endbower)/gi,
-          detect: {
-            js: /script\(.*src=['"]([^'"]+)/gi,
-            css: /link\(.*href=['"]([^'"]+)/gi
-          },
-          replace: {
-            js: 'script(src=\'{{filePath}}\')',
-            css: 'link(rel=\'stylesheet\', href=\'{{filePath}}\')'
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest(src))
-})
-
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src(`${dist}/**/*`).pipe($.size({ title: 'build', gzip: true }))
 })
@@ -188,7 +138,7 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false
-    runSequence(['clean', 'wiredep'], 'build', resolve)
+    runSequence(['clean'], 'build', resolve)
   })
 })
 
