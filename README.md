@@ -18,11 +18,7 @@
 
 ## Preview
 
-![Landing Page](design/exports/Landing@2x.png)
-
-![Archive Page](design/exports/Archive@2x.png)
-
-![Single Page](design/exports/Single@2x.png)
+![Landing Page](reborn.png)
 
 
 ## TODOS
