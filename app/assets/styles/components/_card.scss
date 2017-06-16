@@ -66,15 +66,18 @@
     }
 
     span {
-      line-height: 2rem;
+      display: inline-block;
 
-      @extend .mr-3;
-      @extend .mr-sm-2;
+      @extend .px-2;
+      @extend .px-sm-1;
+      @extend .py-2;
+      @extend .py-sm-0;
 
       img {
         width: 1.5rem;
         height: auto;
         margin-right: .25rem;
+        margin-top: -.125rem;
 
         @extend .rounded-circle;
       }
