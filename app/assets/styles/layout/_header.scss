@@ -82,12 +82,9 @@
       // }
     }
 
-    .navbar-nav {
-      @extend .mr-auto;
-    }
-
     .form-inline {
       position: relative;
+      @extend .ml-auto;
 
       .form-control {
         min-width: 3rem;
