@@ -12,11 +12,11 @@ header.site-header(role='banner')
         a.navbar-brand.icon-logo(href='index.html', rel='home')
           span.sr-only WEDN.NET
 
-    button.navbar-toggler.collapsed(data-toggle='collapse', data-target='#site-menu')
+    button.navbar-toggler.collapsed(data-toggle='collapse', data-target='#site-menu', aria-controls='site-menu', aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
 
     //- http://bootsnipp.com/snippets/featured/navbar-lateral-slide-menu
-    nav#site-menu.navbar-collapse.collapse
+    nav#site-menu.navbar-collapse.collapse(role='navigation', aria-label='navigation')
       ul.navbar-nav
         li.nav-item.active
           a.nav-link(href='index.html') Home #[span.sr-only (current)]
