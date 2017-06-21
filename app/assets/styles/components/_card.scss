@@ -56,33 +56,26 @@
     @extend .d-flex;
     @extend .flex-column;
     @extend .flex-sm-row;
-    @extend .justify-content-center;
-    @extend .justify-content-sm-between;
+    @extend .align-items-center;
+    @extend .justify-content-between;
+
     @include change-link-color;
-
-    .left {
-      @extend .text-center;
-      @extend .text-sm-left;
-    }
-
-    .right {
-      @extend .text-center;
-      @extend .text-sm-right;
-    }
 
     a {
       display: inline-block;
+
       line-height: 1.5rem;
 
       @extend .px-2;
       @extend .px-sm-1;
-      @extend .py-2;
+      @extend .py-1;
       @extend .py-sm-0;
 
       img {
         width: 1.5rem;
         height: auto;
         margin-right: .25rem;
+
         vertical-align: top;
 
         @extend .rounded-circle;
