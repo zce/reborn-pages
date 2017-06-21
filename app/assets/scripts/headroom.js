@@ -1,4 +1,4 @@
-// https://github.com/WickyNilliams/headroom.js/compare/ccb47fa6f5dc7af0aa75142ec970325a56d99583...master
+// https://github.com/WickyNilliams/headroom.js/compare/ea256161df7b183f91a9fde2d070d4f0e050024f...master
 
 ;(window => {
   const features = {
@@ -139,7 +139,9 @@
      */
     destroy () {
       this.initialised = false
-      this.elem.classList.remove(this.classes.unpinned, this.classes.pinned, this.classes.top, this.classes.notTop, this.classes.initial)
+      for (let key in this.classes) {
+        this.elem.classList.remove(this.classes[key])
+      }
       this.scroller.removeEventListener('scroll', this.debouncer, false)
     },
 
