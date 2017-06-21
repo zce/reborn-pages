@@ -20,6 +20,8 @@
 
 ![Landing Page](reborn.png)
 
+人生苦短，我不兼容
+=====
 
 ## TODOS
 

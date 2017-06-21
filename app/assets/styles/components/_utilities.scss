@@ -3,3 +3,10 @@
 @include bg-variant('.bg-light', $indigo-9);
 
 @include text-emphasis-variant('.text-light', $indigo-9);
+
+.sr-only-focusable {
+  position: absolute !important;
+  z-index: $zindex-tooltip;
+  @extend .m-1;
+  @extend .p-2;
+}

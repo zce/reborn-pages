@@ -42,20 +42,17 @@ html.no-js(lang='zh-CN')
 
     a.sr-only.sr-only-focusable(href='#content') 跳转到内容区
 
-    include header
+    header.site-header(role='banner'): include header
 
     if hasSidebar
-      .site-main.container: .row
-        main#content.col-lg-9(role='main')
-          block wrapper
-        aside.col-lg-3(role='complementary')
-          include sidebar
+      #content.container: .row
+        main#primary.site-main.col-lg-9(role='main'): block main
+        aside#secondary.site-sidebar.col-lg-3(role='complementary'): include sidebar
     else
-      main#content.site-main(role='main')
-        block wrapper
+      #content
+        main#primary.site-main(role='main'): block main
 
-
-    include footer
+    footer.site-footer: include footer
 
     // build:js assets/scripts/jquery.js
     script(src='node_modules/jquery/dist/jquery.js')

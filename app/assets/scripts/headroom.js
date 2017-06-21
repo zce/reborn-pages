@@ -376,7 +376,7 @@
    */
   Headroom.options = {
     tolerance: { up: 0, down: 0 },
-    offset: 300,
+    offset: 60,
     scroller: window,
     classes: {
       pinned: 'is-pinned',
@@ -385,7 +385,7 @@
       notTop: 'is-not-top',
       bottom: 'is-bottom',
       notBottom: 'is-not-bottom',
-      initial: 'topbar'
+      initial: 'navbar'
     }
   }
   Headroom.cutsTheMustard = typeof features !== 'undefined' && features.rAF && features.bind && features.classList

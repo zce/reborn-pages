@@ -5,13 +5,14 @@
 // https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
 
 .site-header {
+  // for margin
   $navbar-height: $navbar-padding-y * 2 + $navbar-brand-padding-y * 2 + $brand-size;
 
   overflow: hidden;
 
   .navbar {
     position: absolute;
-    z-index: $zindex-sticky;
+    z-index: $zindex-fixed;
 
     @extend .w-100;
     @extend .bg-white;
