@@ -100,7 +100,7 @@ $spacers: (
 // Body
 
 $body-bg:       $indigo-9;
-$body-color:    $indigo-2;
+$body-color:    $indigo-3;
 
 // Links
 
@@ -131,6 +131,8 @@ $transition-color:       color .35s ease;
 $transition-background:  background .35s ease;
 
 // Fonts
+
+$font-family-sans-serif: 'Exo 2', 'Trebuchet MS', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 $headings-font-weight:   400;
 

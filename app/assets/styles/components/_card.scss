@@ -53,20 +53,26 @@
   }
 
   .card-meta {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .flex-sm-row;
+    @extend .justify-content-center;
+    @extend .justify-content-sm-between;
     @include change-link-color;
 
-    .col-sm-7 {
+    .left {
       @extend .text-center;
       @extend .text-sm-left;
     }
 
-    .col-sm-5 {
+    .right {
       @extend .text-center;
       @extend .text-sm-right;
     }
 
     a {
       display: inline-block;
+      line-height: 1.5rem;
 
       @extend .px-2;
       @extend .px-sm-1;
@@ -77,7 +83,7 @@
         width: 1.5rem;
         height: auto;
         margin-right: .25rem;
-        margin-top: -.125rem;
+        vertical-align: top;
 
         @extend .rounded-circle;
       }
@@ -208,7 +214,7 @@
     line-height: 1.5;
   }
 
-  .card-block {
+  .card-body {
     padding: 0;
   }
 
@@ -343,7 +349,7 @@
     }
   }
 
-  .card-block {
+  .card-body {
     padding: 4% 5%;
   }
 
@@ -351,6 +357,8 @@
   &.format-standard {
     .card-img-overlay {
       position: static;
+
+      color: $brand-primary;
 
       .card-meta {
         @include change-link-color($brand-primary);
@@ -377,6 +385,8 @@
 
     .card-img-overlay {
       position: absolute;
+
+      color: $white;
 
       .card-meta {
         @include change-link-color;
