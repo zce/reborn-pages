@@ -61,7 +61,17 @@
 
     @include change-link-color;
 
-    a {
+    img {
+      width: 1.5rem;
+      height: auto;
+      margin-right: .25rem;
+
+      vertical-align: top;
+
+      @extend .rounded-circle;
+    }
+
+    .meta > span {
       display: inline-block;
 
       line-height: 1.5rem;
@@ -70,20 +80,32 @@
       @extend .px-sm-1;
       @extend .py-1;
       @extend .py-sm-0;
+    }
 
-      img {
-        width: 1.5rem;
-        height: auto;
-        margin-right: .25rem;
+    span::before, a::before {
+      margin-right: .25rem;
+    }
 
-        vertical-align: top;
-
-        @extend .rounded-circle;
-      }
-
+    .byline, .posted-on, .cat-links, .tags-links {
       &::before {
-        margin-right: .25rem;
+        @extend [class^='icon-'], [class*=' icon-'];
       }
+    }
+
+    // .byline::before {
+    //   content: '\e005';
+    // }
+
+    .posted-on::before {
+      content: '\e075';
+    }
+
+    .cat-links::before {
+      content: '\e093';
+    }
+
+    .tags-links::before {
+      content: '\e055';
     }
   }
 

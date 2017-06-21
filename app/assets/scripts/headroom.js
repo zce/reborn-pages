@@ -378,7 +378,7 @@
    */
   Headroom.options = {
     tolerance: { up: 0, down: 0 },
-    offset: 60,
+    offset: 100,
     scroller: window,
     classes: {
       pinned: 'is-pinned',

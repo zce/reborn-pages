@@ -29,7 +29,7 @@ html.no-js(lang='zh-CN')
     //- link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Great+Vibes')
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Exo+2:400,500&amp;subset=latin-ext')
 
-    // build:css assets/styles/global.css
+    // build:css assets/styles/main.css
     link(rel='stylesheet', href='assets/styles/main.css')
     // endbuild
 
@@ -53,13 +53,13 @@ html.no-js(lang='zh-CN')
       #content
         main#primary.site-main(role='main'): block main
 
-    footer.site-footer: include footer
+    footer.site-footer(role='contentinfo'): include footer
 
     // build:js assets/scripts/jquery.js
     script(src='node_modules/jquery/dist/jquery.js')
     // endbuild
 
-    // build:js assets/scripts/global.js
+    // build:js assets/scripts/main.js
     script(src='node_modules/popper.js/dist/umd/popper.js')
     script(src='node_modules/bootstrap/js/dist/util.js')
     //- script(src='node_modules/bootstrap/js/dist/alert.js')
