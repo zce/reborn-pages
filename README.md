@@ -24,7 +24,7 @@
 ## TODOS
 
 - [x] header media height
-- [ ] post item styles
+- [x] post item styles
 
 <!--
   https://github.com/yeoman/generator-webapp/compare/2a6113f3e6c8e67a0f48d2bb96e4570a20143877...master
