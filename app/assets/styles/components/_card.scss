@@ -152,8 +152,6 @@
     bottom: 0;
     left: 0;
 
-    display: block;
-
     height: 50%;
 
     content: '';
@@ -163,14 +161,25 @@
     @include transition(bottom .5s ease-in-out);
   }
 
-  // Card full hover
-  &:hover {
+  // // Card full hover
+  // &:hover {
+  //   .card-img-top {
+  //     transform: scale(1.1);
+  //   }
+
+  //   .card-header::after {
+  //     bottom: -20%;
+  //   }
+  // }
+
+  // Card header hover
+  .card-header:hover {
     .card-img-top {
       transform: scale(1.1);
     }
 
-    .card-header::after {
-      bottom: -100%;
+    &::after {
+      bottom: -20%;
     }
   }
 }
