@@ -1,0 +1,10 @@
+footer.card-footer
+  span.tags-links
+    i.icon-tag
+    each item in entry.tags
+      a(href='archive.html')= item
+  span.edit-link
+    i.icon-pencil
+    a(href='single.html') 编辑
+  span.more-link
+    a(href='single.html') 继续阅读 &rarr;

@@ -2,10 +2,10 @@
 // This file contains styles that are specific to the single page.
 // -----------------------------------------------------------------------------
 
-$item-space: 2.5rem;
+$item-space: 2rem;
 $item-divider-border: border(lighten($card-border-color, 8%));
 
-.terms {
+.taxonomies {
   padding: 0 .5rem $item-space / 2;
 
   border-bottom: $item-divider-border;
@@ -33,23 +33,6 @@ $item-divider-border: border(lighten($card-border-color, 8%));
       font-size: $font-size-sm;
       line-height: 1.2;
     }
-  }
-}
-
-.license {
-  padding: $item-space 0;
-
-  text-align: center;
-
-  border-bottom: $item-divider-border;
-
-  img {
-    width: 8rem;
-  }
-
-  p {
-    margin-top: 1rem;
-    margin-bottom: 0;
   }
 }
 
@@ -97,7 +80,30 @@ $item-divider-border: border(lighten($card-border-color, 8%));
   }
 }
 
+.license {
+  padding: $item-space 0;
+
+  text-align: center;
+
+  img {
+    width: 8rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
 .navigation {
+  margin-bottom: 5rem;
+  padding: 2% 5%;
+  background-color: $card-bg;
+  border: border($card-border-color, $width: $card-border-width);
+  @include border-radius($card-border-radius);
+}
+
+.nav-links {
   display: flex;
 
   padding: $item-space 1rem;
@@ -148,14 +154,10 @@ $item-divider-border: border(lighten($card-border-color, 8%));
 }
 
 .comments {
-  margin-bottom: 5rem;
-  padding: 2% 5%;
-  background-color: $card-bg;
-  border: border($card-border-color, $width: $card-border-width);
-  @include border-radius($card-border-radius);
+  @extend .navigation;
 
   .comment-title {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 
   .comment-list {
@@ -215,6 +217,6 @@ $item-divider-border: border(lighten($card-border-color, 8%));
   }
 
   .comment-form {
-    margin: 1rem 0;
+    margin: 3rem 0;
   }
 }

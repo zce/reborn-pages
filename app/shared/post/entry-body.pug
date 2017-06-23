@@ -1,0 +1,7 @@
+content.card-body
+  h2.card-title: a(href='single.html')= entry.title
+  if entry.subtitle
+    h5.card-subtitle= entry.subtitle
+  .card-text
+    each item in entry.content
+      p= item

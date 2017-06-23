@@ -1,0 +1,38 @@
+-
+  entry = Object.assign({
+    sticky: false,
+    format: 'standard',
+    thumbnail: '',
+    quote: '',
+    authorName: '汪磊',
+    authorAvatar: 'uploads/avatar.jpeg',
+    published: '2013年01月07日',
+    publishedUTC: '2013-01-07T07:07:21+08:00',
+    updated: '2017年06月06日',
+    updatedUTC: '2017-06-06T07:07:21+08:00',
+    categories: ['旅行'],
+    tags: ['诗', '远方'],
+    comments: 2,
+    likes: 10,
+    dislikes: 1,
+    share: false,
+    title: '',
+    subtitle: '',
+    content: [],
+    single: false,
+    classes: []
+  }, entry)
+
+  entry.classes = ['card', 'card-entry', 'format-' + entry.format]
+
+  ;(entry.thumbnail || entry.quote) && entry.classes.push('has-post-thumbnail')
+
+  entry.sticky && entry.classes.push('sticky')
+
+article(class=entry.classes.join(' '))
+  include entry-header
+  include entry-body
+  if entry.single
+    include entry-footer-single
+  else
+    include entry-footer-archive

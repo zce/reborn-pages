@@ -1,0 +1,41 @@
+header.card-header
+  if entry.sticky
+    .card-sticky #[i] #[i] #[i]
+  if entry.thumbnail
+    a(href='single.html')
+      img.card-img-top(src=entry.thumbnail, alt=entry.title)
+  if entry.quote
+    a(href='single.html')
+      span.card-img-top= entry.quote
+  .card-img-overlay: .card-meta
+    .list
+      span.byline
+        span.sr-only 作者
+        a(href='#') #[img(src=entry.authorAvatar, alt=entry.authorName, width='32')]#{entry.authorName}
+      span.posted-on
+        i.icon-calender
+        span.sr-only 日期
+        a(href='#')
+          time.published(datetime=entry.publishedUTC, pubdate)= entry.published
+          time.updated.sr-only(datetime=entry.updatedUTC)= entry.updated
+      span.cat-links
+        i.icon-paper-clip
+        span.sr-only 分类
+        each item in entry.categories
+          a(href='#')= item
+    .list
+      span.comments-link
+        span.sr-only 评论
+        a.icon-bubble(href='#')= entry.comments
+      span.like-link
+        span.sr-only 喜欢
+        a.icon-like(href='#')= entry.likes
+      span.dislike-link
+        span.sr-only 不喜欢
+        a.icon-dislike(href='#')= entry.dislikes
+      if entry.share
+        span.share-link
+          span.sr-only 分享
+          a.icon-share-alt(href='#')
+
+
