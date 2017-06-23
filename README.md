@@ -32,4 +32,5 @@
   https://github.com/yeoman/generator-webapp/compare/2a6113f3e6c8e67a0f48d2bb96e4570a20143877...master
   https://github.com/twbs/bootstrap/compare/8396039b4e2ca10ef06ee21b8c02288c2b01db07...v4-dev
   https://github.com/twbs/bootstrap/compare/16d77b4cb07f575d45ae486125ea9df06bd45d3f...v4-dev
+  https://github.com/twbs/bootstrap/compare/4ae7d8170b794f874dd320335f21c99bdc2a8888...v4-dev
 -->

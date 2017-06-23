@@ -782,7 +782,7 @@ boom@2.x.x:
 
 bootstrap@twbs/bootstrap#v4-dev:
   version "4.0.0-alpha.6"
-  resolved "https://codeload.github.com/twbs/bootstrap/tar.gz/16d77b4cb07f575d45ae486125ea9df06bd45d3f"
+  resolved "https://codeload.github.com/twbs/bootstrap/tar.gz/4ae7d8170b794f874dd320335f21c99bdc2a8888"
   dependencies:
     jquery ">=1.9.1"
     popper.js "^1.10.1"
@@ -1742,13 +1742,13 @@ eslint-module-utils@^2.0.0:
     debug "2.2.0"
     pkg-dir "^1.0.0"
 
-eslint-plugin-import@^2.3.0:
-  version "2.3.0"
-  resolved "http://registry.npm.taobao.org/eslint-plugin-import/download/eslint-plugin-import-2.3.0.tgz#37c801e0ada0e296cbdf20c3f393acb5b52af36b"
+eslint-plugin-import@^2.5.0:
+  version "2.5.0"
+  resolved "http://registry.npm.taobao.org/eslint-plugin-import/download/eslint-plugin-import-2.5.0.tgz#293b5ea7910a901a05a47ccdd7546e611725406c"
   dependencies:
     builtin-modules "^1.1.1"
     contains-path "^0.1.0"
-    debug "^2.2.0"
+    debug "^2.6.8"
     doctrine "1.5.0"
     eslint-import-resolver-node "^0.2.0"
     eslint-module-utils "^2.0.0"

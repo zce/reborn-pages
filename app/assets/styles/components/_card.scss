@@ -4,6 +4,10 @@
 .card {
   @extend .mb-5;
 
+  i, a::before {
+    margin-right: .1875rem;
+  }
+
   .card-header {
     position: relative;
 
@@ -71,7 +75,7 @@
       @extend .rounded-circle;
     }
 
-    .meta > span {
+    .list > span {
       display: inline-block;
 
       line-height: 1.5rem;
@@ -80,32 +84,6 @@
       @extend .px-sm-1;
       @extend .py-1;
       @extend .py-sm-0;
-    }
-
-    span::before, a::before {
-      margin-right: .25rem;
-    }
-
-    .byline, .posted-on, .cat-links, .tags-links {
-      &::before {
-        @extend [class^='icon-'], [class*=' icon-'];
-      }
-    }
-
-    // .byline::before {
-    //   content: '\e005';
-    // }
-
-    .posted-on::before {
-      content: '\e075';
-    }
-
-    .cat-links::before {
-      content: '\e093';
-    }
-
-    .tags-links::before {
-      content: '\e055';
     }
   }
 
@@ -179,7 +157,7 @@
     }
 
     &::after {
-      bottom: -20%;
+      bottom: -30%;
     }
   }
 }

@@ -1,14 +1,12 @@
-article.card.card-entry.format-quote
-  header.card-header
-    a(href='single.html')
-      span.card-img-top 人活着，总是需要一点精神的
-    .card-img-overlay
-      include ../base/meta
-  content.card-body
-    h2.card-title: a(href='single.html') 时代的精神正在消退
-    .card-text
-      p 我2007年在深圳时，还是一个自负的青年，说：“我代表了这个时代的最高精神。”这些年来，我一直在想，能不能配得上这句话，所以从那时到现在，我尽可能地在努力。
-      p 那么，我们这个时代的最高精神究竟是什么？......
-  footer.card-footer
-    span.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
-    a(href='single.html') 继续阅读 →
+-
+  entry = {
+    format: 'quote',
+    quote: '人活着，总是需要一点精神的',
+    title: '时代的精神正在消退',
+    content: [
+      '我2007年在深圳时，还是一个自负的青年，说：“我代表了这个时代的最高精神。”这些年来，我一直在想，能不能配得上这句话，所以从那时到现在，我尽可能地在努力。',
+      '那么，我们这个时代的最高精神究竟是什么？······'
+    ]
+  }
+
+include ../base/entry

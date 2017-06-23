@@ -5,7 +5,202 @@
 // Default Variables
 $icon-font-path: '../fonts/';
 $icon-font-family: 'reborn';
-$icon-prefix: 'icon-';
+$icon-font-prefix: 'icon-';
+
+$icon-font-chars: (
+  logo: '\e900',
+  // user-female: '\e000',
+  // people: '\e001',
+  // user-follow: '\e002',
+  // user-following: '\e003',
+  // user-unfollow: '\e004',
+  user: '\e005',
+  // trophy: '\e006',
+  // speedometer: '\e007',
+  // shield: '\e00e',
+  // screen-tablet: '\e00f',
+  // screen-smartphone: '\e010',
+  // screen-desktop: '\e011',
+  // plane: '\e012',
+  // notebook: '\e013',
+  // mustache: '\e014',
+  // mouse: '\e015',
+  // magnet: '\e016',
+  // magic-wand: '\e017',
+  // hourglass: '\e018',
+  // graduation: '\e019',
+  // ghost: '\e01a',
+  // game-controller: '\e01b',
+  // fire: '\e01c',
+  // eyeglass: '\e01d',
+  // envelope-open: '\e01e',
+  // envolope-letter: '\e01f',
+  // energy: '\e020',
+  // emotsmile: '\e021',
+  // disc: '\e022',
+  // cursor-move: '\e023',
+  // crop: '\e024',
+  // credit-card: '\e025',
+  // chemistry: '\e026',
+  // bell: '\e027',
+  // badge: '\e028',
+  // anchor: '\e029',
+  // wallet: '\e02a',
+  // vector: '\e02b',
+  // speech: '\e02c',
+  // puzzle: '\e02d',
+  // printer: '\e02e',
+  // present: '\e02f',
+  // playlist: '\e030',
+  pin: '\e031',
+  // picture: '\e032',
+  // map: '\e033',
+  // layers: '\e034',
+  // handbag: '\e035',
+  // globe-alt: '\e036',
+  // globe: '\e037',
+  // frame: '\e038',
+  // folder-alt: '\e039',
+  // film: '\e03a',
+  // feed: '\e03b',
+  // earphones-alt: '\e03c',
+  // earphones: '\e03d',
+  // drop: '\e03e',
+  // drawar: '\e03f',
+  // docs: '\e040',
+  // directions: '\e041',
+  // direction: '\e042',
+  // diamond: '\e043',
+  // cup: '\e044',
+  // compass: '\e045',
+  // call-out: '\e046',
+  // call-in: '\e047',
+  // call-end: '\e048',
+  // calculator: '\e049',
+  // bubbles: '\e04a',
+  // briefcase: '\e04b',
+  // book-open: '\e04c',
+  // basket-loaded: '\e04d',
+  // basket: '\e04e',
+  // bag: '\e04f',
+  action-undo: '\e050',
+  // action-redo: '\e051',
+  // wrench: '\e052',
+  // umbrella: '\e053',
+  // trash: '\e054',
+  tag: '\e055',
+  // support: '\e056',
+  // size-fullscreen: '\e057',
+  // size-actual: '\e058',
+  // shuffle: '\e059',
+  share-alt: '\e05a',
+  // share: '\e05b',
+  // rocket: '\e05c',
+  // question: '\e05d',
+  // pie-chart: '\e05e',
+  pencil: '\e05f',
+  // note: '\e060',
+  // music-tone-alt: '\e061',
+  // music-tone: '\e062',
+  // microphone: '\e063',
+  // loop: '\e064',
+  // logout: '\e065',
+  // login: '\e066',
+  // list: '\e067',
+  like: '\e068',
+  // home: '\e069',
+  // grid: '\e06a',
+  // graph: '\e06b',
+  // equalizer: '\e06c',
+  dislike: '\e06d',
+  // cursor: '\e06e',
+  // control-start: '\e06f',
+  // control-rewind: '\e070',
+  // control-play: '\e071',
+  // control-pause: '\e072',
+  // control-forward: '\e073',
+  // control-end: '\e074',
+  calender: '\e075',
+  // bulb: '\e076',
+  // chart: '\e077',
+  // arrow-up-circle: '\e078',
+  // arrow-right-circle: '\e079',
+  // arrow-left-circle: '\e07a',
+  // arrow-down-circle: '\e07b',
+  // ban: '\e07c',
+  bubble: '\e07d',
+  // camrecorder: '\e07e',
+  // camera: '\e07f',
+  // check: '\e080',
+  // clock: '\e081',
+  // close: '\e082',
+  // cloud-download: '\e083',
+  // cloud-upload: '\e084',
+  // doc: '\e085',
+  // envolope: '\e086',
+  // eye: '\e087',
+  // flag: '\e088',
+  // folder: '\e089',
+  // heart: '\e08a',
+  // info: '\e08b',
+  // key: '\e08c',
+  link: '\e08d',
+  // lock: '\e08e',
+  // lock-open: '\e08f',
+  magnifier: '\e090',
+  // magnifier-add: '\e091',
+  // magnifier-remove: '\e092',
+  paper-clip: '\e093',
+  // paper-plane: '\e094',
+  // plus: '\e095',
+  // location: '\e096',
+  // power: '\e097',
+  // refresh: '\e098',
+  // reload: '\e099',
+  // settings: '\e09a',
+  // star: '\e09b',
+  // symble-female: '\e09c',
+  // symbol-male: '\e09d',
+  // target: '\e09e',
+  // volume-down: '\e09f',
+  // volume-up: '\e0a0',
+  // volume-off: '\e0a1',
+  // phone: '\e600',
+  // menu: '\e601',
+  // options-vertical: '\e602',
+  // options: '\e603',
+  // arrow-down: '\e604',
+  // arrow-left: '\e605',
+  // arrow-right: '\e606',
+  // arrow-up: '\e607',
+  // paypal: '\e608',
+  // minus: '\e615',
+  // organization: '\e616',
+  // exclamation: '\e617',
+  // event: '\e619',
+  // apple: '\e901',
+  // baidu: '\e903',
+  // codepen: '\e905',
+  // dribbble: '\e906',
+  // evernote: '\e907',
+  facebook: '\e909',
+  github: '\e90a',
+  google: '\e90b',
+  // whatsapp: '\e90c',
+  google-plus: '\e90d',
+  instagram: '\e90e',
+  linkedin: '\e90f',
+  pocket: '\e910',
+  // rss: '\e911',
+  weibo: '\e912',
+  slack: '\e913',
+  qq: '\e915',
+  twitter: '\e916',
+  // visa: '\e919',
+  wechat: '\e91a',
+  wordpress: '\e91b',
+  youtube: '\e91d'
+);
 
 @font-face {
   font-family: $icon-font-family;
@@ -18,7 +213,8 @@ $icon-prefix: 'icon-';
     url('#{$icon-font-path}/reborn.svg?8yiecd#reborn') format('svg');
 }
 
-[class^='icon-'], [class*=' icon-'] {
+[class^='icon-'],
+[class*=' icon-'] {
   text-transform: none;
   /* use !important to prevent issues with browser extensions that change fonts */
 
@@ -34,772 +230,37 @@ $icon-prefix: 'icon-';
   -moz-osx-font-smoothing: grayscale;
 }
 
-.#{$icon-prefix} {
-  &logo::before {
-    content: '\e900';
-  }
-
-  &user-female::before {
-    content: '\e000';
-  }
-
-  &people::before {
-    content: '\e001';
-  }
-
-  &user-follow::before {
-    content: '\e002';
-  }
-
-  &user-following::before {
-    content: '\e003';
-  }
-
-  &user-unfollow::before {
-    content: '\e004';
-  }
-
-  &user::before {
-    content: '\e005';
-  }
-
-  &trophy::before {
-    content: '\e006';
-  }
-
-  &speedometer::before {
-    content: '\e007';
-  }
-
-  &shield::before {
-    content: '\e00e';
-  }
-
-  &screen-tablet::before {
-    content: '\e00f';
-  }
-
-  &screen-smartphone::before {
-    content: '\e010';
-  }
-
-  &screen-desktop::before {
-    content: '\e011';
-  }
-
-  &plane::before {
-    content: '\e012';
-  }
-
-  &notebook::before {
-    content: '\e013';
-  }
-
-  &mustache::before {
-    content: '\e014';
-  }
-
-  &mouse::before {
-    content: '\e015';
-  }
-
-  &magnet::before {
-    content: '\e016';
-  }
-
-  &magic-wand::before {
-    content: '\e017';
-  }
-
-  &hourglass::before {
-    content: '\e018';
-  }
-
-  &graduation::before {
-    content: '\e019';
-  }
-
-  &ghost::before {
-    content: '\e01a';
-  }
-
-  &game-controller::before {
-    content: '\e01b';
-  }
-
-  &fire::before {
-    content: '\e01c';
-  }
-
-  &eyeglass::before {
-    content: '\e01d';
-  }
-
-  &envelope-open::before {
-    content: '\e01e';
-  }
-
-  &envolope-letter::before {
-    content: '\e01f';
-  }
-
-  &energy::before {
-    content: '\e020';
-  }
-
-  &emotsmile::before {
-    content: '\e021';
-  }
-
-  &disc::before {
-    content: '\e022';
-  }
-
-  &cursor-move::before {
-    content: '\e023';
-  }
-
-  &crop::before {
-    content: '\e024';
-  }
-
-  &credit-card::before {
-    content: '\e025';
-  }
-
-  &chemistry::before {
-    content: '\e026';
-  }
-
-  &bell::before {
-    content: '\e027';
-  }
-
-  &badge::before {
-    content: '\e028';
-  }
-
-  &anchor::before {
-    content: '\e029';
-  }
-
-  &wallet::before {
-    content: '\e02a';
-  }
-
-  &vector::before {
-    content: '\e02b';
-  }
-
-  &speech::before {
-    content: '\e02c';
-  }
-
-  &puzzle::before {
-    content: '\e02d';
-  }
-
-  &printer::before {
-    content: '\e02e';
-  }
-
-  &present::before {
-    content: '\e02f';
-  }
-
-  &playlist::before {
-    content: '\e030';
-  }
-
-  &pin::before {
-    content: '\e031';
-  }
-
-  &picture::before {
-    content: '\e032';
-  }
-
-  &map::before {
-    content: '\e033';
-  }
-
-  &layers::before {
-    content: '\e034';
-  }
-
-  &handbag::before {
-    content: '\e035';
-  }
-
-  &globe-alt::before {
-    content: '\e036';
-  }
-
-  &globe::before {
-    content: '\e037';
-  }
-
-  &frame::before {
-    content: '\e038';
-  }
-
-  &folder-alt::before {
-    content: '\e039';
-  }
-
-  &film::before {
-    content: '\e03a';
-  }
-
-  &feed::before {
-    content: '\e03b';
-  }
-
-  &earphones-alt::before {
-    content: '\e03c';
-  }
-
-  &earphones::before {
-    content: '\e03d';
-  }
-
-  &drop::before {
-    content: '\e03e';
-  }
-
-  &drawar::before {
-    content: '\e03f';
-  }
-
-  &docs::before {
-    content: '\e040';
-  }
-
-  &directions::before {
-    content: '\e041';
-  }
-
-  &direction::before {
-    content: '\e042';
-  }
-
-  &diamond::before {
-    content: '\e043';
-  }
-
-  &cup::before {
-    content: '\e044';
-  }
-
-  &compass::before {
-    content: '\e045';
-  }
-
-  &call-out::before {
-    content: '\e046';
-  }
-
-  &call-in::before {
-    content: '\e047';
-  }
-
-  &call-end::before {
-    content: '\e048';
-  }
-
-  &calculator::before {
-    content: '\e049';
-  }
-
-  &bubbles::before {
-    content: '\e04a';
-  }
-
-  &briefcase::before {
-    content: '\e04b';
-  }
-
-  &book-open::before {
-    content: '\e04c';
-  }
-
-  &basket-loaded::before {
-    content: '\e04d';
-  }
-
-  &basket::before {
-    content: '\e04e';
-  }
-
-  &bag::before {
-    content: '\e04f';
-  }
-
-  &action-undo::before {
-    content: '\e050';
-  }
-
-  &action-redo::before {
-    content: '\e051';
-  }
-
-  &wrench::before {
-    content: '\e052';
-  }
-
-  &umbrella::before {
-    content: '\e053';
-  }
-
-  &trash::before {
-    content: '\e054';
-  }
-
-  &tag::before {
-    content: '\e055';
-  }
-
-  &support::before {
-    content: '\e056';
-  }
-
-  &size-fullscreen::before {
-    content: '\e057';
-  }
-
-  &size-actual::before {
-    content: '\e058';
-  }
-
-  &shuffle::before {
-    content: '\e059';
-  }
-
-  &share-alt::before {
-    content: '\e05a';
-  }
-
-  &share::before {
-    content: '\e05b';
-  }
-
-  &rocket::before {
-    content: '\e05c';
-  }
-
-  &question::before {
-    content: '\e05d';
-  }
-
-  &pie-chart::before {
-    content: '\e05e';
-  }
-
-  &pencil::before {
-    content: '\e05f';
-  }
-
-  &note::before {
-    content: '\e060';
-  }
-
-  &music-tone-alt::before {
-    content: '\e061';
-  }
-
-  &music-tone::before {
-    content: '\e062';
-  }
-
-  &microphone::before {
-    content: '\e063';
-  }
-
-  &loop::before {
-    content: '\e064';
-  }
-
-  &logout::before {
-    content: '\e065';
-  }
-
-  &login::before {
-    content: '\e066';
-  }
-
-  &list::before {
-    content: '\e067';
-  }
-
-  &like::before {
-    content: '\e068';
-  }
-
-  &home::before {
-    content: '\e069';
-  }
-
-  &grid::before {
-    content: '\e06a';
-  }
-
-  &graph::before {
-    content: '\e06b';
-  }
-
-  &equalizer::before {
-    content: '\e06c';
-  }
-
-  &dislike::before {
-    content: '\e06d';
-  }
-
-  &cursor::before {
-    content: '\e06e';
-  }
-
-  &control-start::before {
-    content: '\e06f';
-  }
-
-  &control-rewind::before {
-    content: '\e070';
-  }
-
-  &control-play::before {
-    content: '\e071';
-  }
-
-  &control-pause::before {
-    content: '\e072';
-  }
-
-  &control-forward::before {
-    content: '\e073';
-  }
-
-  &control-end::before {
-    content: '\e074';
-  }
-
-  &calender::before {
-    content: '\e075';
-  }
-
-  &bulb::before {
-    content: '\e076';
-  }
-
-  &chart::before {
-    content: '\e077';
-  }
-
-  &arrow-up-circle::before {
-    content: '\e078';
-  }
-
-  &arrow-right-circle::before {
-    content: '\e079';
-  }
-
-  &arrow-left-circle::before {
-    content: '\e07a';
-  }
-
-  &arrow-down-circle::before {
-    content: '\e07b';
-  }
-
-  &ban::before {
-    content: '\e07c';
-  }
-
-  &bubble::before {
-    content: '\e07d';
-  }
-
-  &camrecorder::before {
-    content: '\e07e';
-  }
-
-  &camera::before {
-    content: '\e07f';
-  }
-
-  &check::before {
-    content: '\e080';
-  }
-
-  &clock::before {
-    content: '\e081';
-  }
-
-  &close::before {
-    content: '\e082';
-  }
-
-  &cloud-download::before {
-    content: '\e083';
-  }
-
-  &cloud-upload::before {
-    content: '\e084';
-  }
-
-  &doc::before {
-    content: '\e085';
-  }
-
-  &envolope::before {
-    content: '\e086';
-  }
-
-  &eye::before {
-    content: '\e087';
-  }
-
-  &flag::before {
-    content: '\e088';
-  }
-
-  &folder::before {
-    content: '\e089';
-  }
-
-  &heart::before {
-    content: '\e08a';
-  }
-
-  &info::before {
-    content: '\e08b';
-  }
-
-  &key::before {
-    content: '\e08c';
-  }
-
-  &link::before {
-    content: '\e08d';
-  }
-
-  &lock::before {
-    content: '\e08e';
-  }
-
-  &lock-open::before {
-    content: '\e08f';
-  }
-
-  &magnifier::before {
-    content: '\e090';
-  }
-
-  &magnifier-add::before {
-    content: '\e091';
-  }
-
-  &magnifier-remove::before {
-    content: '\e092';
-  }
-
-  &paper-clip::before {
-    content: '\e093';
-  }
-
-  &paper-plane::before {
-    content: '\e094';
-  }
-
-  &plus::before {
-    content: '\e095';
-  }
-
-  &location::before {
-    content: '\e096';
-  }
-
-  &power::before {
-    content: '\e097';
-  }
-
-  &refresh::before {
-    content: '\e098';
-  }
-
-  &reload::before {
-    content: '\e099';
-  }
-
-  &settings::before {
-    content: '\e09a';
-  }
-
-  &star::before {
-    content: '\e09b';
-  }
-
-  &symble-female::before {
-    content: '\e09c';
-  }
-
-  &symbol-male::before {
-    content: '\e09d';
-  }
-
-  &target::before {
-    content: '\e09e';
-  }
-
-  &volume-down::before {
-    content: '\e09f';
-  }
-
-  &volume-up::before {
-    content: '\e0a0';
-  }
-
-  &volume-off::before {
-    content: '\e0a1';
-  }
-
-  &phone::before {
-    content: '\e600';
-  }
-
-  &menu::before {
-    content: '\e601';
-  }
-
-  &options-vertical::before {
-    content: '\e602';
-  }
-
-  &options::before {
-    content: '\e603';
-  }
-
-  &arrow-down::before {
-    content: '\e604';
-  }
-
-  &arrow-left::before {
-    content: '\e605';
-  }
-
-  &arrow-right::before {
-    content: '\e606';
-  }
-
-  &arrow-up::before {
-    content: '\e607';
-  }
-
-  &paypal::before {
-    content: '\e608';
-  }
-
-  &minus::before {
-    content: '\e615';
-  }
-
-  &organization::before {
-    content: '\e616';
-  }
-
-  &exclamation::before {
-    content: '\e617';
-  }
-
-  &event::before {
-    content: '\e619';
-  }
-
-  &apple::before {
-    content: '\e901';
-  }
-
-  &baidu::before {
-    content: '\e903';
-  }
-
-  &codepen::before {
-    content: '\e905';
-  }
-
-  &dribbble::before {
-    content: '\e906';
-  }
-
-  &evernote::before {
-    content: '\e907';
-  }
-
-  &facebook::before {
-    content: '\e909';
-  }
-
-  &github::before {
-    content: '\e90a';
-  }
-
-  &google::before {
-    content: '\e90b';
-  }
-
-  &whatsapp::before {
-    content: '\e90c';
-  }
-
-  &google-plus::before {
-    content: '\e90d';
-  }
-
-  &instagram::before {
-    content: '\e90e';
-  }
-
-  &linkedin::before {
-    content: '\e90f';
-  }
-
-  &pocket::before {
-    content: '\e910';
-  }
-
-  &rss::before {
-    content: '\e911';
-  }
-
-  &weibo::before {
-    content: '\e912';
-  }
-
-  &slack::before {
-    content: '\e913';
-  }
-
-  &qq::before {
-    content: '\e915';
-  }
-
-  &twitter::before {
-    content: '\e916';
-  }
-
-  &visa::before {
-    content: '\e919';
-  }
-
-  &wechat::before {
-    content: '\e91a';
-  }
-
-  &wordpress::before {
-    content: '\e91b';
-  }
-
-  &youtube::before {
-    content: '\e91d';
+// icon item class
+.#{$icon-font-prefix} {
+  @each $name, $char in $icon-font-chars {
+    &#{$name}::before {
+      content: $char;
+    }
   }
 }
+
+// alias
+// .byline,
+// .posted-on,
+// .cat-links,
+// .tags-links {
+//   &::before {
+//     @extend [class^='icon-'];
+//   }
+// }
+
+// .byline {
+//   @extend .icon-user;
+// }
+
+// .posted-on {
+//   @extend .icon-calender;
+// }
+
+// .cat-links {
+//   @extend .icon-paper-clip;
+// }
+
+// .tags-links {
+//   @extend .icon-tag;
+// }

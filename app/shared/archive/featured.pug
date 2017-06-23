@@ -1,14 +1,11 @@
-article.card.card-entry.format-standard.has-post-thumbnail
-  header.card-header
-    a(href='single.html')
-      img.card-img-top(src='uploads/entry-3.jpeg', alt='苏格兰 - 奥克尼群岛')
-    .card-img-overlay
-      include ../base/meta
-  content.card-body
-    h2.card-title: a(href='single.html') 【苏格兰】奥克尼群岛，天涯何处无芳草
-    .card-text
-      p 长久以来，没有由来的，对那些苏格兰周围，遥远而股票的岛屿，产生了一种向往
-      p 一直以为，那些地方是荒凉的、孤寂的、被人遗忘的，然而，旅行的功能之一，就是纠正偏见，再加上难得的阳光灿烂的好天气，这北方的岛屿，居然也不乏富饶的气质。......
-  footer.card-footer
-    span.icon-tag #[a(href='archive.html') 旅行]、#[a(href='archive.html') 远方]
-    a(href='single.html') 继续阅读 →
+-
+  entry = {
+    thumbnail: 'uploads/entry-3.jpeg',
+    title: '【苏格兰】奥克尼群岛，天涯何处无芳草',
+    content: [
+      '长久以来，没有由来的，对那些苏格兰周围，遥远而股票的岛屿，产生了一种向往',
+      '一直以为，那些地方是荒凉的、孤寂的、被人遗忘的，然而，旅行的功能之一，就是纠正偏见，再加上难得的阳光灿烂的好天气，这北方的岛屿，居然也不乏富饶的气质。······'
+    ]
+  }
+
+include ../base/entry
