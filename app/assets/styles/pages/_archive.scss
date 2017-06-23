@@ -2,6 +2,45 @@
 // This file contains styles that are specific to the archive page.
 // -----------------------------------------------------------------------------
 
+// .hentry {
+//   @extend .card;
+//   @extend .card-entry;
+// }
+
+// .entry {
+//   &-header {
+//     @extend .card-header;
+//   }
+//   &-sticky {
+//     @extend .card-sticky;
+//   }
+//   &-img-top {
+//     @extend .card-img-top;
+//   }
+//   &-img-overlay {
+//     @extend .card-img-overlay;
+//   }
+//   &-meta {
+//     @extend .card-meta;
+//   }
+//   &-body {
+//     @extend .card-body;
+//   }
+//   &-title {
+//     @extend .card-title;
+//   }
+//   &-subtitle {
+//     @extend .card-subtitle;
+//   }
+//   &-text {
+//     @extend .card-text;
+//   }
+//   &-footer {
+//     @extend .card-footer;
+//   }
+// }
+
+
 .pagination {
   @extend .justify-content-center;
   @extend .mb-7;
