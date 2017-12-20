@@ -44,7 +44,7 @@
 
     .article {
       .title {
-        @extend .text-gray-dark;
+        @extend .text-secondary;
         @extend .text-center;
         @extend .text-md-left;
       }
@@ -79,7 +79,7 @@
     }
 
     &:nth-child(2n + 1) {
-      @extend .bg-faded;
+      @extend .bg-light;
     }
   }
 

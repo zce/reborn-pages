@@ -19,7 +19,9 @@
     "deploy": "gulp deploy"
   },
   "dependencies": {
-    "bootstrap": "twbs/bootstrap#v4-dev"
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

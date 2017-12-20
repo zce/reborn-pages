@@ -70,6 +70,10 @@ $brand-warning:             $orange;
 $brand-danger:              $red;
 $brand-inverse:             $indigo-2;
 
+$theme-colors: (
+  "primary": $indigo-3
+);
+
 // Options
 
 $enable-rounded:            true;
